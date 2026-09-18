@@ -1,0 +1,10 @@
+# Downloaded observations and generated outputs stay out of the code repository.
+/data/
+/results/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
