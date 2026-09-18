@@ -1,0 +1,604 @@
+{
+  "paper_commit": "8f7cc53",
+  "purpose": "Comparison-only manuscript descriptive counts. Age summaries and overlap are released aggregate measurements, not reconstructed participant records.",
+  "targets": [
+    {
+      "path": [
+        "sessions"
+      ],
+      "expected": 2469
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "reviews"
+      ],
+      "expected": 2028
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "pretests"
+      ],
+      "expected": 381
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "main_cohort_pretests"
+      ],
+      "expected": 340
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "other_pretests"
+      ],
+      "expected": 41
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "reviewers"
+      ],
+      "expected": 51
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "reviewers_with_multiple_pretests"
+      ],
+      "expected": 39
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "comparisons"
+      ],
+      "expected": 852
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "richer_prompt_quant_pretests"
+      ],
+      "expected": 6
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "richer_prompt_quant_reviews"
+      ],
+      "expected": 16
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "rubric_ratings"
+      ],
+      "expected": 16224
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "planning_ratings"
+      ],
+      "expected": 10140
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "practice_ratings"
+      ],
+      "expected": 6084
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "by_section",
+        "quant",
+        "reviews"
+      ],
+      "expected": 1136
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "by_section",
+        "verbal",
+        "reviews"
+      ],
+      "expected": 892
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "by_section",
+        "quant",
+        "reviewers"
+      ],
+      "expected": 39
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "by_section",
+        "verbal",
+        "reviewers"
+      ],
+      "expected": 38
+    },
+    {
+      "path": [
+        "interactions",
+        "ai_sessions"
+      ],
+      "expected": 2139
+    },
+    {
+      "path": [
+        "interactions",
+        "total_nonblank_chat_messages"
+      ],
+      "expected": 176614
+    },
+    {
+      "path": [
+        "interactions",
+        "answered_practice_problems"
+      ],
+      "expected": 45463
+    },
+    {
+      "path": [
+        "human_tutors",
+        "quant",
+        "tutors"
+      ],
+      "expected": 9
+    },
+    {
+      "path": [
+        "human_tutors",
+        "quant",
+        "maximum_students"
+      ],
+      "expected": 17
+    },
+    {
+      "path": [
+        "human_tutors",
+        "quant",
+        "minimum_students"
+      ],
+      "expected": 1
+    },
+    {
+      "path": [
+        "human_tutors",
+        "verbal",
+        "tutors"
+      ],
+      "expected": 9
+    },
+    {
+      "path": [
+        "human_tutors",
+        "verbal",
+        "maximum_students"
+      ],
+      "expected": 21
+    },
+    {
+      "path": [
+        "human_tutors",
+        "verbal",
+        "minimum_students"
+      ],
+      "expected": 1
+    },
+    {
+      "path": [
+        "participant_overlap",
+        "quant_only_unique_people"
+      ],
+      "expected": 1205
+    },
+    {
+      "path": [
+        "participant_overlap",
+        "verbal_only_unique_people"
+      ],
+      "expected": 1092
+    },
+    {
+      "path": [
+        "participant_overlap",
+        "both_sections_unique_people"
+      ],
+      "expected": 86
+    },
+    {
+      "path": [
+        "participant_overlap",
+        "unique_people_total"
+      ],
+      "expected": 2383
+    },
+    {
+      "path": [
+        "participant_overlap",
+        "section_assignments_total"
+      ],
+      "expected": 2469
+    },
+    {
+      "path": [
+        "transcripts",
+        "ai_trajectories_observed"
+      ],
+      "expected": 2139
+    },
+    {
+      "path": [
+        "transcripts",
+        "human_profiles_total"
+      ],
+      "expected": 140
+    },
+    {
+      "path": [
+        "transcripts",
+        "human_transcripts_observed"
+      ],
+      "expected": 135
+    },
+    {
+      "path": [
+        "transcripts",
+        "human_transcripts_missing"
+      ],
+      "expected": 5
+    },
+    {
+      "path": [
+        "cohorts",
+        0,
+        "section"
+      ],
+      "expected": "quant"
+    },
+    {
+      "path": [
+        "cohorts",
+        0,
+        "kind"
+      ],
+      "expected": "ai"
+    },
+    {
+      "path": [
+        "cohorts",
+        0,
+        "n"
+      ],
+      "expected": 1139
+    },
+    {
+      "path": [
+        "cohorts",
+        1,
+        "section"
+      ],
+      "expected": "quant"
+    },
+    {
+      "path": [
+        "cohorts",
+        1,
+        "kind"
+      ],
+      "expected": "control"
+    },
+    {
+      "path": [
+        "cohorts",
+        1,
+        "n"
+      ],
+      "expected": 91
+    },
+    {
+      "path": [
+        "cohorts",
+        2,
+        "section"
+      ],
+      "expected": "quant"
+    },
+    {
+      "path": [
+        "cohorts",
+        2,
+        "kind"
+      ],
+      "expected": "human"
+    },
+    {
+      "path": [
+        "cohorts",
+        2,
+        "n"
+      ],
+      "expected": 61
+    },
+    {
+      "path": [
+        "cohorts",
+        3,
+        "section"
+      ],
+      "expected": "verbal"
+    },
+    {
+      "path": [
+        "cohorts",
+        3,
+        "kind"
+      ],
+      "expected": "ai"
+    },
+    {
+      "path": [
+        "cohorts",
+        3,
+        "n"
+      ],
+      "expected": 1000
+    },
+    {
+      "path": [
+        "cohorts",
+        4,
+        "section"
+      ],
+      "expected": "verbal"
+    },
+    {
+      "path": [
+        "cohorts",
+        4,
+        "kind"
+      ],
+      "expected": "control"
+    },
+    {
+      "path": [
+        "cohorts",
+        4,
+        "n"
+      ],
+      "expected": 99
+    },
+    {
+      "path": [
+        "cohorts",
+        5,
+        "section"
+      ],
+      "expected": "verbal"
+    },
+    {
+      "path": [
+        "cohorts",
+        5,
+        "kind"
+      ],
+      "expected": "human"
+    },
+    {
+      "path": [
+        "cohorts",
+        5,
+        "n"
+      ],
+      "expected": 79
+    },
+    {
+      "path": [
+        "age_aggregates",
+        0,
+        "n"
+      ],
+      "expected": 1291
+    },
+    {
+      "path": [
+        "age_aggregates",
+        0,
+        "median_age"
+      ],
+      "expected": 21
+    },
+    {
+      "path": [
+        "age_aggregates",
+        0,
+        "min_age"
+      ],
+      "expected": 18
+    },
+    {
+      "path": [
+        "age_aggregates",
+        0,
+        "max_age"
+      ],
+      "expected": 67
+    },
+    {
+      "path": [
+        "age_aggregates",
+        1,
+        "n"
+      ],
+      "expected": 1178
+    },
+    {
+      "path": [
+        "age_aggregates",
+        1,
+        "median_age"
+      ],
+      "expected": 21
+    },
+    {
+      "path": [
+        "age_aggregates",
+        1,
+        "min_age"
+      ],
+      "expected": 18
+    },
+    {
+      "path": [
+        "age_aggregates",
+        1,
+        "max_age"
+      ],
+      "expected": 67
+    },
+    {
+      "path": [
+        "age_aggregates",
+        2,
+        "n"
+      ],
+      "expected": 2383
+    },
+    {
+      "path": [
+        "age_aggregates",
+        2,
+        "median_age"
+      ],
+      "expected": 21
+    },
+    {
+      "path": [
+        "age_aggregates",
+        2,
+        "min_age"
+      ],
+      "expected": 18
+    },
+    {
+      "path": [
+        "age_aggregates",
+        2,
+        "max_age"
+      ],
+      "expected": 67
+    },
+    {
+      "path": [
+        "interactions",
+        "by_section",
+        0,
+        "n_answered"
+      ],
+      "expected": 21769
+    },
+    {
+      "path": [
+        "interactions",
+        "by_section",
+        0,
+        "n_flagged"
+      ],
+      "expected": 523
+    },
+    {
+      "path": [
+        "interactions",
+        "by_section",
+        1,
+        "n_answered"
+      ],
+      "expected": 23694
+    },
+    {
+      "path": [
+        "interactions",
+        "by_section",
+        1,
+        "n_flagged"
+      ],
+      "expected": 120
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "question_variants",
+        7,
+        "question_variant_id"
+      ],
+      "expected": "ai_vs_ai_quant_lesson_plan_review_v3_q08_format_weaknesses"
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "question_variants",
+        7,
+        "n"
+      ],
+      "expected": 590
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "question_variants",
+        8,
+        "question_variant_id"
+      ],
+      "expected": "ai_vs_ai_quant_lesson_plan_review_v3_q08_test_taking_strategies"
+    },
+    {
+      "path": [
+        "expert_reviews",
+        "question_variants",
+        8,
+        "n"
+      ],
+      "expected": 546
+    },
+    {
+      "path": [
+        "cost_coverage",
+        "sessions"
+      ],
+      "expected": 2139
+    },
+    {
+      "path": [
+        "cost_coverage",
+        "complete_estimates"
+      ],
+      "expected": 1062
+    },
+    {
+      "path": [
+        "cost_coverage",
+        "partial_lower_bounds"
+      ],
+      "expected": 1077
+    },
+    {
+      "path": [
+        "interactions",
+        "helpfulness_ratings_observed"
+      ],
+      "expected": 2139
+    }
+  ]
+}

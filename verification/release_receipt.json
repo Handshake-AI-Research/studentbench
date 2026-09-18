@@ -1,0 +1,81 @@
+{
+  "complete": true,
+  "verified_at_utc": "2026-09-18T05:49:12.946280+00:00",
+  "analysis_code_commit": "27a746147338175867816bcdb7cf318d27c0642e",
+  "dataset": "handshake-ai-research/studentbench",
+  "dataset_revision": "d31a8de4ee98ba367920aed36c4f0ddd1897ef0b",
+  "dataset_files_verified": 35496,
+  "scientific_input_tree_sha256": "670396bf1865d211b18b7242107e1c2df04d7fd7e31a7d7eb06be20c9ae9b93a",
+  "paper_source_commit": "dd453ebef06bf46d1d05290d67af69d31e455f18",
+  "scientific_reference_commit": "8f7cc53f0d6d5ff4e58aa00e968e9daada0ae08d",
+  "clean_checkout": true,
+  "fresh_output_directory": true,
+  "analysis_stages_completed": 15,
+  "figures": {
+    "total": 24,
+    "regenerated_statistical_figures": 18,
+    "fixed_illustrations_verified": 6
+  },
+  "tables": {
+    "total": 16,
+    "recomputed_empirical_tables": 12,
+    "fixed_protocol_tables": 4
+  },
+  "scientific_checks": {
+    "learning_costs_expert_reviews_conversations": {
+      "passed": true,
+      "comparisons": 30704
+    },
+    "prompts_subgroups": {
+      "passed": true,
+      "comparisons": 7279
+    },
+    "engagement_dependence_and_sensitivity": {
+      "passed": true,
+      "comparisons": 4715
+    },
+    "condition_interaction": {
+      "passed": true,
+      "comparisons": 112
+    },
+    "statistical_figure_inputs": {
+      "passed": true,
+      "comparisons": 12118
+    },
+    "repeat_participant_main_results": {
+      "passed": true,
+      "comparisons": 713
+    },
+    "study_summary": {
+      "passed": true,
+      "comparisons": 77
+    },
+    "printed_table_cells": {
+      "passed": true,
+      "comparisons": 511
+    }
+  },
+  "unit_tests_passed": 14,
+  "paper_rebuild": {
+    "byte_identical": true,
+    "expected_pdf_sha256": "127b843d8918d4d3c3b61bdc4b0f0f9ab03063e2c30329f8aa2b2d57474c1722",
+    "rebuilt_pdf_sha256": "127b843d8918d4d3c3b61bdc4b0f0f9ab03063e2c30329f8aa2b2d57474c1722",
+    "method": "Rebuilt the pinned LaTeX source in an isolated directory after replacing every statistical figure with freshly generated outputs. Typeset text and table layout were retained; reported empirical values were independently recomputed and checked."
+  },
+  "environment": {
+    "python": "3.14.4",
+    "system": "Darwin",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scipy": "1.17.1",
+      "statsmodels": "0.15.0",
+      "matplotlib": "3.10.9",
+      "CairoSVG": "2.9.1",
+      "PyMuPDF": "1.28.2"
+    },
+    "latex": "pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)"
+  },
+  "scope": "Numerical verification uses the documented floating-point tolerances. Printed table values match at reported precision. Byte identity refers to this pinned manuscript and verification environment."
+}
