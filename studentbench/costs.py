@@ -181,6 +181,18 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _producer_signature() -> str:
+    """Invalidate checkpoints after producer changes, without changing RNG seeds."""
+    digest = hashlib.sha256()
+    module_dir = Path(__file__).resolve().parent
+    for name in ("costs.py", "data.py", "journal.py"):
+        digest.update(name.encode())
+        digest.update(b"\0")
+        digest.update((module_dir / name).read_bytes())
+        digest.update(b"\0")
+    return digest.hexdigest()
+
+
 def _utc_mtime(path: Path) -> str:
     return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat()
 
@@ -209,17 +221,24 @@ def _load_jsonl(path: Path, key: str) -> dict[str, dict[str, Any]]:
     rows: dict[str, dict[str, Any]] = {}
     if not path.is_file():
         return rows
-    with path.open(encoding="utf-8") as handle:
-        for line in handle:
-            if not line.strip():
-                continue
-            try:
-                row = json.loads(line)
-            except json.JSONDecodeError:
-                # A process kill can leave only the final journal line partial.
-                continue
-            if key in row:
-                rows[str(row[key])] = row
+    lines = path.read_bytes().splitlines(keepends=True)
+    offset = 0
+    for index, line in enumerate(lines):
+        try:
+            row = json.loads(line)
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            if index != len(lines) - 1 or line.endswith(b"\n"):
+                raise
+            # Preserve an interrupted append, then resume on a complete line.
+            path.with_suffix(path.suffix + ".incomplete").write_bytes(line)
+            with path.open("r+b") as handle:
+                handle.truncate(offset)
+            break
+        rows[str(row[key])] = row
+        offset += len(line)
+        if index == len(lines) - 1 and not line.endswith(b"\n"):
+            with path.open("ab") as handle:
+                handle.write(b"\n")
     return rows
 
 
@@ -496,6 +515,7 @@ def _extract_students(
         cache_path.with_suffix(cache_path.suffix + ".force") if force else cache_path
     )
     cache = _load_jsonl(journal_path, "student_id")
+    producer_signature = _producer_signature()
     profiles = _enumerate_profiles(ssot_root)
     if len(profiles) != sum(EXPECTED_COUNTS.values()):
         raise ValueError(
@@ -526,10 +546,15 @@ def _extract_students(
         profile = json.loads(profile_path.read_text(encoding="utf-8"))
         student_id = str(profile["student_id"])
         record = cache.get(student_id)
-        if record and record.get("input_signature") == signature:
+        if (
+            record
+            and record.get("input_signature") == signature
+            and record.get("producer_signature") == producer_signature
+        ):
             cache_hits += 1
         else:
             record = _extract_student(profile_path, ssot_root, signature)
+            record["producer_signature"] = producer_signature
             _append_jsonl(journal_path, record)
             cache[student_id] = record
         records.append(record)
@@ -550,7 +575,7 @@ def _extract_students(
         base = {
             key: value
             for key, value in record.items()
-            if key not in {"topics", "source_files"}
+            if key not in {"topics", "source_files", "producer_signature"}
         }
         flat_rows.append(base)
         for topic in record["topics"]:
@@ -654,8 +679,10 @@ def _bootstrap_ratio(
         f"{scope}|{arm_id}|{source_signature}|B{draws}|seed{seed_root}|"
         f"confidence{confidence:.12g}|valid{minimum_valid_fraction:.12g}"
     )
-    if not force and cache_key in cache:
-        return cache[cache_key]
+    producer_signature = _producer_signature()
+    cached = cache.get(cache_key)
+    if not force and cached and cached.get("producer_signature") == producer_signature:
+        return cached
     gains = block.gain_pp.to_numpy(float)
     costs = (
         np.full(len(block), float(fixed_cost), dtype=float)
@@ -680,6 +707,7 @@ def _bootstrap_ratio(
         "scope": scope,
         "arm_id": arm_id,
         "source_signature": source_signature,
+        "producer_signature": producer_signature,
         "draws": draws,
         "valid_draws": int(valid.sum()),
         "seed": seed,
