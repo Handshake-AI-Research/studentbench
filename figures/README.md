@@ -1,12 +1,12 @@
 # Figures, in paper order
 
-Each statistical figure has its plotting code in its own file. Analyses reconstruct the input estimates first. For example:
+Each statistical figure has a separate plotting script. Run the analyses first, then draw a figure:
 
 ```bash
 python figures/figure_01_learning.py --analysis-root results/analysis --output results/figures
 ```
 
-Every script exports PDF, SVG and PNG. With Arial installed, the final typography matches the paper. A `.style.json` receipt verifies that styling preserves the scientific marks. Use `--native-figures` for alternative inputs or layouts; this skips the manuscript typography. If Arial is unavailable, the script keeps the native font fallback and records that explicitly. Source screenshots and the study-design diagram are fixed illustrations and have no statistical generator.
+Every script saves PDF, SVG and PNG. Install Arial to match the paper's fonts, or use an available font. Add `--native-figures` when using modified data or changing the layout. The study-design diagram and screenshots are included as image files.
 
 | Figure | Paper content | Code or asset |
 | --- | --- | --- |

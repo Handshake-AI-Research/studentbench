@@ -1,6 +1,6 @@
 # Fixed paper illustrations
 
-These illustrations are source artwork or interface screenshots, not computed statistical results. Their paper numbers and source hashes are listed in `index.json`.
+The study-design diagram and interface screenshots are listed below. `index.json` records their file hashes.
 
 | Figure | File |
 | --- | --- |
@@ -11,4 +11,4 @@ These illustrations are source artwork or interface screenshots, not computed st
 | 10: Human tutoring illustration | `figure_10_human_tutoring.pdf` |
 | 11: Expert comparison interface | `figure_11_expert_comparison_interface.png` |
 
-Figures 9–10 retain the redactions in the paper. The study team confirmed that consent covers these illustrations. They are not inputs to any statistical analysis.
+Figures 9–10 are published with participant consent and the redactions used in the paper.
