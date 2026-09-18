@@ -6,11 +6,19 @@
 
 **[Download the human study data on Hugging Face](https://huggingface.co/datasets/handshake-ai-research/studentbench)** · [Project](https://studentbench.org) · [Find a figure](figures/README.md) · [Find a table](tables/README.md)
 
-Code for **StudentBench: AI and human tutoring yield equivalent GRE learning gains**.
+Code and data for **StudentBench: AI and human tutoring yield equivalent GRE learning gains**.
 
-We open-source the analysis code and release all de-identified human study data used to produce the paper's results. The data are available on Hugging Face, including assessment responses, tutoring conversations, lesson plans, practice attempts, student surveys, expert reviews and cost records. Privacy-sensitive geography is provided as aggregate statistics sufficient to reproduce the reported subgroup tests.
+We release the de-identified human study data and code to reproduce every figure, table and numerical result in the paper. The data include assessment responses, tutoring conversations, lesson plans, practice attempts, student surveys, expert reviews and cost records.
 
-Every reported empirical result is reproducible from this release. The repository covers all 24 figures and 16 tables, with numbered scripts and checks against the paper.
+| Data | Count |
+|---|---|
+| Students in the learning study | **2,383** |
+| GRE study sessions | **2,469**: 2,139 with AI tutors, 140 with human tutors and 190 without tutoring |
+| Messages in AI tutoring conversations | **176,614**: 123,968 from tutors and 52,646 from students |
+| Practice problems answered during AI tutoring | **45,463** |
+| Pairwise lesson-plan and practice-problem reviews | **2,028**, completed by **51 expert tutors** |
+
+Student interaction counts cover the main learning study. The release also includes supplementary studies, prompt pilots and excluded sessions.
 
 ![Figure 1. Learning gains across GRE domains and tutoring conditions, pooled AI–human equivalence, and adjusted gains by AI tutor.](docs/figure_01.png)
 
@@ -18,13 +26,12 @@ Every reported empirical result is reproducible from this release. The repositor
 
 ## What the paper studies
 
-- **Student learning:** 2,383 participants completed 2,469 GRE Quantitative or Verbal sessions with an AI tutor, a human tutor, or no tutor. Each session included a 27-question pretest, the assigned intervention, and a 27-question posttest.
-- **Expert evaluation:** 51 expert tutors completed 2,028 pairwise reviews of lesson plans and practice problems. Five criteria assess lesson planning and three assess practice-problem design.
-- **How tutoring works:** the analyses cover learning across seven GRE domains, starting proficiency, tutor reply times, student engagement, practice, conversation indicators, cost, prompt comparisons and robustness checks.
+- **Student learning:** a 27-question pretest, a one-hour intervention with an AI tutor, a human tutor or no tutor, and a 27-question posttest. The study covers seven GRE domains and 13 AI configurations per section.
+- **Expert evaluation:** tutors compare lesson plans and practice problems using five lesson-planning criteria and three practice-problem criteria.
 
-## Reproduce the paper
+## Reproduce the results
 
-Python 3.12 or newer is recommended. No model API calls, database access, or private participant mappings are required.
+Use Python 3.12 or newer. The analyses run locally; no model API keys are needed.
 
 Figure rendering needs [Cairo](https://cairosvg.org/documentation/): install it with `brew install cairo libffi` on macOS, or `sudo apt-get install libcairo2 python3-dev libffi-dev` on Ubuntu/Debian.
 
@@ -41,25 +48,19 @@ python reproduce.py --data data --output results --verify
 
 Already downloaded the data? Point `--data` to the folder containing `studentbench_overall_parameters.json`.
 
-The analyses recompute results from the released observations. Published estimates in `verification/` are used only to check the outputs. Interrupted runs save progress; rerunning the same command resumes matching extraction and model checkpoints.
-
-The [release verification receipt](verification/release_receipt.json) records the clean-checkout run, dataset revision and paper snapshot. Replacing all statistical figures with the regenerated outputs produced a byte-identical paper PDF in the verification environment.
-
-Outputs are organized as:
+This runs every analysis and generates all figures and tables. `--verify` checks the results against the paper. If a run is interrupted, rerun the same command to resume.
 
 ```text
 results/
-  analysis/       # Computed estimates and intermediate observations, by analysis
-  figures/        # Numbered PDF, SVG and PNG figures
-  tables/         # Numbered CSV, Markdown and LaTeX tables
-  verification/   # Comparisons against the paper
-  progress.jsonl  # Completed stages and partial progress
-  run.json        # Completion status
+  analysis/       # Results by analysis
+  figures/        # PDF, SVG and PNG
+  tables/         # CSV, Markdown and LaTeX
+  verification/   # Checks against the paper
 ```
 
 ## Start from a figure or table
 
-File names follow the paper's numbering and terminology. Each figure file contains its plotting code; shared analysis modules calculate the estimates.
+Figures and tables use the same numbering as the paper.
 
 | Main figure | Plotting code | Analysis |
 |---|---|---|
@@ -79,13 +80,13 @@ python reproduce.py --data data --output results --only learning
 python figures/figure_01_learning.py --analysis-root results/analysis --output results/figures
 ```
 
-Use `python reproduce.py --help` for the other analysis stages. The study-design diagram and interface screenshots are fixed illustrations, not statistical plots. Protocol tables record fixed study definitions; empirical tables are calculated from the data.
+Use `python reproduce.py --help` to choose other analyses. The study-design diagram and screenshots are included as image files; four tables contain study definitions.
 
-## Reproducibility conventions
+## Analysis notes
 
-Learning gain is the change in percentage of questions answered correctly; unanswered questions receive no credit. Adjusted estimates, uncertainty intervals, equivalence margins, multiplicity corrections and sensitivity analyses follow the paper. Random seeds are fixed for bootstrap calculations.
+Learning gain is the change in percentage of questions answered correctly. Unanswered questions receive no credit. Package versions and bootstrap seeds are fixed.
 
-The repository pins scientific package versions. Final manuscript typography requires Arial; systems without it use native plots with available fonts. Use `--native-figures` to redraw plots with modified data or layouts. Fonts and PDF metadata can differ across systems without changing results. Student-level geography and private identity mappings are not needed: the public release contains sufficient subgroup statistics and anonymous repeat-session membership lists.
+Install Arial to match the paper's figure fonts. Otherwise, plots use an available font. Add `--native-figures` when using modified data or changing the layout.
 
 ## Citation
 
@@ -100,4 +101,4 @@ The repository pins scientific package versions. Final manuscript typography req
 
 ## License
 
-Code: [MIT](LICENSE). Dataset: [CC BY 4.0](https://huggingface.co/datasets/handshake-ai-research/studentbench/blob/main/LICENSE), the same data license used by VIALS. Please cite the paper when using the data or analyses.
+Code: [MIT](LICENSE). Dataset: [CC BY 4.0](https://huggingface.co/datasets/handshake-ai-research/studentbench/blob/main/LICENSE). Please cite the paper when using the data or analyses.

@@ -1,6 +1,6 @@
 # Tables in the paper
 
-Each script writes CSV, Markdown and LaTeX. Empirical tables read fresh analysis outputs; fixed protocol tables are identified in their source descriptions.
+Each script writes CSV, Markdown and LaTeX. Four tables contain study definitions; the rest are calculated from the analysis outputs.
 
 | Table | Code |
 |---|---|
