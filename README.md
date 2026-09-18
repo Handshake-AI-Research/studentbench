@@ -31,7 +31,9 @@ Student interaction counts cover the main learning study. The release also inclu
 
 ## Reproduce the results
 
-Use Python 3.12 or newer. The analyses run locally; no model API keys are needed.
+The commands below compute the reported results and produce the individual figures and tables. They do not generate the manuscript PDF.
+
+Use Python 3.12 or newer. The setup commands below are for macOS and Linux. No model API keys are needed.
 
 Figure rendering needs [Cairo](https://cairosvg.org/documentation/): install it with `brew install cairo libffi` on macOS, or `sudo apt-get install libcairo2 python3-dev libffi-dev` on Ubuntu/Debian.
 
@@ -46,15 +48,15 @@ python download_data.py --output data
 python reproduce.py --data data --output results --verify
 ```
 
-Already downloaded the data? Point `--data` to the folder containing `studentbench_overall_parameters.json`.
+`download_data.py` downloads the public dataset version used for the paper (about 820 MB). If you already have it, set `--data` to the downloaded folder containing `studentbench_overall_parameters.json`.
 
-This runs every analysis and generates all figures and tables. `--verify` checks the results against the paper. If a run is interrupted, rerun the same command to resume.
+`--verify` compares your computed results with the reference numbers included in this repository. All inputs come from this repository and the public dataset. If a run is interrupted, rerun the same command to resume.
 
 ```text
 results/
   analysis/       # Results by analysis
-  figures/        # PDF, SVG and PNG
-  tables/         # CSV, Markdown and LaTeX
+  figures/        # Individual figures: PDF, SVG and PNG
+  tables/         # Individual tables: CSV, Markdown and LaTeX
   verification/   # Checks against the paper
 ```
 
