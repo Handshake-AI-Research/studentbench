@@ -10,6 +10,8 @@ Code for **StudentBench: AI and human tutoring yield equivalent GRE learning gai
 
 We open-source the analysis code and release all de-identified human study data used to produce the paper's results. The data are available on Hugging Face, including assessment responses, tutoring conversations, lesson plans, practice attempts, student surveys, expert reviews and cost records. Privacy-sensitive geography is provided as aggregate statistics sufficient to reproduce the reported subgroup tests.
 
+Every reported empirical result is reproducible from this release. The repository covers all 24 figures and 16 tables, with numbered scripts and checks against the paper.
+
 ![Figure 1. Learning gains across GRE domains and tutoring conditions, pooled AI–human equivalence, and adjusted gains by AI tutor.](docs/figure_01.png)
 
 *Figure 1 from the paper. Diamonds in panel A identify the highest observed AI mean in each domain and can represent different tutors. Panel C adjusts for pretest score and GRE section.*
@@ -40,6 +42,8 @@ python reproduce.py --data data --output results --verify
 Already downloaded the data? Point `--data` to the folder containing `studentbench_overall_parameters.json`.
 
 The analyses recompute results from the released observations. Published estimates in `verification/` are used only to check the outputs. Interrupted runs save progress; rerunning the same command resumes matching extraction and model checkpoints.
+
+The [release verification receipt](verification/release_receipt.json) records the clean-checkout run, dataset revision and paper snapshot. Replacing all statistical figures with the regenerated outputs produced a byte-identical paper PDF in the verification environment.
 
 Outputs are organized as:
 
