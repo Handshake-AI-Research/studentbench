@@ -1,0 +1,3507 @@
+{
+  "figure": 1,
+  "name": "figure_01_learning",
+  "purpose": "Typography, canvas, legend and provider artwork only. Generated scientific marks and text remain authoritative.",
+  "canvas": {
+    "width": "750.19301pt",
+    "height": "654.558006pt",
+    "viewBox": "0 0 750.19301 654.558006"
+  },
+  "pdf_canvas": [
+    0.0,
+    0.0,
+    750.6580200195312,
+    655.0416259765625
+  ],
+  "text_groups": [
+    {
+      "id": "text_1",
+      "text_sha256": "43dd78ac4ee1acd32fc74067824852bdb7ca4741d8521011739acd900d44d817",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_1"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(60.899988 288.202975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(62.234051 301.21135)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_2",
+      "text_sha256": "75abd6fef1d60ee562cdaca6bb961be0d85b9fd89330e5228864c7e0f5957836",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_2"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(169.717778 288.349225)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(161.374965 301.3576)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_3",
+      "text_sha256": "bf6ad9a65c1e1f6d761c72c1adca5755b0f293b66b646bde08fe593faf7cb075",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_3"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(268.526817 288.202975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 10
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(260.515879 301.070725)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_4",
+      "text_sha256": "10a36f2dc6ad2183ef3e1efcf8748d784027d1b0f88324f4f2d8ceac38fc4c67",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_4"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(373.659294 288.202975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 7
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(359.656794 301.21135)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_5",
+      "text_sha256": "0f9ebb3d23b592de28a853efaafeebc2a155df385e4dc47b4622b063ad5b83e7",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_5"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(468.127708 288.202975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(461.457396 300.895225)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 11
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(458.797708 313.762975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_6",
+      "text_sha256": "ba64892fc4fc881b038d6bfa78d30f5fa075e1097cf0577a9efbcd6c89c72e9f",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_6"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(581.619872 288.202975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 4
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(563.606747 300.895225)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 10
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(557.938622 313.762975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_7",
+      "text_sha256": "d1a65e9ae417d30217650d400649f9dafd2d21c7314fe3a495617eef44adaf45",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_7"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(669.412349 288.202975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 7
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(650.740162 301.03585)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(653.742974 313.9036)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 14
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_8",
+      "text_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_8"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "249.283709",
+              "transform": "rotate(-0 40.345469 249.283709)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 1
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_9",
+      "text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_9"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "199.057203",
+              "transform": "rotate(-0 40.345469 199.057203)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 2
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_10",
+      "text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_10"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "148.830697",
+              "transform": "rotate(-0 40.345469 148.830697)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 2
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_11",
+      "text_sha256": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_11"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "98.604191",
+              "transform": "rotate(-0 40.345469 98.604191)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 2
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_12",
+      "text_sha256": "1d615c11c9e28360d877ad30dc3dfad8516ed245e069df51c890e06a69326860",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_12"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 13.05608117px; font-family: Arial; text-anchor: middle",
+              "x": "15.578828",
+              "y": "168.3936",
+              "transform": "rotate(-90 15.578828 168.3936)",
+              "font-family": "Arial",
+              "font-size": "13.05608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 40
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_13",
+      "text_sha256": "c08865d7e4f0d4d8024e683364c15ad8573d11cfb70a2a300e467f8ad63db7bc",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_13"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(59.00000000 147.07943100)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 16
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(87.45799973 158.36412922)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_14",
+      "text_sha256": "a884731b179d0818a728e60d686c1aa7c26923716b44cf2121a8a09b2dc2e9d5",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_14"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(156.16438530 113.84858600)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 16
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(184.62238403 125.13328422)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_15",
+      "text_sha256": "a4271bd0afbc52dbe260e76202c5dfad016f7c1129e257ab72955f840f285acb",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_15"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(265.82202328 103.09823500)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 11
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(281.41611374 114.38293322)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_16",
+      "text_sha256": "6fe045abd7cc8ba79c4d80547f487d05d874ae59ecd2c5a42219fb8968a2712f",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_16"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(394.41369742 100.35811300)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 9
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(403.21730418 109.64281122)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": null
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_17",
+      "text_sha256": "fde3158bd9f023735ade94a8214e7ea14576a082bd2bb9030f6ee44486af3e13",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_17"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(502.36476134 114.08197800)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(503.79395503 125.36667522)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_18",
+      "text_sha256": "f27ca9c99712b6402adff5294eed81d7f8857a7f85f1bc9defa93ed3cb367814",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_18"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(571.20297025 144.69872400)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(574.73102595 155.98342122)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_19",
+      "text_sha256": "851f0c2d90cc0ae20703a6da3bca6a79e2a23761fa422ae9bb96a6b18e65b8a8",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_19"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(656.56153999 154.22506900)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 14
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; fill: #4b5964",
+              "transform": "translate(678.26841283 165.50976722)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 6
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_20",
+      "text_sha256": "28056f7c0db8a86e2bfacdbc166ba1847aed66dedc090b5333526ce34bf5e72e",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_20"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 11.5px; font-family: Arial; text-anchor: start",
+              "x": "60.233788",
+              "y": "79.93906",
+              "transform": "rotate(-0 60.233788 79.93906)",
+              "font-family": "Arial",
+              "font-size": "11.5px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 12
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_21",
+      "text_sha256": "420dd61c98f3b7a86b01bda323a6f79095e6b89d8cc048dc3441c1f1be25dbc5",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_21"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 11.5px; font-family: Arial; text-anchor: start",
+              "x": "455.806036",
+              "y": "79.93906",
+              "transform": "rotate(-0 455.806036 79.93906)",
+              "font-family": "Arial",
+              "font-size": "11.5px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 6
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_22",
+      "text_sha256": "808b584491001bee182e4b8cdd1855487f149b96bc038ad1a0adbb695f63622e",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_22"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 9.5px; font-family: Arial; text-anchor: start",
+              "x": "79.645469",
+              "y": "42.8517",
+              "transform": "rotate(-0 79.645469 42.8517)",
+              "font-family": "Arial",
+              "font-size": "9.5px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 9
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_23",
+      "text_sha256": "b0b49b4fb7eed816a4c0adff8f5d051b9ece7834a17e1946076c5d7f0b2f378b",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_23"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 9.5px; font-family: Arial; text-anchor: start",
+              "x": "79.645469",
+              "y": "56.289747",
+              "transform": "rotate(-0 79.645469 56.289747)",
+              "font-family": "Arial",
+              "font-size": "9.5px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 11
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_24",
+      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_24"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 9.5px; font-family: Arial; text-anchor: start",
+              "x": "189.655469",
+              "y": "42.8517",
+              "transform": "rotate(-0 189.655469 42.8517)",
+              "font-family": "Arial",
+              "font-size": "9.5px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_25",
+      "text_sha256": "73e65e2d324389084cbb82818806e0c37e53dd03e039a9ef15e16fe24903cfde",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_25"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 9.5px; font-family: Arial; text-anchor: start",
+              "x": "189.655469",
+              "y": "56.289747",
+              "transform": "rotate(-0 189.655469 56.289747)",
+              "font-family": "Arial",
+              "font-size": "9.5px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 34
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_26",
+      "text_sha256": "6d989cff57cf1050bad0ac2b6339e058bd9ec2d5302fab97cae902cb7a6b2924",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_26"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(69.571099 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 9
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(73.068911 637.873225)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 7
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_27",
+      "text_sha256": "d3b693832fcfc0ae7ca6b9834fe76717b2cb3c1d225c34a10634b118aa24f312",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_27"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(143.275269 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 11
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(161.104644 637.873225)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_28",
+      "text_sha256": "fae6800ec08dfb8afc5b0fca07de6ea944eba7e04b9707ae257a8ee3a96f149c",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_28"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(239.646314 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n      "
+            },
+            "children": []
+          },
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; fill: #38444c",
+              "transform": "translate(244.136939 637.873225)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_29",
+      "text_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_29"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "613.886287",
+              "transform": "rotate(-0 40.345469 613.886287)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 1
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_30",
+      "text_sha256": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_30"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "576.540787",
+              "transform": "rotate(-0 40.345469 576.540787)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 1
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_31",
+      "text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_31"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "539.195287",
+              "transform": "rotate(-0 40.345469 539.195287)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 2
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_32",
+      "text_sha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_32"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "501.849787",
+              "transform": "rotate(-0 40.345469 501.849787)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 2
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_33",
+      "text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_33"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: end; fill: #38444c",
+              "x": "40.345469",
+              "y": "464.504287",
+              "transform": "rotate(-0 40.345469 464.504287)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 2
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_34",
+      "text_sha256": "0091d8fcd7f0de57411968affb9ab3bd3b0187588fb5c2e5a2222dd6e4d7c81d",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_34"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 13.05608117px; font-family: Arial; text-anchor: middle",
+              "x": "15.578828",
+              "y": "534.9006",
+              "transform": "rotate(-90 15.578828 534.9006)",
+              "font-family": "Arial",
+              "font-size": "13.05608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 33
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_35",
+      "text_sha256": "34bb7aff4d9162a3786c527c6494ebf518a7acea7366504be8d41879604f298a",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_35"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 12px; font-family: Arial; text-anchor: middle; fill: #ffffff",
+              "x": "94.922974",
+              "y": "560.718696",
+              "transform": "rotate(-0 94.922974 560.718696)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 4
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_36",
+      "text_sha256": "dabbeb4a53d00ef7cb490aa9dbb72291e285128eba198151a954287e42afa927",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_36"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 12px; font-family: Arial; text-anchor: middle; fill: #ffffff",
+              "x": "177.955269",
+              "y": "554.41163",
+              "transform": "rotate(-0 177.955269 554.41163)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 4
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_37",
+      "text_sha256": "772444a00dc21159ebfb1b6487a9a00977d12a9da5bdcb06a872f0faa9cc0a95",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_37"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 12px; font-family: Arial; text-anchor: middle; fill: #ffffff",
+              "x": "260.987564",
+              "y": "586.276462",
+              "transform": "rotate(-0 260.987564 586.276462)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_38",
+      "text_sha256": "9244104092dbc68bf5e53f051edbb2e3ac50bb3e009874d825736761831d1695",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_38"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "84.946791",
+              "y": "431.963631",
+              "transform": "rotate(-0 84.946791 431.963631)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_39",
+      "text_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_39"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "179.904669",
+              "y": "431.963631",
+              "transform": "rotate(-0 179.904669 431.963631)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 1
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_40",
+      "text_sha256": "5c7cfebfb2b6fb6c764b78a7b3efd1e5ae7df4418c870a6a1bb4fd6f7cdfd7b1",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_40"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "274.862547",
+              "y": "431.963631",
+              "transform": "rotate(-0 274.862547 431.963631)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 5
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_41",
+      "text_sha256": "a19a1584344c1f3783bff51524a5a4b86f2cc09356c9dbfb6af9cd236e314362",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_41"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "476.213469",
+              "y": "625.180975",
+              "transform": "rotate(-0 476.213469 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_42",
+      "text_sha256": "f1e42019aecc858ffbcca7fddec511b761b474916fde37b1a6ff321a9b459330",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_42"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "567.185469",
+              "y": "625.180975",
+              "transform": "rotate(-0 567.185469 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 4
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_43",
+      "text_sha256": "c72ae9676454d7cc0014583a9d0a2e28553d5c62f087c7562b5307ebd1cc84c8",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_43"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "658.157469",
+              "y": "625.180975",
+              "transform": "rotate(-0 658.157469 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 4
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_44",
+      "text_sha256": "7f9909b6e71ff4f50722bddc87d5b64ec1d21313150a114cf0e3bf55b943014d",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_44"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 12px; font-family: Arial; text-anchor: middle; fill: #38444c",
+              "x": "721.837869",
+              "y": "625.180975",
+              "transform": "rotate(-0 721.837869 625.180975)",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 4
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_45",
+      "text_sha256": "8fd332191616c183516950675d35c8264076217d624a23d476b82a9e08a334b2",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_45"
+        },
+        "text": {
+          "whitespace": "\n     "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 13.05608117px; font-family: Arial; text-anchor: middle",
+              "x": "599.025669",
+              "y": "644.937616",
+              "transform": "rotate(-0 599.025669 644.937616)",
+              "font-family": "Arial",
+              "font-size": "13.05608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 33
+            },
+            "tail": {
+              "whitespace": "\n    "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_46",
+      "text_sha256": "31f3f61b0908c902867ce144bbbdc6057c1ff18352302c4f591c1795a5c581e8",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_46"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "387.567154",
+              "transform": "rotate(-0 469.213469 387.567154)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 17
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_47",
+      "text_sha256": "9af156d27c67ca731390ffb6819ff80dac3bad7c991731a3617888c9cb6ee7a1",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_47"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "404.378007",
+              "transform": "rotate(-0 469.213469 404.378007)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 17
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_48",
+      "text_sha256": "d8a577d4f7967e0db7cb99a7838f5fb0bd10d43e6df5718c7e7dfb60dbfc6cbe",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_48"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "421.191673",
+              "transform": "rotate(-0 469.213469 421.191673)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 21
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_49",
+      "text_sha256": "8282f0cb619a618baa9d8ffe4c93bcd9c5857b05153d9d5a2458e3bfe539e947",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_49"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "438.005338",
+              "transform": "rotate(-0 469.213469 438.005338)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 22
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_50",
+      "text_sha256": "0f6273244241a46f5af79bfe3e8a27bd24c899a5f60e80b39612acdd874a8162",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_50"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "454.819004",
+              "transform": "rotate(-0 469.213469 454.819004)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 22
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_51",
+      "text_sha256": "d1ce5cfab91c6c6a1a26c611a10ad8e4023dd8ecf8d03869312146ac7d81e9d0",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_51"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "471.635482",
+              "transform": "rotate(-0 469.213469 471.635482)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 14
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_52",
+      "text_sha256": "b0d50c567ec4c2cd89168a00d579cf2b074732ea531c280a84ba26bff30c79a5",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_52"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "488.446335",
+              "transform": "rotate(-0 469.213469 488.446335)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 14
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_53",
+      "text_sha256": "6597e8f26e6c32767b634d8de75c0a23f18e8e6a8a3484a3a90af353c4378bb5",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_53"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "505.26",
+              "transform": "rotate(-0 469.213469 505.26)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 18
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_54",
+      "text_sha256": "a0259fdcd39aacb4f48f223d7d44699fb9be7d67b951143fe340e16f6c4c9a85",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_54"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "522.073666",
+              "transform": "rotate(-0 469.213469 522.073666)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 18
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_55",
+      "text_sha256": "eb0cc5415178107f9d7cc15d5e7e3bac224e2a2dac11adc4a5b8b06723c1c6ad",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_55"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "538.890144",
+              "transform": "rotate(-0 469.213469 538.890144)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 13
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_56",
+      "text_sha256": "9076d68af6da095405b98e0d9539b6ca5b5f665885228e1fcc6f60a07a28839e",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_56"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "555.646153",
+              "transform": "rotate(-0 469.213469 555.646153)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 15
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_57",
+      "text_sha256": "70d71387ac6ca21f4a03345064a0c642a6cedb6156d2f96c67b59a3c9e093fd9",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_57"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "572.514662",
+              "transform": "rotate(-0 469.213469 572.514662)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 22
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_58",
+      "text_sha256": "b0b49b4fb7eed816a4c0adff8f5d051b9ece7834a17e1946076c5d7f0b2f378b",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_58"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #7f2a21",
+              "x": "469.213469",
+              "y": "589.273484",
+              "transform": "rotate(-0 469.213469 589.273484)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 11
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_59",
+      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_59"
+        },
+        "text": {
+          "whitespace": "\n      "
+        },
+        "tail": {
+          "whitespace": "\n    "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "469.213469",
+              "y": "606.087149",
+              "transform": "rotate(-0 469.213469 606.087149)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 8
+            },
+            "tail": {
+              "whitespace": "\n     "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_60",
+      "text_sha256": "7ed8f0f3b707956d9fb1e889e11153e0aa0a854983081d262fbe5eede32da7ca",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_60"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "386.615123",
+              "transform": "rotate(-0 727.978479 386.615123)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_61",
+      "text_sha256": "79d6eaa2676189eb927f2e16a70091474078e2117c3fc607d35cdc6b591ef355",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_61"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "403.428789",
+              "transform": "rotate(-0 727.978479 403.428789)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_62",
+      "text_sha256": "bc52dd634277c4a34a2d6210994a9a5e2ab6d33bb4a3a8963410e00ca6c15a02",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_62"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "420.242454",
+              "transform": "rotate(-0 727.978479 420.242454)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_63",
+      "text_sha256": "8cd2510271575d8430c05368315a87b9c4784c7389a47496080c1e615a2a00b6",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_63"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "437.05612",
+              "transform": "rotate(-0 727.978479 437.05612)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_64",
+      "text_sha256": "3068430da9e4b7a674184035643d9e19af3dc7483e31cc03b35f75268401df77",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_64"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "453.869785",
+              "transform": "rotate(-0 727.978479 453.869785)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_65",
+      "text_sha256": "c75de23d89df36ba921287616ee8edb4c986e328a78e033e57c1e5e2b59c838e",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_65"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "470.683451",
+              "transform": "rotate(-0 727.978479 470.683451)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_66",
+      "text_sha256": "bb668ca95563216088b98a62557fa1e26802563f3919ac78ae30533bb9ed422c",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_66"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "487.497116",
+              "transform": "rotate(-0 727.978479 487.497116)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_67",
+      "text_sha256": "ff2ccb6ba423d356bd549ed4bfb76e96976a0dcde05a09996a1cdb9f83422ec4",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_67"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "504.310782",
+              "transform": "rotate(-0 727.978479 504.310782)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_68",
+      "text_sha256": "bb668ca95563216088b98a62557fa1e26802563f3919ac78ae30533bb9ed422c",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_68"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "521.124447",
+              "transform": "rotate(-0 727.978479 521.124447)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_69",
+      "text_sha256": "620c9c332101a5bae955c66ae72268fbcd3972766179522c8deede6a249addb7",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_69"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "537.938113",
+              "transform": "rotate(-0 727.978479 537.938113)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_70",
+      "text_sha256": "bb668ca95563216088b98a62557fa1e26802563f3919ac78ae30533bb9ed422c",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_70"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "554.751778",
+              "transform": "rotate(-0 727.978479 554.751778)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_71",
+      "text_sha256": "80c3cd40fa35f9088b8741bd8be6153de05f661cfeeb4625ffbf5f4a6c3c02c4",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_71"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "571.565443",
+              "transform": "rotate(-0 727.978479 571.565443)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_72",
+      "text_sha256": "dbae772db29058a88f9bd830e957c695347c41b6162a7eb9a9ea13def34be56b",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_72"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "588.379109",
+              "transform": "rotate(-0 727.978479 588.379109)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_73",
+      "text_sha256": "2397346b45823e070f6fc72ac94c0a999d234c472479f0e26b30cdf5942db854",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_73"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end; fill: #4b5964",
+              "x": "747.0",
+              "y": "605.192774",
+              "transform": "rotate(-0 727.978479 605.192774)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 3
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_74",
+      "text_sha256": "1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_74"
+        },
+        "text": {
+          "whitespace": "\n    "
+        },
+        "tail": {
+          "whitespace": "\n   "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: end",
+              "x": "747.0",
+              "y": "369.81612",
+              "transform": "rotate(-0 727.978479 369.81612)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 1
+            },
+            "tail": {
+              "whitespace": "\n   "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_75",
+      "text_sha256": "9225f4235f0a77ecde549c5bbd19b8a0889fbbf46f61a6aa4d0357ca109d107e",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_75"
+        },
+        "text": {
+          "whitespace": "\n   "
+        },
+        "tail": {
+          "whitespace": "\n  "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 14px; font-family: Arial; text-anchor: start",
+              "x": "47.345469",
+              "y": "18.119531",
+              "transform": "rotate(-0 47.345469 18.119531)",
+              "font-family": "Arial",
+              "font-size": "14px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 49
+            },
+            "tail": {
+              "whitespace": "\n  "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_76",
+      "text_sha256": "e64367092f697f883987d7ac4d1698755338a5109d21d61c992be39668276fe3",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_76"
+        },
+        "text": {
+          "whitespace": "\n   "
+        },
+        "tail": {
+          "whitespace": "\n  "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 14px; font-family: Arial; text-anchor: start",
+              "x": "47.345469",
+              "y": "366.726319",
+              "transform": "rotate(-0 47.345469 366.726319)",
+              "font-family": "Arial",
+              "font-size": "14px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 33
+            },
+            "tail": {
+              "whitespace": "\n  "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_77",
+      "text_sha256": "0caec45795bc5053d410becaecf852b50ff09477b5d42d5177ab3245a259fe9f",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_77"
+        },
+        "text": {
+          "whitespace": "\n   "
+        },
+        "tail": {
+          "whitespace": "\n  "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 11.05608117px; font-family: Arial; text-anchor: start; fill: #087ca7",
+              "x": "47.345469",
+              "y": "382.938722",
+              "transform": "rotate(-0 47.345469 382.938722)",
+              "font-family": "Arial",
+              "font-size": "11.05608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 40
+            },
+            "tail": {
+              "whitespace": "\n  "
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_78",
+      "text_sha256": "86020d67c429776f3b4aeebf0787844b963dec5bb4615fbb1473d0ac942af2d1",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_78"
+        },
+        "text": {
+          "whitespace": "\n   "
+        },
+        "tail": {
+          "whitespace": "\n  "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-size: 10.55608117px; font-family: Arial; text-anchor: middle; fill: #4b5964",
+              "x": "177.565389",
+              "y": "447.7032",
+              "transform": "rotate(-0 177.565389 447.7032)",
+              "font-family": "Arial",
+              "font-size": "10.55608117px",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 0
+            },
+            "tail": {
+              "whitespace": "\n  "
+            },
+            "children": [
+              {
+                "tag": "tspan",
+                "attributes": {
+                  "x": "95.40526519651456",
+                  "text-anchor": "start",
+                  "style": "text-anchor: start"
+                },
+                "text": {
+                  "characters": 25
+                },
+                "tail": {
+                  "characters": 0
+                },
+                "children": []
+              },
+              {
+                "tag": "tspan",
+                "attributes": {
+                  "x": "227.14495176808282",
+                  "text-anchor": "start",
+                  "style": "text-anchor: start; font-style: italic",
+                  "font-style": "italic"
+                },
+                "text": {
+                  "characters": 1
+                },
+                "tail": {
+                  "characters": 0
+                },
+                "children": []
+              },
+              {
+                "tag": "tspan",
+                "attributes": {
+                  "x": "233.0157409416344",
+                  "text-anchor": "start",
+                  "style": "text-anchor: start"
+                },
+                "text": {
+                  "characters": 5
+                },
+                "tail": {
+                  "characters": 0
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "text_79",
+      "text_sha256": "c5b6cf2b1357c7f8d5aaae267f2293199dd7c9468dff8b40c8192ae502fb88e0",
+      "template": {
+        "tag": "g",
+        "attributes": {
+          "id": "text_79"
+        },
+        "text": {
+          "whitespace": "\n   "
+        },
+        "tail": {
+          "whitespace": "\n "
+        },
+        "children": [
+          {
+            "tag": "text",
+            "attributes": {
+              "style": "font-weight: 700; font-size: 14px; font-family: Arial; text-anchor: start",
+              "x": "347.553069",
+              "y": "366.909131",
+              "transform": "rotate(-0 347.553069 366.909131)",
+              "font-family": "Arial",
+              "font-size": "14px",
+              "font-weight": "700",
+              "{http://www.w3.org/XML/1998/namespace}space": "preserve"
+            },
+            "text": {
+              "characters": 23
+            },
+            "tail": {
+              "whitespace": "\n  "
+            },
+            "children": []
+          }
+        ]
+      }
+    }
+  ],
+  "legends": [
+    {
+      "id": "legend_1",
+      "transform": null,
+      "marker_positions": [
+        {
+          "x": "61.595469",
+          "y": "39.5267"
+        },
+        {
+          "x": "61.595469",
+          "y": "52.964747"
+        },
+        {
+          "x": "171.605469",
+          "y": "39.5267"
+        },
+        {
+          "x": "171.605469",
+          "y": "52.964747"
+        }
+      ]
+    }
+  ],
+  "provider_marks": [
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_22_provider_22",
+        "transform": "translate(48.80188700 139.90512400) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_24_provider_24",
+        "transform": "translate(145.96598230 106.67465900) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "openai",
+      "attributes": {
+        "id": "provider_26_provider_26",
+        "transform": "translate(255.62051928 96.02224900) scale(0.097590361) translate(-22 -23)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "moonshot",
+      "attributes": {
+        "id": "provider_28_provider_28",
+        "transform": "translate(384.37687217 93.18637800) scale(0.324000000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "anthropic",
+      "attributes": {
+        "id": "provider_29_provider_29",
+        "transform": "translate(492.16564734 108.18189100) scale(0.231428571) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "anthropic",
+      "attributes": {
+        "id": "provider_31_provider_31",
+        "transform": "translate(561.00200425 138.79907500) scale(0.231428571) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_33_provider_33",
+        "transform": "translate(646.36090999 147.05356100) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "anthropic",
+      "attributes": {
+        "id": "provider_64_provider_64",
+        "transform": "translate(377.79008020 381.66626200) scale(0.231428571) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "openai",
+      "attributes": {
+        "id": "provider_65_provider_65",
+        "transform": "translate(369.59370783 397.30349600) scale(0.097590361) translate(-22 -23)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_66_provider_66",
+        "transform": "translate(359.01505644 414.01840500) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_67_provider_67",
+        "transform": "translate(353.74634847 430.83090500) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_68_provider_68",
+        "transform": "translate(349.05416588 447.64731100) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "anthropic",
+      "attributes": {
+        "id": "provider_69_provider_69",
+        "transform": "translate(394.26605261 465.73657500) scale(0.231428571) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "openai",
+      "attributes": {
+        "id": "provider_70_provider_70",
+        "transform": "translate(389.52872857 481.36990200) scale(0.097590361) translate(-22 -23)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_71_provider_71",
+        "transform": "translate(361.36076784 498.08871800) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    },
+    {
+      "brand": "openai",
+      "attributes": {
+        "id": "provider_72_provider_72",
+        "transform": "translate(374.98359379 514.99879300) scale(0.097590361) translate(-22 -23)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "anthropic",
+      "attributes": {
+        "id": "provider_73_provider_73",
+        "transform": "translate(395.38405535 532.99046600) scale(0.231428571) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "moonshot",
+      "attributes": {
+        "id": "provider_74_provider_74",
+        "transform": "translate(383.88778125 548.47151500) scale(0.324000000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "none"
+      }
+    },
+    {
+      "brand": "google",
+      "attributes": {
+        "id": "provider_75_provider_75",
+        "transform": "translate(353.74634847 565.34260900) scale(0.337500000) translate(-0 -0)",
+        "color": "#141413",
+        "fill": "black"
+      }
+    }
+  ],
+  "background_size": [
+    750.19301,
+    654.558006
+  ],
+  "align_legend_lines": true,
+  "label_backgrounds": [],
+  "frontier_badge_transforms": {},
+  "inset_label_guides": []
+}

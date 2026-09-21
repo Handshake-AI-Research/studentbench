@@ -1,0 +1,101 @@
+{
+  "paper_source_commit": "a4b7cb621b5105a8b92a2530220410c0b9128d32",
+  "tables": [
+    {
+      "script_id": 1,
+      "label": "tab:baseline",
+      "paper_number": "C.1",
+      "script": "tables/table_01_baseline.py"
+    },
+    {
+      "script_id": 2,
+      "label": "tab:data_quality",
+      "paper_number": "C.2",
+      "script": "tables/table_02_data_quality.py"
+    },
+    {
+      "script_id": 3,
+      "label": "tab:models",
+      "paper_number": "C.3",
+      "script": "tables/table_03_tutor_configurations.py"
+    },
+    {
+      "script_id": 4,
+      "label": "tab:prompt_instruction_scope",
+      "paper_number": "C.4",
+      "script": "tables/table_04_prompt_guidance.py"
+    },
+    {
+      "script_id": 5,
+      "label": "tab:pvalue_conventions",
+      "paper_number": "D.1",
+      "script": "tables/table_05_pvalue_conventions.py"
+    },
+    {
+      "script_id": 6,
+      "label": "tab:adjusted_contrasts",
+      "paper_number": "D.2",
+      "script": "tables/table_06_adjusted_contrasts.py"
+    },
+    {
+      "script_id": 7,
+      "label": "tab:tutor_dependence",
+      "paper_number": "D.3",
+      "script": "tables/table_07_tutor_dependence.py"
+    },
+    {
+      "script_id": 8,
+      "label": "tab:repeat_participation",
+      "paper_number": "D.4",
+      "script": "tables/table_08_repeat_participation.py"
+    },
+    {
+      "script_id": 9,
+      "label": "tab:combined_learning_complete",
+      "paper_number": "E.1",
+      "script": "tables/table_09_combined_learning.py"
+    },
+    {
+      "script_id": 10,
+      "label": "tab:domain_learning_contrasts",
+      "paper_number": "E.2",
+      "script": "tables/table_10_domain_contrasts.py"
+    },
+    {
+      "script_id": 11,
+      "label": "tab:model_process_gain",
+      "paper_number": "F.1",
+      "script": "tables/table_11_resource_gain_correlations.py"
+    },
+    {
+      "script_id": 12,
+      "label": "tab:dialogue_practice_learning",
+      "paper_number": "F.2",
+      "script": "tables/table_12_engagement_practice.py"
+    },
+    {
+      "script_id": 13,
+      "label": "tab:rubric",
+      "paper_number": "G.1",
+      "script": "tables/table_13_rubric_criteria.py"
+    },
+    {
+      "script_id": 14,
+      "label": "tab:reviewer_dependence",
+      "paper_number": "G.2",
+      "script": "tables/table_14_reviewer_dependence.py"
+    },
+    {
+      "script_id": 15,
+      "label": "tab:conversation_rules",
+      "paper_number": "H.1",
+      "script": "tables/table_15_conversation_rules.py"
+    },
+    {
+      "script_id": 16,
+      "label": "tab:prompt_pilot_cells",
+      "paper_number": "I.1",
+      "script": "tables/table_16_prompt_pilot.py"
+    }
+  ]
+}

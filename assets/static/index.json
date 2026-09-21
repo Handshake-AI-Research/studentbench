@@ -1,0 +1,46 @@
+[
+  {
+    "figure": 2,
+    "path": "figure_02_study_design.pdf",
+    "sha256": "4f3869e8618a67adda809a6212f4aa09380ee1b5b18ca8a72da17ad46a9fdd41",
+    "kind": "fixed_artwork_or_interface_screenshot",
+    "status": "included"
+  },
+  {
+    "figure": 7,
+    "path": "figure_07_tutoring_interface.png",
+    "sha256": "6bd8f63fdd65d4d59538b253f3a513cda9c2f77e798d4da53b1ec5db5b165b06",
+    "kind": "fixed_artwork_or_interface_screenshot",
+    "status": "included"
+  },
+  {
+    "figure": 8,
+    "path": "figure_08_assessment_interface.png",
+    "sha256": "718666a8c7fc1c8f945c76fac17a1840f035c3860e807ad132865526e31527cf",
+    "kind": "fixed_artwork_or_interface_screenshot",
+    "status": "included"
+  },
+  {
+    "figure": 9,
+    "path": "figure_09_human_pretest.pdf",
+    "sha256": "b2dc5f5ea5e8309dc12b6d27bfa2b08b60e2c093dbafe28449b60032b2da347d",
+    "kind": "fixed_redacted_human_tutoring_illustration",
+    "status": "included",
+    "release_basis": "User confirmed existing redacted images are covered by consent."
+  },
+  {
+    "figure": 10,
+    "path": "figure_10_human_tutoring.pdf",
+    "sha256": "fa2716d9326b7a235e11f12b3304c7006261b2e824f4ecf751beb806141d6dbb",
+    "kind": "fixed_redacted_human_tutoring_illustration",
+    "status": "included",
+    "release_basis": "User confirmed existing redacted images are covered by consent."
+  },
+  {
+    "figure": 11,
+    "path": "figure_11_expert_comparison_interface.png",
+    "sha256": "a6c386c4c44addf1ef8d004e1c30c2744c0686a11affb512e168cf335fe6a6f3",
+    "kind": "fixed_artwork_or_interface_screenshot",
+    "status": "included"
+  }
+]

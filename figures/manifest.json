@@ -1,0 +1,447 @@
+{
+  "paper_commit": "a4b7cb621b5105a8b92a2530220410c0b9128d32",
+  "figures": [
+    {
+      "number": 1,
+      "label": "fig:learning",
+      "title": "Learning gains",
+      "asset": "figures/primary_effects.pdf",
+      "asset_sha256": "35878cc46810579d27a3ad16cce3484ae10c0e8da1cf7d9a5b5d9b5bbcd4eb14",
+      "analysis_inputs": [
+        "learning/ancova_adjusted_arm_outcomes.csv",
+        "learning/learning_figure_data.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_01_learning.py",
+      "outputs": [
+        "figure_01_learning.pdf",
+        "figure_01_learning.svg",
+        "figure_01_learning.png"
+      ],
+      "paper_number": "1"
+    },
+    {
+      "number": 2,
+      "label": "fig:placeholder",
+      "title": "Study design",
+      "asset": "figures/exp-design.pdf",
+      "asset_sha256": "4f3869e8618a67adda809a6212f4aa09380ee1b5b18ca8a72da17ad46a9fdd41",
+      "analysis_inputs": [],
+      "kind": "fixed_artwork",
+      "script": null,
+      "static_asset": "assets/static/figure_02_study_design.pdf",
+      "static_sha256": "4f3869e8618a67adda809a6212f4aa09380ee1b5b18ca8a72da17ad46a9fdd41",
+      "outputs": [
+        "figure_02_study_design.pdf"
+      ],
+      "paper_number": "2",
+      "asset_note": "Local threshold wording correction to match the unchanged eligibility protocol."
+    },
+    {
+      "number": 3,
+      "label": "fig:rubrics",
+      "title": "Teaching evaluations",
+      "asset": "figures/revised_teaching/main_teaching_capabilities.pdf",
+      "asset_sha256": "87e221836cf95ab8af3ae017be77a10a911b3374a27014f865907bbd3cfb54b0",
+      "analysis_inputs": [
+        "teaching/conversation_strategy_prevalence.csv",
+        "teaching/fit_planning_combined.json",
+        "teaching/fit_practice_combined.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_03_teaching_evaluations.py",
+      "outputs": [
+        "figure_03_teaching_evaluations.pdf",
+        "figure_03_teaching_evaluations.svg",
+        "figure_03_teaching_evaluations.png"
+      ],
+      "paper_number": "3"
+    },
+    {
+      "number": 4,
+      "label": "fig:frontiers",
+      "title": "Cost, reply time and engagement",
+      "asset": "figures/revised_efficiency/main_resource_comparisons.pdf",
+      "asset_sha256": "8d6eae96383e50792c3d9b2368cee03a92411158eaddbd302074b9f6b6072607",
+      "analysis_inputs": [
+        "costs/latency_student_engagement_by_arm_scope.csv",
+        "costs/pareto_figure_data.json",
+        "costs/statistics.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_04_resources.py",
+      "outputs": [
+        "figure_04_resources.pdf",
+        "figure_04_resources.svg",
+        "figure_04_resources.png"
+      ],
+      "paper_number": "4"
+    },
+    {
+      "number": 5,
+      "label": "fig:cost",
+      "title": "Cost per learning gain",
+      "asset": "figures/revised_efficiency/main_cost_per_gain.pdf",
+      "asset_sha256": "442d7433f259fb17784e712aa4d7cbe6cdbcf11de164cd2231e2115ad25741c7",
+      "analysis_inputs": [
+        "costs/cost_efficiency_by_arm_scope.csv",
+        "costs/individual_model_equivalence.jsonl"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_05_cost_per_gain.py",
+      "outputs": [
+        "figure_05_cost_per_gain.pdf",
+        "figure_05_cost_per_gain.svg",
+        "figure_05_cost_per_gain.png"
+      ],
+      "paper_number": "5"
+    },
+    {
+      "number": 6,
+      "label": "fig:dialogue_practice",
+      "title": "Reply time, student engagement and first-attempt correct practice",
+      "asset": "figures/dialogue_practice_learning.pdf",
+      "asset_sha256": "d9eeb87e6af8e3028b4e802bdd93df3fe062ee5c15baf906ae2ce75848abd303",
+      "analysis_inputs": [
+        "engagement/first_attempt_practice_learning.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_06_engagement_practice.py",
+      "outputs": [
+        "figure_06_engagement_practice.pdf",
+        "figure_06_engagement_practice.svg",
+        "figure_06_engagement_practice.png"
+      ],
+      "paper_number": "6"
+    },
+    {
+      "number": 7,
+      "label": "fig:interface_tutoring",
+      "title": "AI tutoring interface",
+      "asset": "figures/source_interfaces/tutoring.png",
+      "asset_sha256": "6bd8f63fdd65d4d59538b253f3a513cda9c2f77e798d4da53b1ec5db5b165b06",
+      "analysis_inputs": [],
+      "kind": "fixed_artwork",
+      "script": null,
+      "static_asset": "assets/static/figure_07_tutoring_interface.png",
+      "static_sha256": "6bd8f63fdd65d4d59538b253f3a513cda9c2f77e798d4da53b1ec5db5b165b06",
+      "outputs": [
+        "figure_07_tutoring_interface.png"
+      ],
+      "paper_number": "C.1"
+    },
+    {
+      "number": 8,
+      "label": "fig:interface_pretest",
+      "title": "Assessment interface",
+      "asset": "figures/source_interfaces/pretest.png",
+      "asset_sha256": "718666a8c7fc1c8f945c76fac17a1840f035c3860e807ad132865526e31527cf",
+      "analysis_inputs": [],
+      "kind": "fixed_artwork",
+      "script": null,
+      "static_asset": "assets/static/figure_08_assessment_interface.png",
+      "static_sha256": "718666a8c7fc1c8f945c76fac17a1840f035c3860e807ad132865526e31527cf",
+      "outputs": [
+        "figure_08_assessment_interface.png"
+      ],
+      "paper_number": "C.2"
+    },
+    {
+      "number": 9,
+      "label": "fig:interface_human_pretest",
+      "title": "Human tutor pre-test review",
+      "asset": "figures/source_interfaces/human_pretest.pdf",
+      "asset_sha256": "b2dc5f5ea5e8309dc12b6d27bfa2b08b60e2c093dbafe28449b60032b2da347d",
+      "analysis_inputs": [],
+      "kind": "fixed_artwork",
+      "script": null,
+      "static_asset": "assets/static/figure_09_human_pretest.pdf",
+      "static_sha256": "b2dc5f5ea5e8309dc12b6d27bfa2b08b60e2c093dbafe28449b60032b2da347d",
+      "outputs": [
+        "figure_09_human_pretest.pdf"
+      ],
+      "paper_number": "C.3"
+    },
+    {
+      "number": 10,
+      "label": "fig:interface_human_concepts",
+      "title": "Human tutoring video call",
+      "asset": "figures/source_interfaces/human_concepts.pdf",
+      "asset_sha256": "fa2716d9326b7a235e11f12b3304c7006261b2e824f4ecf751beb806141d6dbb",
+      "analysis_inputs": [],
+      "kind": "fixed_artwork",
+      "script": null,
+      "static_asset": "assets/static/figure_10_human_tutoring.pdf",
+      "static_sha256": "fa2716d9326b7a235e11f12b3304c7006261b2e824f4ecf751beb806141d6dbb",
+      "outputs": [
+        "figure_10_human_tutoring.pdf"
+      ],
+      "paper_number": "C.4"
+    },
+    {
+      "number": 11,
+      "label": "fig:interface_lesson_comparison",
+      "title": "Expert comparison interface",
+      "asset": "figures/source_interfaces/lesson_comparison.png",
+      "asset_sha256": "a6c386c4c44addf1ef8d004e1c30c2744c0686a11affb512e168cf335fe6a6f3",
+      "analysis_inputs": [],
+      "kind": "fixed_artwork",
+      "script": null,
+      "static_asset": "assets/static/figure_11_expert_comparison_interface.png",
+      "static_sha256": "a6c386c4c44addf1ef8d004e1c30c2744c0686a11affb512e168cf335fe6a6f3",
+      "outputs": [
+        "figure_11_expert_comparison_interface.png"
+      ],
+      "paper_number": "C.5"
+    },
+    {
+      "number": 12,
+      "label": "fig:learning_section_grid",
+      "title": "Observed and adjusted section leaderboards",
+      "asset": "figures/revised_learning/raw_adjusted_section_leaderboards.pdf",
+      "asset_sha256": "f149cbc9899e74c5be4ca5d4bb7d5b0d7e6630b65be2c59cff35f04cb20aa437",
+      "analysis_inputs": [
+        "learning/ancova_adjusted_arm_outcomes.csv",
+        "learning/raw_arm_outcomes.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_12_section_learning.py",
+      "outputs": [
+        "figure_12_section_learning.pdf",
+        "figure_12_section_learning.svg",
+        "figure_12_section_learning.png"
+      ],
+      "paper_number": "E.1"
+    },
+    {
+      "number": 13,
+      "label": "fig:domain_learning_grid",
+      "title": "Seven domain leaderboards",
+      "asset": "figures/revised_learning/seven_domain_leaderboards.pdf",
+      "asset_sha256": "996f981d981649cc8ff92b5d0b9c15cf4b0c171494689fde5a18eb1108961dc5",
+      "analysis_inputs": [
+        "learning/domain_arm_outcomes.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_13_domain_learning.py",
+      "outputs": [
+        "figure_13_domain_learning.pdf",
+        "figure_13_domain_learning.svg",
+        "figure_13_domain_learning.png"
+      ],
+      "paper_number": "E.2"
+    },
+    {
+      "number": 14,
+      "label": "fig:quartile_learning",
+      "title": "Starting proficiency contrasts",
+      "asset": "figures/revised_learning/quartile_learning_contrasts.pdf",
+      "asset_sha256": "b9218d49ebfe671a5fa3a5be97f5e2b7b9f6e41490ad8467a04548343f7b58a1",
+      "analysis_inputs": [
+        "learning/proficiency_quartile_ai_control_contrasts.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_14_starting_proficiency.py",
+      "outputs": [
+        "figure_14_starting_proficiency.pdf",
+        "figure_14_starting_proficiency.svg",
+        "figure_14_starting_proficiency.png"
+      ],
+      "paper_number": "E.3"
+    },
+    {
+      "number": 15,
+      "label": "fig:model_domain_proficiency",
+      "title": "Quantitative domain and proficiency",
+      "asset": "figures/revised_learning/quant_model_domain_proficiency.pdf",
+      "asset_sha256": "e83caf18eb8973e791ac7b1da69ae9d1446387570c6bd22e13991727e236b316",
+      "analysis_inputs": [
+        "learning/topic_proficiency_configuration_effects.csv",
+        "learning/topic_proficiency_configuration_omnibus.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_15_domain_proficiency.py",
+      "outputs": [
+        "figure_15_domain_proficiency.pdf",
+        "figure_15_domain_proficiency.svg",
+        "figure_15_domain_proficiency.png"
+      ],
+      "paper_number": "E.4"
+    },
+    {
+      "number": 16,
+      "label": "fig:cost_per_gain_sections",
+      "title": "Section cost per gain",
+      "asset": "figures/revised_efficiency/cost_per_gain_sections.pdf",
+      "asset_sha256": "59e6bb269fc9febf724f88ca733324a1826d4a426eee944f6db1b137ff795171",
+      "analysis_inputs": [
+        "costs/cost_efficiency_by_arm_scope.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_16_section_cost_per_gain.py",
+      "outputs": [
+        "figure_16_section_cost_per_gain.pdf",
+        "figure_16_section_cost_per_gain.svg",
+        "figure_16_section_cost_per_gain.png"
+      ],
+      "paper_number": "F.1"
+    },
+    {
+      "number": 17,
+      "label": "fig:section_resource_frontiers",
+      "title": "Section resource frontiers",
+      "asset": "figures/revised_efficiency/section_frontiers.pdf",
+      "asset_sha256": "8bc632cde54a017dd955183fb682ee6fd0252ac20473f15df484c671fbaa8c71",
+      "analysis_inputs": [
+        "costs/pareto_figure_data.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_17_section_frontiers.py",
+      "outputs": [
+        "figure_17_section_frontiers.pdf",
+        "figure_17_section_frontiers.svg",
+        "figure_17_section_frontiers.png"
+      ],
+      "paper_number": "F.2"
+    },
+    {
+      "number": 18,
+      "label": "fig:latency_engagement_sections",
+      "title": "Section reply time and engagement",
+      "asset": "figures/revised_efficiency/latency_engagement_sections.pdf",
+      "asset_sha256": "225353c9334745f9516f8bb527ca0cee95da5c8c2248101e7c165b476906ebd5",
+      "analysis_inputs": [
+        "costs/latency_student_engagement_by_arm_scope.csv",
+        "costs/statistics.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_18_reply_time_engagement.py",
+      "outputs": [
+        "figure_18_reply_time_engagement.pdf",
+        "figure_18_reply_time_engagement.svg",
+        "figure_18_reply_time_engagement.png"
+      ],
+      "paper_number": "F.3"
+    },
+    {
+      "number": 19,
+      "label": "fig:activity_combined",
+      "title": "Tutoring experience",
+      "asset": "figures/revised_efficiency/activity_combined.pdf",
+      "asset_sha256": "7a5e971b8928c49a5686829ba3c26d7c5826b85352df49edee5e3ddb55e727d9",
+      "analysis_inputs": [
+        "costs/interaction_fingerprint_by_arm_scope.csv",
+        "costs/statistics.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_19_tutoring_experience.py",
+      "outputs": [
+        "figure_19_tutoring_experience.pdf",
+        "figure_19_tutoring_experience.svg",
+        "figure_19_tutoring_experience.png"
+      ],
+      "paper_number": "F.4"
+    },
+    {
+      "number": 20,
+      "label": "fig:criterion_bt_grid",
+      "title": "Criteria and overall expert preference",
+      "asset": "figures/revised_teaching/criteria_and_overall.pdf",
+      "asset_sha256": "4680404d96461dc3fd4d4bfeb86d07aa21dbff3457f9ea07111d3226a5ef76db",
+      "analysis_inputs": [
+        "teaching/fit_answer_key_accuracy.json",
+        "teaching/fit_common8_combined.json",
+        "teaching/fit_common8_quant.json",
+        "teaching/fit_common8_verbal.json",
+        "teaching/fit_concept_grouping.json",
+        "teaching/fit_concept_prioritization.json",
+        "teaching/fit_difficulty_appropriateness.json",
+        "teaching/fit_practice_alignment.json",
+        "teaching/fit_relevant_concepts.json",
+        "teaching/fit_test_taking_strategies.json",
+        "teaching/fit_time_allocation.json"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_20_expert_criteria.py",
+      "outputs": [
+        "figure_20_expert_criteria.pdf",
+        "figure_20_expert_criteria.svg",
+        "figure_20_expert_criteria.png"
+      ],
+      "paper_number": "G.1"
+    },
+    {
+      "number": 21,
+      "label": "fig:conversation",
+      "title": "Combined conversation indicators",
+      "asset": "figures/conversation_combined.pdf",
+      "asset_sha256": "7c8c5f8d4d1eb2487f08ede003487923bc6fbd9bdd159423284674b8c1a2503f",
+      "analysis_inputs": [
+        "teaching/conversation_strategy_prevalence.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_21_conversation_indicators.py",
+      "outputs": [
+        "figure_21_conversation_indicators.pdf",
+        "figure_21_conversation_indicators.svg",
+        "figure_21_conversation_indicators.png"
+      ],
+      "paper_number": "H.1"
+    },
+    {
+      "number": 22,
+      "label": "fig:conversation_by_section",
+      "title": "Section conversation indicators",
+      "asset": "figures/revised_teaching/conversation_by_section.pdf",
+      "asset_sha256": "07fa7ab3fb0f5602aeefedd19f5572659fdcdfad48e4069afa42d9718d2a576d",
+      "analysis_inputs": [
+        "teaching/conversation_strategy_prevalence.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_22_conversation_by_section.py",
+      "outputs": [
+        "figure_22_conversation_by_section.pdf",
+        "figure_22_conversation_by_section.svg",
+        "figure_22_conversation_by_section.png"
+      ],
+      "paper_number": "H.2"
+    },
+    {
+      "number": 23,
+      "label": "fig:flags",
+      "title": "Student disputed answers",
+      "asset": "figures/revised_teaching/problem_flags_three_scopes.pdf",
+      "asset_sha256": "3e7a6e63abb5fad753bc8ba91e3b798a1d7a16f9c1f59243715823e4ba2658e1",
+      "analysis_inputs": [
+        "teaching/flag_rates.csv"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_23_disputed_answers.py",
+      "outputs": [
+        "figure_23_disputed_answers.pdf",
+        "figure_23_disputed_answers.svg",
+        "figure_23_disputed_answers.png"
+      ],
+      "paper_number": "H.3"
+    },
+    {
+      "number": 24,
+      "label": "fig:prompt_comparison",
+      "title": "Minimal versus expanded prompts",
+      "asset": "figures/extended/figure_s5_quant_max_prompt.pdf",
+      "asset_sha256": "b9e1a58f7b3edfae95cc736c735f97f3bc5b5ace2f55930ac8454cd683c7fd99",
+      "analysis_inputs": [
+        "prompts/prompt_comparison_results.jsonl"
+      ],
+      "kind": "statistical",
+      "script": "figures/figure_24_prompt_comparisons.py",
+      "outputs": [
+        "figure_24_prompt_comparisons.pdf",
+        "figure_24_prompt_comparisons.svg",
+        "figure_24_prompt_comparisons.png"
+      ],
+      "paper_number": "I.1"
+    }
+  ],
+  "scientific_reference_commit": "8f7cc53f0d6d5ff4e58aa00e968e9daada0ae08d"
+}
