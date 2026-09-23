@@ -1,8 +1,9 @@
-"""Table I.1: all five exploratory prompt-pilot settings."""
+"""Table G.1: all five exploratory prompt-pilot settings."""
 
 from pathlib import Path
 import pandas as pd
-from studentbench.table_output import render, cli
+from tables.output import render
+from studentbench.table_output import cli, read_json
 
 
 def run(data_dir, analysis_dir, output_dir):
@@ -38,8 +39,15 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_16_prompt_pilot",
         rows,
-        "Table I.1. Five prompt-pilot settings",
+        "Table G.1. Five prompt-pilot settings",
         "Fresh mean percentage-point gain and session counts; pilot sessions are separate from the main study.",
+        values={
+            "plan_tutor_mismatches": next(
+                r["plan_tutor_identity_mismatches"]
+                for r in read_json(Path(analysis_dir) / "prompts/summary.json")["coverage"]
+                if r["dataset"] == "pilot"
+            )
+        },
     )
 
 

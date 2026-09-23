@@ -58,7 +58,7 @@ MODEL_LABELS = {
     "sonnet-5-low": "Sonnet 5 (low)",
     "sonnet-section-specific-low": "Sonnet (section-specific)",
     "human": "Human tutor",
-    "control": "No tutor",
+    "control": "Control",
 }
 
 
@@ -275,7 +275,7 @@ def finish_publication(svg_path, native=False):
     """
     import hashlib
     import xml.etree.ElementTree as ET
-    from .publication_style import apply, scientific_geometry
+    from .publication_style import apply, scientific_geometry, finish_paper_pdf
     from .journal import write_json as write_receipt
 
     svg_path = Path(svg_path)
@@ -324,6 +324,13 @@ def finish_publication(svg_path, native=False):
     after = scientific_geometry(ET.parse(svg_path).getroot(), annotation_ids)
     if before != after:
         raise ValueError(f"{svg_path.stem}: final styling changed scientific geometry")
+    if not native and has_arial:
+        presentation = finish_paper_pdf(svg_path)
+        if presentation:
+            result["presentation"] = presentation
+            result["geometry_check_scope"] = (
+                "Typography; final presentation separately verifies retained marks."
+            )
     result.update(
         figure=svg_path.stem,
         profile_sha256=profile_hash,

@@ -1,7 +1,8 @@
-"""Table C.3: recorded tutor endpoints and analyzed assignments."""
+"""Table A.3: recorded tutor endpoints and analyzed assignments."""
 
 from pathlib import Path
-from studentbench.table_output import render, cli
+from tables.output import render
+from studentbench.table_output import cli
 from studentbench.data import Dataset, load_sessions
 from studentbench.plotting import display_label
 
@@ -32,7 +33,7 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_03_tutor_configurations",
         rows,
-        "Table C.3. Tutor configurations and assignments",
+        "Table A.3. Tutor configurations and assignments",
         "Endpoints are recorded study settings; assignment counts are recomputed.",
     )
 

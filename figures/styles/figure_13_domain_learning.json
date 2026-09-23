@@ -682,7 +682,7 @@
     },
     {
       "id": "text_19",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -707,7 +707,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -1941,7 +1941,7 @@
     },
     {
       "id": "text_53",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -1966,7 +1966,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -3237,7 +3237,7 @@
     },
     {
       "id": "text_88",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -3262,7 +3262,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -4496,7 +4496,7 @@
     },
     {
       "id": "text_122",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -4521,7 +4521,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -5755,7 +5755,7 @@
     },
     {
       "id": "text_156",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -5780,7 +5780,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -7014,7 +7014,7 @@
     },
     {
       "id": "text_190",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -7039,7 +7039,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -8310,7 +8310,7 @@
     },
     {
       "id": "text_225",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -8335,7 +8335,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n     "
@@ -9015,7 +9015,7 @@
     },
     {
       "id": "text_244",
-      "text_sha256": "749f04b8d2ba93dd932cea897c56be31130f9885bc4b3068de0ee29035c7d0fc",
+      "text_sha256": "14c1266b3c15dbdf57125595e6bf738cd5944cd088fcfda8f2c3b8a323159b82",
       "template": {
         "tag": "g",
         "attributes": {
@@ -9055,7 +9055,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 42
+              "characters": 41
             },
             "tail": {
               "whitespace": "\n    "
@@ -9269,7 +9269,7 @@
     },
     {
       "id": "text_250",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -9294,7 +9294,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n    "
@@ -10139,5 +10139,6 @@
   ],
   "label_backgrounds": [],
   "frontier_badge_transforms": {},
-  "inset_label_guides": []
+  "inset_label_guides": [],
+  "pdf_document_id": "[<C3B6C2A8C392C2B9C3985AC2B15642C2><0B69903D5A217125C26522FC6B91D3C6>]"
 }

@@ -26,9 +26,7 @@ def learning_color(row):
     return (
         HUMAN_RED
         if row["kind"] == "human"
-        else PARETO_SLATE
-        if row["kind"] == "control"
-        else COLORS[row["family"]]
+        else PARETO_SLATE if row["kind"] == "control" else COLORS[row["family"]]
     )
 
 
@@ -48,7 +46,7 @@ def learning_name(row, compact=False):
     if row["kind"] == "human":
         return "Human tutor"
     if row["kind"] == "control":
-        return "No tutor"
+        return "Control"
     return display_label(row["arm_label"])
 
 
@@ -168,9 +166,9 @@ def learning_rank_panel(ax, rows, *, compact=False, intervals=True, domain=False
     )
     ax.set_xlabel(
         (
-            "Observed gain (percentage points)"
+            "Learning gain (percentage points)"
             if domain
-            else "Adjusted gain (percentage points)"
+            else "Learning gain (percentage points)"
         ),
         fontsize=11.5 if compact else fs,
         labelpad=9 if compact else 7,
@@ -273,7 +271,7 @@ def learning_domains_panel(ax, domains):
     ax.set_ylim(-5.5, 36)
     ax.set_yticks([0, 10, 20, 30])
     ax.tick_params(axis="y", labelsize=12)
-    ax.set_ylabel("Observed domain gain (percentage points)", fontsize=11.5, labelpad=9)
+    ax.set_ylabel("Mean learning gain (percentage points)", fontsize=11.5, labelpad=9)
     learning_axes_style(ax, "y")
     ax.spines[["top", "right"]].set_visible(False)
     ax.tick_params(axis="both", width=0.8, length=3.5, pad=3.5)
@@ -292,7 +290,7 @@ def learning_domains_panel(ax, domains):
             markeredgecolor="white",
             markeredgewidth=1.05,
         )
-        for (k, c, m, l), n in zip(styles, ["AI pooled", "Human tutor", "No tutor"])
+        for (k, c, m, l), n in zip(styles, ["AI pooled", "Human tutor", "Control"])
     ]
     handles.append(
         Line2D(
@@ -361,14 +359,14 @@ def learning_pooled_panel(ax, data):
         [
             f"AI pooled\nn={data['pooled_combined']['ai']['n']:,}",
             f"Human tutor\nn={data['pooled_combined']['human']['n']}",
-            f"No tutor\nn={data['pooled_combined']['control']['n']}",
+            f"Control\nn={data['pooled_combined']['control']['n']}",
         ],
         fontsize=12,
     )
     ax.set_ylim(0, 20)
     ax.set_yticks([0, 5, 10, 15, 20])
     ax.tick_params(axis="y", labelsize=12)
-    ax.set_ylabel("Observed gain (percentage points)", fontsize=11.5, labelpad=9)
+    ax.set_ylabel("Learning gain (percentage points)", fontsize=11.5, labelpad=9)
     learning_axes_style(ax, "y")
     ax.spines[["top", "right"]].set_visible(False)
     ax.tick_params(axis="both", width=0.8, length=3.5, pad=3.5)
@@ -407,50 +405,17 @@ def render(analysis_root, output_dir):
     fig.text(
         0.075,
         0.446,
-        "Pooled AI and human gains are equivalent",
+        "Adjusted AI − human (percentage points)",
         fontsize=9.5,
         color=PARETO_BLUE,
         va="top",
     )
-    tost = data["combined_tost"]
-    ins = fig.add_axes([0.09, 0.385, 0.31, 0.045])
-    margin = tost["equivalence_margin_pp"]
-    ins.axvspan(-margin, margin, color=PARETO_BLUE, alpha=0.035)
-    ins.axvline(0, color="#aeb8bf", lw=0.7)
-    for edge in [-margin, margin]:
-        ins.axvline(edge, color=PARETO_BLUE, lw=0.75, ls="--")
-    lo = tost["equivalence_ci_low_pp"]
-    hi = tost["equivalence_ci_high_pp"]
-    v = tost["ai_minus_human_raw_gap_pp"]
-    ins.errorbar(
-        v,
-        0,
-        xerr=[[v - lo], [hi - v]],
-        fmt="o",
-        color=PARETO_BLUE,
-        ms=5,
-        markeredgecolor="white",
-        markeredgewidth=1.05,
-        capsize=3,
-        lw=1.5,
-    )
-    ins.set_xlim(-5.2, 5.2)
-    ins.set_ylim(-1, 1)
-    ins.set_yticks([])
-    ins.set_xticks([-margin, 0, margin], [f"−{margin:.2f}", "0", f"+{margin:.2f}"])
-    ins.tick_params(labelsize=9)
-    ins.spines[:].set_visible(False)
-    ins.tick_params(
-        color="#aeb8bf", labelcolor="#38444c", width=0.8, length=3.5, pad=3.5
-    )
-    fig.text(
-        0.242,
-        0.343,
-        f"AI − human: 90% CI; TOST p={tost['p_tost']:.3f}".replace("=0.", "=."),
-        ha="center",
-        fontsize=9,
-        color=PARETO_TEXT,
-    )
+    # Reserve the original inset's panel index. Its explicit SVG marks below
+    # preserve the author's layout and use the newly calculated comparison.
+    inset = fig.add_axes([0.09, 0.3925, 0.31, 0.03])
+    inset.set_yticks([])
+    inset.set_xticks([-1, 0, 1], ["left", "zero", "right"])
+    fig.text(0.242, 0.335, "Inset interval", ha="center")
     rank = fig.add_axes([0.625, 0.11, 0.315, 0.34])
     learning_rank_panel(rank, data["combined_adjusted"], compact=True)
     fig.text(
@@ -461,7 +426,149 @@ def render(analysis_root, output_dir):
         weight="bold",
         va="top",
     )
+    # Retain the published page margin independently of label font metrics.
+    from matplotlib.transforms import Bbox
+
+    original_bounds = fig.get_tightbbox
+
+    def bounds(*args, **kwargs):
+        box = original_bounds(*args, **kwargs)
+        return Bbox.from_extents(box.x0 - 0.0071875 / 72, box.y0, box.x1, box.y1)
+
+    fig.get_tightbbox = bounds
     save_figure(fig, output_dir, "figure_01_learning")
+    pooled = json.loads(
+        (Path(analysis_root) / "primary_equivalence/results.json").read_text()
+    )["models"]["adjusted_combined"]
+    add_equivalence_inset(Path(output_dir) / "figure_01_learning.svg", pooled)
+
+
+def add_equivalence_inset(svg_path, row):
+    """Plot the primary CR2 comparison at the paper's fixed inset coordinates."""
+    import xml.etree.ElementTree as ET
+
+    value = row["estimate_pp"]
+    low, high = row["ci90_pp"]
+    assert row["adjusted"] and row["clustering"] == "connected"
+    assert row["n_ai"] == 2139 and row["n_human"] == 140
+    assert all(math.isfinite(v) for v in [value, low, high, row["df"]])
+    assert low < value < high
+    margins = sorted(m["margin_pp"] for m in row["margins"])
+    assert len(margins) == 2 and 0 < margins[0] < margins[1]
+    svg_ns = "http://www.w3.org/2000/svg"
+    group = ET.Element(
+        "{" + svg_ns + "}g", id="adjusted_cluster_aware_human_comparison"
+    )
+
+    def element(tag, **attrs):
+        return ET.SubElement(
+            group,
+            "{" + svg_ns + "}" + tag,
+            {key.replace("_", "-"): str(val) for key, val in attrs.items()},
+        )
+
+    def label(x, y, text, anchor="middle", fill="#38444c", size=10):
+        node = element(
+            "text",
+            x=x,
+            y=y,
+            text_anchor=anchor,
+            fill=fill,
+            font_family="Arial",
+            font_size=size,
+        )
+        node.text = text
+
+    left, right, top, bottom, center = 59.041869, 300.767469, 392, 412, 402
+
+    def xpos(v):
+        return left + (v + 5.2) / 10.4 * (right - left)
+
+    colors = ["#d3e6ef", "#e8ecef"]
+    for margin, color in reversed(list(zip(margins, colors))):
+        element(
+            "rect",
+            x=xpos(-margin),
+            y=top,
+            width=xpos(margin) - xpos(-margin),
+            height=bottom - top,
+            fill=color,
+        )
+        for edge in [-margin, margin]:
+            element(
+                "line",
+                x1=xpos(edge),
+                x2=xpos(edge),
+                y1=top,
+                y2=bottom,
+                stroke="#087ca7" if margin == margins[0] else "#86939d",
+                stroke_width=0.7,
+                stroke_dasharray="3,2",
+            )
+    element(
+        "line",
+        x1=xpos(0),
+        x2=xpos(0),
+        y1=top,
+        y2=bottom,
+        stroke="#aeb8bf",
+        stroke_width=0.7,
+    )
+    element(
+        "line",
+        x1=xpos(low),
+        x2=xpos(high),
+        y1=center,
+        y2=center,
+        stroke="#087ca7",
+        stroke_width=1.7,
+    )
+    for edge in [low, high]:
+        element(
+            "line",
+            x1=xpos(edge),
+            x2=xpos(edge),
+            y1=center - 4,
+            y2=center + 4,
+            stroke="#087ca7",
+            stroke_width=1.3,
+        )
+    element(
+        "circle",
+        cx=xpos(value),
+        cy=center,
+        r=2.8,
+        fill="#087ca7",
+        stroke="white",
+        stroke_width=0.8,
+    )
+    for tick, text in [
+        (-margins[1], f"−{margins[1]:.2f}"),
+        (0, "0"),
+        (margins[1], f"+{margins[1]:.2f}"),
+    ]:
+        label(xpos(tick), 424, text)
+    # Keep both benchmarks explicit without crowding five numeric axis ticks.
+    for x, color, text in [(67, colors[1], "±0.25 SD"), (177, colors[0], "±0.20 SD")]:
+        element(
+            "rect",
+            x=x,
+            y=432,
+            width=11,
+            height=8,
+            fill=color,
+            stroke="#aeb8bf",
+            stroke_width=0.5,
+        )
+        label(x + 16, 440, text, anchor="start")
+    label((left + right) / 2, 453, "90% cluster-aware CI", size=10)
+    root = ET.parse(svg_path).getroot()
+    parents = {child: parent for parent in root.iter() for child in parent}
+    for element in list(root.iter()):
+        if element.get("id") in {"axes_3", "text_78"}:
+            parents[element].remove(element)
+    root.append(group)
+    svg_path.write_bytes(ET.tostring(root))
 
 
 if __name__ == "__main__":

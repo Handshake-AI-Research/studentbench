@@ -1,0 +1,192 @@
+{
+  "paper_commit": "47fa622",
+  "purpose": "Comparison targets only; analysis never reads this file.",
+  "models": {
+    "adjusted_combined": {
+      "estimate_pp": -0.5768983655918922,
+      "se_pp": 0.4577330098756887,
+      "df": 1.5908366678618115,
+      "ci90_pp": [
+        -2.180125133665066,
+        1.0263284024812813
+      ],
+      "ci95_pp": [
+        -3.121123352375572,
+        1.9673266211917877
+      ],
+      "clusters": 2070,
+      "n": 2279,
+      "scope": "combined",
+      "adjusted": true,
+      "clustering": "connected",
+      "n_ai": 2139,
+      "n_human": 140,
+      "n_human_tutors": 13,
+      "margins": [
+        {
+          "margin_pp": 3.2683734915722114,
+          "p_tost": 0.022928556014248813
+        },
+        {
+          "margin_pp": 4.085466864465264,
+          "p_tost": 0.015197703223096399
+        }
+      ]
+    },
+    "adjusted_quant": {
+      "estimate_pp": 0.8767998212299881,
+      "se_pp": 1.3796214991757667,
+      "df": 5.995222330004264,
+      "ci90_pp": [
+        -1.8044361276215395,
+        3.5580357700815157
+      ],
+      "ci95_pp": [
+        -2.4996646007901506,
+        4.253264243250127
+      ],
+      "clusters": 1148,
+      "n": 1200,
+      "scope": "quant",
+      "adjusted": true,
+      "clustering": "connected",
+      "n_ai": 1139,
+      "n_human": 61,
+      "n_human_tutors": 9,
+      "margins": [
+        {
+          "margin_pp": 3.312365189742436,
+          "p_tost": 0.06398876549997552
+        },
+        {
+          "margin_pp": 4.140456487178045,
+          "p_tost": 0.027943626446111945
+        }
+      ]
+    },
+    "adjusted_verbal": {
+      "estimate_pp": -2.1936155335124323,
+      "se_pp": 1.0924323503433193,
+      "df": 6.039619952704984,
+      "ci90_pp": [
+        -4.313917216847575,
+        -0.07331385017729053
+      ],
+      "ci95_pp": [
+        -4.862456304931143,
+        0.47522523790627824
+      ],
+      "clusters": 1009,
+      "n": 1079,
+      "scope": "verbal",
+      "adjusted": true,
+      "clustering": "connected",
+      "n_ai": 1000,
+      "n_human": 79,
+      "n_human_tutors": 9,
+      "margins": [
+        {
+          "margin_pp": 3.115643627265492,
+          "p_tost": 0.21540833242808427
+        },
+        {
+          "margin_pp": 3.894554534081865,
+          "p_tost": 0.08507524675757547
+        }
+      ]
+    },
+    "exclude_repeat_adjusted_combined": {
+      "estimate_pp": -0.052857343563530224,
+      "se_pp": 0.8354008609423652,
+      "df": 7.4394571285955085,
+      "ci90_pp": [
+        -1.6216363745625093,
+        1.5159216874354489
+      ],
+      "ci95_pp": [
+        -2.0048557202486976,
+        1.8991410331216372
+      ],
+      "clusters": 2002,
+      "n": 2107,
+      "scope": "combined",
+      "adjusted": true,
+      "clustering": "connected",
+      "n_ai": 1989,
+      "n_human": 118,
+      "n_human_tutors": 13,
+      "margins": [
+        {
+          "margin_pp": 3.2683734915722114,
+          "p_tost": 0.0028039123238210134
+        },
+        {
+          "margin_pp": 4.085466864465264,
+          "p_tost": 0.0008034276861975358
+        }
+      ]
+    },
+    "exclude_repeat_adjusted_quant": {
+      "estimate_pp": 1.1763890130209105,
+      "se_pp": 1.327133986439765,
+      "df": 5.772802622490333,
+      "ci90_pp": [
+        -1.4207627156194444,
+        3.7735407416612654
+      ],
+      "ci95_pp": [
+        -2.1022243247555408,
+        4.455002350797361
+      ],
+      "clusters": 1072,
+      "n": 1114,
+      "scope": "quant",
+      "adjusted": true,
+      "clustering": "connected",
+      "n_ai": 1063,
+      "n_human": 51,
+      "n_human_tutors": 9,
+      "margins": [
+        {
+          "margin_pp": 3.312365189742436,
+          "p_tost": 0.08028950613787085
+        },
+        {
+          "margin_pp": 4.140456487178045,
+          "p_tost": 0.03434551460931266
+        }
+      ]
+    },
+    "exclude_repeat_adjusted_verbal": {
+      "estimate_pp": -1.4199524574665296,
+      "se_pp": 1.6703792475860273,
+      "df": 5.788666581688133,
+      "ci90_pp": [
+        -4.687146474906415,
+        1.8472415599733558
+      ],
+      "ci95_pp": [
+        -5.543668180932714,
+        2.7037632659996547
+      ],
+      "clusters": 935,
+      "n": 993,
+      "scope": "verbal",
+      "adjusted": true,
+      "clustering": "connected",
+      "n_ai": 926,
+      "n_human": 67,
+      "n_human_tutors": 9,
+      "margins": [
+        {
+          "margin_pp": 3.115643627265492,
+          "p_tost": 0.17528422324147264
+        },
+        {
+          "margin_pp": 3.894554534081865,
+          "p_tost": 0.09537697966906976
+        }
+      ]
+    }
+  }
+}

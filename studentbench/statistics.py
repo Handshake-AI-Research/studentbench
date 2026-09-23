@@ -78,31 +78,9 @@ def _linear_estimate(
     }
 
 
-def _welch_contrast(a: np.ndarray, b: np.ndarray) -> dict[str, float]:
-    estimate = float(a.mean() - b.mean())
-    variance = float(a.var(ddof=1) / len(a) + b.var(ddof=1) / len(b))
-    se = math.sqrt(variance)
-    dof = variance**2 / (
-        (a.var(ddof=1) / len(a)) ** 2 / (len(a) - 1)
-        + (b.var(ddof=1) / len(b)) ** 2 / (len(b) - 1)
-    )
-    t_value = estimate / se
-    critical = float(stats.t.ppf(0.975, dof))
-    return {
-        "estimate_pp": estimate,
-        "se_welch": se,
-        "welch_df": float(dof),
-        "ci_low_pp": estimate - critical * se,
-        "ci_high_pp": estimate + critical * se,
-        "t": t_value,
-        "p_two_sided_welch": float(2.0 * stats.t.sf(abs(t_value), dof)),
-    }
-
-
 def _estimate_outcomes(records: list[dict[str, Any]]) -> dict[str, Any]:
     raw_groups: list[dict[str, Any]] = []
     adjusted_groups: list[dict[str, Any]] = []
-    raw_contrasts: list[dict[str, Any]] = []
     adjusted_contrasts: list[dict[str, Any]] = []
     models: list[dict[str, Any]] = []
 
@@ -138,24 +116,6 @@ def _estimate_outcomes(records: list[dict[str, Any]]) -> dict[str, Any]:
                         2.0 * stats.t.sf(abs(t_value), n - 1)
                     ),
                     "ci_method": "participant-level Student-t 95% CI",
-                }
-            )
-
-        raw_pairs = (
-            ("pooled_ai_minus_control", "ai", "control"),
-            ("human_minus_control", "human", "control"),
-            ("human_minus_pooled_ai", "human", "ai"),
-        )
-        for contrast, left, right in raw_pairs:
-            raw_contrasts.append(
-                {
-                    "scope": scope,
-                    "contrast": contrast,
-                    "left_kind": left,
-                    "right_kind": right,
-                    "n_left": len(arrays[left]),
-                    "n_right": len(arrays[right]),
-                    **_welch_contrast(arrays[left], arrays[right]),
                 }
             )
 
@@ -243,7 +203,6 @@ def _estimate_outcomes(records: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "raw_groups": raw_groups,
         "adjusted_groups": adjusted_groups,
-        "raw_contrasts": raw_contrasts,
         "adjusted_contrasts": adjusted_contrasts,
         "models": models,
     }
@@ -285,30 +244,3 @@ def _welch_tost(
         "equivalence_ci_high_pp": gap + critical * se,
         "equivalent_at_registered_alpha": max(p_lower, p_upper) < alpha,
     }
-
-
-def _equivalence(
-    records: list[dict[str, Any]], parameters: dict[str, Any]
-) -> list[dict[str, Any]]:
-    inference = parameters["statistical_inference"]
-    alpha = float(inference["equivalence_tost_alpha"])
-    margins = inference["equivalence_margins_pooled_sd"]
-    rows: list[dict[str, Any]] = []
-    for scope in ("quant", "verbal"):
-        block = [row for row in records if row["section"] == scope]
-        ai = np.asarray(
-            [row["gain_pp"] for row in block if row["kind"] == "ai"], dtype=float
-        )
-        human = np.asarray(
-            [row["gain_pp"] for row in block if row["kind"] == "human"], dtype=float
-        )
-        for label in ("primary", "sensitivity"):
-            rows.append(
-                {
-                    "scope": scope,
-                    "margin_label": label,
-                    **_welch_tost(ai, human, float(margins[label]), alpha),
-                    "method": "Welch TOST on raw participant gain in percentage points",
-                }
-            )
-    return rows

@@ -1,6 +1,7 @@
-"""Table G.1: fixed study protocol definitions, not estimated outcomes."""
+"""Table E.1: fixed study protocol definitions, not estimated outcomes."""
 
-from studentbench.table_output import render, cli
+from tables.output import render
+from studentbench.table_output import cli
 
 ROWS = [
     {
@@ -47,7 +48,7 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_13_rubric_criteria",
         ROWS,
-        "Table G.1. Eight expert rubric criteria",
+        "Table E.1. Eight expert rubric criteria",
         "Fixed study protocol; these definitions specify the analyses rather than report fitted results.",
     )
 

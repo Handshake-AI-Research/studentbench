@@ -238,7 +238,7 @@
     },
     {
       "id": "text_7",
-      "text_sha256": "0035e8fdb48f4fe57ed7e571f6317dabe2a9beae35d8cec243e5f4cebc5b3577",
+      "text_sha256": "d29c7496297ffcdb1bb812db0afa44e5a4519079b10df60174768a9182a0ee57",
       "template": {
         "tag": "g",
         "attributes": {
@@ -263,7 +263,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 47
+              "characters": 46
             },
             "tail": {
               "whitespace": "\n    "
@@ -683,7 +683,7 @@
     },
     {
       "id": "text_19",
-      "text_sha256": "0035e8fdb48f4fe57ed7e571f6317dabe2a9beae35d8cec243e5f4cebc5b3577",
+      "text_sha256": "d29c7496297ffcdb1bb812db0afa44e5a4519079b10df60174768a9182a0ee57",
       "template": {
         "tag": "g",
         "attributes": {
@@ -708,7 +708,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 47
+              "characters": 46
             },
             "tail": {
               "whitespace": "\n    "
@@ -1018,5 +1018,6 @@
   ],
   "label_backgrounds": [],
   "frontier_badge_transforms": {},
-  "inset_label_guides": []
+  "inset_label_guides": [],
+  "pdf_document_id": "[<C38C4FC3B9C2A5C2A7C3B511C39C5FC3><511E76AE824B8F0B4DB32A4E8B5549C0>]"
 }

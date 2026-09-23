@@ -1,0 +1,2943 @@
+{
+  "paper_commit": "47fa622",
+  "purpose": "Comparison targets transcribed from empirical paper prose; never inputs to estimation.",
+  "checks": [
+    {
+      "id": "study.sessions",
+      "metric": "study.sessions",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 2469
+    },
+    {
+      "id": "study.participant_overlap.unique_people_total",
+      "metric": "study.participant_overlap.unique_people_total",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 2383
+    },
+    {
+      "id": "study.participant_overlap.quant_only_unique_people",
+      "metric": "study.participant_overlap.quant_only_unique_people",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 1205
+    },
+    {
+      "id": "study.participant_overlap.verbal_only_unique_people",
+      "metric": "study.participant_overlap.verbal_only_unique_people",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 1092
+    },
+    {
+      "id": "study.participant_overlap.both_sections_unique_people",
+      "metric": "study.participant_overlap.both_sections_unique_people",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 86
+    },
+    {
+      "id": "study.sessions_quant",
+      "metric": "study.sessions_quant",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 1291
+    },
+    {
+      "id": "study.sessions_verbal",
+      "metric": "study.sessions_verbal",
+      "locations": [
+        "main.tex:20",
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 1178
+    },
+    {
+      "id": "study.human_tutors.quant.tutors",
+      "metric": "study.human_tutors.quant.tutors",
+      "locations": [
+        "appendix_study.tex:5"
+      ],
+      "operation": "equal",
+      "expected": 9
+    },
+    {
+      "id": "study.human_tutors.quant.minimum_students",
+      "metric": "study.human_tutors.quant.minimum_students",
+      "locations": [
+        "appendix_study.tex:5"
+      ],
+      "operation": "equal",
+      "expected": 1
+    },
+    {
+      "id": "study.human_tutors.quant.maximum_students",
+      "metric": "study.human_tutors.quant.maximum_students",
+      "locations": [
+        "appendix_study.tex:5"
+      ],
+      "operation": "equal",
+      "expected": 17
+    },
+    {
+      "id": "study.human_tutors.verbal.tutors",
+      "metric": "study.human_tutors.verbal.tutors",
+      "locations": [
+        "appendix_study.tex:5"
+      ],
+      "operation": "equal",
+      "expected": 9
+    },
+    {
+      "id": "study.human_tutors.verbal.minimum_students",
+      "metric": "study.human_tutors.verbal.minimum_students",
+      "locations": [
+        "appendix_study.tex:5"
+      ],
+      "operation": "equal",
+      "expected": 1
+    },
+    {
+      "id": "study.human_tutors.verbal.maximum_students",
+      "metric": "study.human_tutors.verbal.maximum_students",
+      "locations": [
+        "appendix_study.tex:5"
+      ],
+      "operation": "equal",
+      "expected": 21
+    },
+    {
+      "id": "age.pooled.min_age",
+      "metric": "age.pooled.min_age",
+      "locations": [
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 18
+    },
+    {
+      "id": "age.pooled.max_age",
+      "metric": "age.pooled.max_age",
+      "locations": [
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 67
+    },
+    {
+      "id": "age.pooled.median_age",
+      "metric": "age.pooled.median_age",
+      "locations": [
+        "appendix_study.tex:4"
+      ],
+      "operation": "equal",
+      "expected": 21
+    },
+    {
+      "id": "age.pooled.age_18_24_percent",
+      "metric": "age.pooled.age_18_24_percent",
+      "locations": [
+        "appendix_study.tex:4"
+      ],
+      "operation": "round",
+      "expected": 83.3,
+      "digits": 1
+    },
+    {
+      "id": "study.expert_reviews.reviews",
+      "metric": "study.expert_reviews.reviews",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 2028
+    },
+    {
+      "id": "study.expert_reviews.pretests",
+      "metric": "study.expert_reviews.pretests",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 381
+    },
+    {
+      "id": "study.expert_reviews.main_cohort_pretests",
+      "metric": "study.expert_reviews.main_cohort_pretests",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 340
+    },
+    {
+      "id": "study.expert_reviews.other_pretests",
+      "metric": "study.expert_reviews.other_pretests",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 41
+    },
+    {
+      "id": "study.expert_reviews.reviewers",
+      "metric": "study.expert_reviews.reviewers",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 51
+    },
+    {
+      "id": "study.expert_reviews.reviewers_with_multiple_pretests",
+      "metric": "study.expert_reviews.reviewers_with_multiple_pretests",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 39
+    },
+    {
+      "id": "study.expert_reviews.comparisons",
+      "metric": "study.expert_reviews.comparisons",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 852
+    },
+    {
+      "id": "study.expert_reviews.richer_prompt_quant_pretests",
+      "metric": "study.expert_reviews.richer_prompt_quant_pretests",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 6
+    },
+    {
+      "id": "study.expert_reviews.richer_prompt_quant_reviews",
+      "metric": "study.expert_reviews.richer_prompt_quant_reviews",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 16
+    },
+    {
+      "id": "study.expert_reviews.rubric_ratings",
+      "metric": "study.expert_reviews.rubric_ratings",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 16224
+    },
+    {
+      "id": "study.expert_reviews.planning_ratings",
+      "metric": "study.expert_reviews.planning_ratings",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 10140
+    },
+    {
+      "id": "study.expert_reviews.practice_ratings",
+      "metric": "study.expert_reviews.practice_ratings",
+      "locations": [
+        "main.tex:37",
+        "appendix_materials.tex:20",
+        "appendix_materials.tex:24",
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 6084
+    },
+    {
+      "id": "study.expert_reviews.by_section.quant.reviews",
+      "metric": "study.expert_reviews.by_section.quant.reviews",
+      "locations": [
+        "appendix_materials.tex:24"
+      ],
+      "operation": "equal",
+      "expected": 1136
+    },
+    {
+      "id": "study.expert_reviews.by_section.quant.reviewers",
+      "metric": "study.expert_reviews.by_section.quant.reviewers",
+      "locations": [
+        "appendix_materials.tex:24"
+      ],
+      "operation": "equal",
+      "expected": 39
+    },
+    {
+      "id": "study.expert_reviews.by_section.verbal.reviews",
+      "metric": "study.expert_reviews.by_section.verbal.reviews",
+      "locations": [
+        "appendix_materials.tex:24"
+      ],
+      "operation": "equal",
+      "expected": 892
+    },
+    {
+      "id": "study.expert_reviews.by_section.verbal.reviewers",
+      "metric": "study.expert_reviews.by_section.verbal.reviewers",
+      "locations": [
+        "appendix_materials.tex:24"
+      ],
+      "operation": "equal",
+      "expected": 38
+    },
+    {
+      "id": "rubric.quant_strategy_format_weaknesses",
+      "metric": "rubric.quant_strategy_format_weaknesses",
+      "locations": [
+        "appendix_materials.tex:28"
+      ],
+      "operation": "equal",
+      "expected": 590
+    },
+    {
+      "id": "rubric.quant_strategy_test_taking_strategies",
+      "metric": "rubric.quant_strategy_test_taking_strategies",
+      "locations": [
+        "appendix_materials.tex:28"
+      ],
+      "operation": "equal",
+      "expected": 546
+    },
+    {
+      "id": "study.transcripts.ai_trajectories_observed",
+      "metric": "study.transcripts.ai_trajectories_observed",
+      "locations": [
+        "appendix_conversation.tex:2"
+      ],
+      "operation": "equal",
+      "expected": 2139
+    },
+    {
+      "id": "study.transcripts.human_profiles_total",
+      "metric": "study.transcripts.human_profiles_total",
+      "locations": [
+        "appendix_conversation.tex:2"
+      ],
+      "operation": "equal",
+      "expected": 140
+    },
+    {
+      "id": "study.transcripts.human_transcripts_observed",
+      "metric": "study.transcripts.human_transcripts_observed",
+      "locations": [
+        "appendix_conversation.tex:2"
+      ],
+      "operation": "equal",
+      "expected": 135
+    },
+    {
+      "id": "study.transcripts.human_transcripts_missing",
+      "metric": "study.transcripts.human_transcripts_missing",
+      "locations": [
+        "appendix_conversation.tex:2"
+      ],
+      "operation": "equal",
+      "expected": 5
+    },
+    {
+      "id": "study.interactions.total_nonblank_chat_messages",
+      "metric": "study.interactions.total_nonblank_chat_messages",
+      "locations": [
+        "main.tex:116"
+      ],
+      "operation": "equal",
+      "expected": 176614
+    },
+    {
+      "id": "study.interactions.answered_practice_problems",
+      "metric": "study.interactions.answered_practice_problems",
+      "locations": [
+        "main.tex:116"
+      ],
+      "operation": "equal",
+      "expected": 45463
+    },
+    {
+      "id": "study.interactions.helpfulness_ratings_observed",
+      "metric": "study.interactions.helpfulness_ratings_observed",
+      "locations": [
+        "appendix_resource_methods.tex:8"
+      ],
+      "operation": "equal",
+      "expected": 2139
+    },
+    {
+      "id": "practice.quant.n_answered",
+      "metric": "practice.quant.n_answered",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "equal",
+      "expected": 21769
+    },
+    {
+      "id": "practice.quant.n_flagged",
+      "metric": "practice.quant.n_flagged",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "equal",
+      "expected": 523
+    },
+    {
+      "id": "practice.verbal.n_answered",
+      "metric": "practice.verbal.n_answered",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "equal",
+      "expected": 23694
+    },
+    {
+      "id": "practice.verbal.n_flagged",
+      "metric": "practice.verbal.n_flagged",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "equal",
+      "expected": 120
+    },
+    {
+      "id": "pooled.adjusted_combined.estimate_pp",
+      "metric": "pooled.adjusted_combined.estimate_pp",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": -0.58,
+      "digits": 2
+    },
+    {
+      "id": "pooled.adjusted_combined.ci90_pp",
+      "metric": "pooled.adjusted_combined.ci90_pp",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": [
+        -2.18,
+        1.03
+      ],
+      "digits": 2
+    },
+    {
+      "id": "pooled.adjusted_combined.primary.p_tost",
+      "metric": "pooled.adjusted_combined.primary.p_tost",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": 0.015,
+      "digits": 3
+    },
+    {
+      "id": "pooled.adjusted_combined.equivalent",
+      "metric": "pooled.adjusted_combined.equivalent",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "pooled.adjusted_quant.estimate_pp",
+      "metric": "pooled.adjusted_quant.estimate_pp",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": 0.88,
+      "digits": 2
+    },
+    {
+      "id": "pooled.adjusted_quant.ci90_pp",
+      "metric": "pooled.adjusted_quant.ci90_pp",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": [
+        -1.8,
+        3.56
+      ],
+      "digits": 2
+    },
+    {
+      "id": "pooled.adjusted_quant.primary.p_tost",
+      "metric": "pooled.adjusted_quant.primary.p_tost",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": 0.028,
+      "digits": 3
+    },
+    {
+      "id": "pooled.adjusted_quant.equivalent",
+      "metric": "pooled.adjusted_quant.equivalent",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "pooled.adjusted_verbal.estimate_pp",
+      "metric": "pooled.adjusted_verbal.estimate_pp",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": -2.19,
+      "digits": 2
+    },
+    {
+      "id": "pooled.adjusted_verbal.ci90_pp",
+      "metric": "pooled.adjusted_verbal.ci90_pp",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": [
+        -4.31,
+        -0.07
+      ],
+      "digits": 2
+    },
+    {
+      "id": "pooled.adjusted_verbal.primary.p_tost",
+      "metric": "pooled.adjusted_verbal.primary.p_tost",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": 0.085,
+      "digits": 3
+    },
+    {
+      "id": "pooled.adjusted_verbal.equivalent",
+      "metric": "pooled.adjusted_verbal.equivalent",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "pooled.adjusted_combined.narrow.p_tost",
+      "metric": "pooled.adjusted_combined.narrow.p_tost",
+      "locations": [
+        "main.tex:47",
+        "appendix_statistics.tex:27",
+        "paper.tex:25",
+        "introduction.tex:14"
+      ],
+      "operation": "round",
+      "expected": 0.023,
+      "digits": 3
+    },
+    {
+      "id": "pooled.adjusted_combined.df",
+      "metric": "pooled.adjusted_combined.df",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "round",
+      "expected": 1.59,
+      "digits": 2
+    },
+    {
+      "id": "pooled.fixed_margins.quant",
+      "metric": "pooled.fixed_margins.quant",
+      "locations": [
+        "appendix_statistics.tex:12"
+      ],
+      "operation": "round",
+      "expected": 4.14,
+      "digits": 2
+    },
+    {
+      "id": "pooled.fixed_margins.verbal",
+      "metric": "pooled.fixed_margins.verbal",
+      "locations": [
+        "appendix_statistics.tex:12"
+      ],
+      "operation": "round",
+      "expected": 3.89,
+      "digits": 2
+    },
+    {
+      "id": "pooled.fixed_margins.combined",
+      "metric": "pooled.fixed_margins.combined",
+      "locations": [
+        "appendix_statistics.tex:12"
+      ],
+      "operation": "round",
+      "expected": 4.09,
+      "digits": 2
+    },
+    {
+      "id": "contrast.quant.pooled_ai_minus_control.estimate_pp",
+      "metric": "contrast.quant.pooled_ai_minus_control.estimate_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 6.86,
+      "digits": 2
+    },
+    {
+      "id": "contrast.quant.pooled_ai_minus_control.ci_low_pp",
+      "metric": "contrast.quant.pooled_ai_minus_control.ci_low_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 4.02,
+      "digits": 2
+    },
+    {
+      "id": "contrast.quant.pooled_ai_minus_control.ci_high_pp",
+      "metric": "contrast.quant.pooled_ai_minus_control.ci_high_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 9.69,
+      "digits": 2
+    },
+    {
+      "id": "contrast.verbal.pooled_ai_minus_control.estimate_pp",
+      "metric": "contrast.verbal.pooled_ai_minus_control.estimate_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 5.47,
+      "digits": 2
+    },
+    {
+      "id": "contrast.verbal.pooled_ai_minus_control.ci_low_pp",
+      "metric": "contrast.verbal.pooled_ai_minus_control.ci_low_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 2.46,
+      "digits": 2
+    },
+    {
+      "id": "contrast.verbal.pooled_ai_minus_control.ci_high_pp",
+      "metric": "contrast.verbal.pooled_ai_minus_control.ci_high_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 8.47,
+      "digits": 2
+    },
+    {
+      "id": "contrast.combined.pooled_ai_minus_control.estimate_pp",
+      "metric": "contrast.combined.pooled_ai_minus_control.estimate_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 6.15,
+      "digits": 2
+    },
+    {
+      "id": "contrast.combined.pooled_ai_minus_control.ci_low_pp",
+      "metric": "contrast.combined.pooled_ai_minus_control.ci_low_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 4.08,
+      "digits": 2
+    },
+    {
+      "id": "contrast.combined.pooled_ai_minus_control.ci_high_pp",
+      "metric": "contrast.combined.pooled_ai_minus_control.ci_high_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "round",
+      "expected": 8.21,
+      "digits": 2
+    },
+    {
+      "id": "contrast.quant.human_minus_control.ci_low_pp",
+      "metric": "contrast.quant.human_minus_control.ci_low_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "greater_than",
+      "expected": 0
+    },
+    {
+      "id": "gain_only.quant.equivalent",
+      "metric": "gain_only.quant.equivalent",
+      "locations": [
+        "appendix_statistics.tex:30"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "contrast.verbal.human_minus_control.ci_low_pp",
+      "metric": "contrast.verbal.human_minus_control.ci_low_pp",
+      "locations": [
+        "main.tex:49"
+      ],
+      "operation": "greater_than",
+      "expected": 0
+    },
+    {
+      "id": "gain_only.verbal.equivalent",
+      "metric": "gain_only.verbal.equivalent",
+      "locations": [
+        "appendix_statistics.tex:30"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "interaction.estimate_pp",
+      "metric": "interaction.estimate_pp",
+      "locations": [
+        "appendix_statistics.tex:35"
+      ],
+      "operation": "round",
+      "expected": 2.76,
+      "digits": 2
+    },
+    {
+      "id": "interaction.ci95",
+      "metric": "interaction.ci95",
+      "locations": [
+        "appendix_statistics.tex:35"
+      ],
+      "operation": "round",
+      "expected": [
+        -2.38,
+        7.9
+      ],
+      "digits": 2
+    },
+    {
+      "id": "learning_omnibus.combined.ai_omnibus_p_holm_across_3_scopes",
+      "metric": "learning_omnibus.combined.ai_omnibus_p_holm_across_3_scopes",
+      "locations": [
+        "appendix_statistics.tex:10"
+      ],
+      "operation": "round",
+      "expected": 0.755,
+      "digits": 3
+    },
+    {
+      "id": "domains.count",
+      "metric": "domains.count",
+      "locations": [
+        "paper.tex:25",
+        "main.tex:51"
+      ],
+      "operation": "equal",
+      "expected": 7
+    },
+    {
+      "id": "domains.distinct_winners",
+      "metric": "domains.distinct_winners",
+      "locations": [
+        "main.tex:51"
+      ],
+      "operation": "equal",
+      "expected": 7
+    },
+    {
+      "id": "domains.ai_above_human",
+      "metric": "domains.ai_above_human",
+      "locations": [
+        "paper.tex:25",
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": 5
+    },
+    {
+      "id": "domains.human_above_best_ai",
+      "metric": "domains.human_above_best_ai",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": [
+        "Algebra",
+        "Sentence Equivalence"
+      ]
+    },
+    {
+      "id": "domains.quant.best_ai_above_human",
+      "metric": "domains.quant.best_ai_above_human",
+      "locations": [
+        "main.tex:53"
+      ],
+      "operation": "equal",
+      "expected": 3
+    },
+    {
+      "id": "domains.verbal.human_above_pooled_ai",
+      "metric": "domains.verbal.human_above_pooled_ai",
+      "locations": [
+        "main.tex:53"
+      ],
+      "operation": "equal",
+      "expected": 3
+    },
+    {
+      "id": "domain_provider.Data Analysis",
+      "metric": "domain_provider.Data Analysis",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "Google"
+    },
+    {
+      "id": "domain_provider.Geometry",
+      "metric": "domain_provider.Geometry",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "Google"
+    },
+    {
+      "id": "domain_provider.Reading Comprehension",
+      "metric": "domain_provider.Reading Comprehension",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "Google"
+    },
+    {
+      "id": "domain_provider.Arithmetic",
+      "metric": "domain_provider.Arithmetic",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "OpenAI"
+    },
+    {
+      "id": "domain_provider.Algebra",
+      "metric": "domain_provider.Algebra",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "Moonshot"
+    },
+    {
+      "id": "domain_provider.Sentence Equivalence",
+      "metric": "domain_provider.Sentence Equivalence",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "Anthropic"
+    },
+    {
+      "id": "domain_provider.Text Completion",
+      "metric": "domain_provider.Text Completion",
+      "locations": [
+        "appendix_learning.tex:15"
+      ],
+      "operation": "equal",
+      "expected": "Anthropic"
+    },
+    {
+      "id": "irt.chosen_quant_specification.n",
+      "metric": "irt.chosen_quant_specification.n",
+      "locations": [
+        "appendix_learning.tex:42"
+      ],
+      "operation": "equal",
+      "expected": 285
+    },
+    {
+      "id": "irt.chosen_quant_specification.hc3_p_holm_24",
+      "metric": "irt.chosen_quant_specification.hc3_p_holm_24",
+      "locations": [
+        "appendix_learning.tex:42"
+      ],
+      "operation": "round",
+      "expected": 0.12,
+      "digits": 3
+    },
+    {
+      "id": "irt.top_arm_id",
+      "metric": "irt.top_arm_id",
+      "locations": [
+        "main.tex:55",
+        "appendix_learning.tex:42"
+      ],
+      "operation": "equal",
+      "expected": "gemini-3.5-flash-low"
+    },
+    {
+      "id": "irt.best_mean_gain",
+      "metric": "irt.best_mean_gain",
+      "locations": [
+        "appendix_learning.tex:42"
+      ],
+      "operation": "round",
+      "expected": 15.8,
+      "digits": 1
+    },
+    {
+      "id": "irt.top_five_gemini",
+      "metric": "irt.top_five_gemini",
+      "locations": [
+        "main.tex:55",
+        "appendix_learning.tex:42"
+      ],
+      "operation": "equal",
+      "expected": 4
+    },
+    {
+      "id": "quartiles.quant.cutpoints",
+      "metric": "quartiles.quant.cutpoints",
+      "locations": [
+        "appendix_learning.tex:23"
+      ],
+      "operation": "equal",
+      "expected": [
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "id": "quartiles.verbal.cutpoints",
+      "metric": "quartiles.verbal.cutpoints",
+      "locations": [
+        "appendix_learning.tex:23"
+      ],
+      "operation": "equal",
+      "expected": [
+        9,
+        12,
+        15
+      ]
+    },
+    {
+      "id": "quartile_contrast.quant.Q1.p_holm_across_8_quartile_contrasts",
+      "metric": "quartile_contrast.quant.Q1.p_holm_across_8_quartile_contrasts",
+      "locations": [
+        "appendix_learning.tex:23"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "quartile_contrast.quant.Q2.p_holm_across_8_quartile_contrasts",
+      "metric": "quartile_contrast.quant.Q2.p_holm_across_8_quartile_contrasts",
+      "locations": [
+        "appendix_learning.tex:23"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "quartile_contrast.quant.Q4.p_holm_across_8_quartile_contrasts",
+      "metric": "quartile_contrast.quant.Q4.p_holm_across_8_quartile_contrasts",
+      "locations": [
+        "appendix_learning.tex:23"
+      ],
+      "operation": "round",
+      "expected": 0.129,
+      "digits": 3
+    },
+    {
+      "id": "domain_interaction.quant.df",
+      "metric": "domain_interaction.quant.df",
+      "locations": [
+        "appendix_learning.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 108
+    },
+    {
+      "id": "domain_interaction.quant.wald_chi2",
+      "metric": "domain_interaction.quant.wald_chi2",
+      "locations": [
+        "appendix_learning.tex:32"
+      ],
+      "operation": "round",
+      "expected": 181.49,
+      "digits": 2
+    },
+    {
+      "id": "domain_interaction.verbal.df",
+      "metric": "domain_interaction.verbal.df",
+      "locations": [
+        "appendix_learning.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 72
+    },
+    {
+      "id": "domain_interaction.verbal.wald_chi2",
+      "metric": "domain_interaction.verbal.wald_chi2",
+      "locations": [
+        "appendix_learning.tex:32"
+      ],
+      "operation": "round",
+      "expected": 83.16,
+      "digits": 2
+    },
+    {
+      "id": "domain_interaction.quant.p_holm_across_quant_verbal_global_frontiers",
+      "metric": "domain_interaction.quant.p_holm_across_quant_verbal_global_frontiers",
+      "locations": [
+        "appendix_learning.tex:32"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "domain_interaction.verbal.p_holm_across_quant_verbal_global_frontiers",
+      "metric": "domain_interaction.verbal.p_holm_across_quant_verbal_global_frontiers",
+      "locations": [
+        "appendix_learning.tex:32"
+      ],
+      "operation": "round",
+      "expected": 0.173,
+      "digits": 3
+    },
+    {
+      "id": "domain_cells.significant",
+      "metric": "domain_cells.significant",
+      "locations": [
+        "appendix_learning.tex:32",
+        "appendix_learning.tex:37"
+      ],
+      "operation": "equal",
+      "expected": 0
+    },
+    {
+      "id": "domain_cells.quant_min_n",
+      "metric": "domain_cells.quant_min_n",
+      "locations": [
+        "appendix_learning.tex:32",
+        "appendix_learning.tex:37"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "domain_cells.quant_max_n",
+      "metric": "domain_cells.quant_max_n",
+      "locations": [
+        "appendix_learning.tex:32",
+        "appendix_learning.tex:37"
+      ],
+      "operation": "equal",
+      "expected": 35
+    },
+    {
+      "id": "domain_cells.quant_control_n",
+      "metric": "domain_cells.quant_control_n",
+      "locations": [
+        "appendix_learning.tex:32",
+        "appendix_learning.tex:37"
+      ],
+      "operation": "equal",
+      "expected": [
+        24,
+        22,
+        16,
+        29
+      ]
+    },
+    {
+      "id": "domain_cells.effect_count",
+      "metric": "domain_cells.effect_count",
+      "locations": [
+        "appendix_learning.tex:32",
+        "appendix_learning.tex:37"
+      ],
+      "operation": "equal",
+      "expected": 364
+    },
+    {
+      "id": "teaching.planning_combined.winner",
+      "metric": "teaching.planning_combined.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.practice_combined.winner",
+      "metric": "teaching.practice_combined.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.relevant_concepts.winner",
+      "metric": "teaching.relevant_concepts.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.concept_grouping.winner",
+      "metric": "teaching.concept_grouping.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "gpt-5.5-high"
+    },
+    {
+      "id": "teaching.concept_prioritization.winner",
+      "metric": "teaching.concept_prioritization.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "gpt-5.5-pro-med"
+    },
+    {
+      "id": "teaching.time_allocation.winner",
+      "metric": "teaching.time_allocation.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "gpt-5.5-pro-med"
+    },
+    {
+      "id": "teaching.practice_alignment.winner",
+      "metric": "teaching.practice_alignment.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.difficulty_appropriateness.winner",
+      "metric": "teaching.difficulty_appropriateness.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.answer_key_accuracy.winner",
+      "metric": "teaching.answer_key_accuracy.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.test_taking_strategies.winner",
+      "metric": "teaching.test_taking_strategies.winner",
+      "locations": [
+        "main.tex:69"
+      ],
+      "operation": "equal",
+      "expected": "opus-5-high"
+    },
+    {
+      "id": "teaching.planning_combined.n_decisive",
+      "metric": "teaching.planning_combined.n_decisive",
+      "locations": [
+        "main.tex:63",
+        "appendix_materials.tex:26"
+      ],
+      "operation": "equal",
+      "expected": 9577
+    },
+    {
+      "id": "teaching.planning_combined.cluster_n",
+      "metric": "teaching.planning_combined.cluster_n",
+      "locations": [
+        "main.tex:63",
+        "appendix_materials.tex:26"
+      ],
+      "operation": "equal",
+      "expected": 381
+    },
+    {
+      "id": "teaching.practice_combined.n_decisive",
+      "metric": "teaching.practice_combined.n_decisive",
+      "locations": [
+        "main.tex:63",
+        "appendix_materials.tex:26"
+      ],
+      "operation": "equal",
+      "expected": 5265
+    },
+    {
+      "id": "teaching.practice_combined.cluster_n",
+      "metric": "teaching.practice_combined.cluster_n",
+      "locations": [
+        "main.tex:63",
+        "appendix_materials.tex:26"
+      ],
+      "operation": "equal",
+      "expected": 380
+    },
+    {
+      "id": "conversation.figure_ai_transcripts",
+      "metric": "conversation.figure_ai_transcripts",
+      "locations": [
+        "main.tex:63"
+      ],
+      "operation": "equal",
+      "expected": 1971
+    },
+    {
+      "id": "conversation.provider_bands_separate",
+      "metric": "conversation.provider_bands_separate",
+      "locations": [
+        "main.tex:83"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "flags.quant_worst_model",
+      "metric": "flags.quant_worst_model",
+      "locations": [
+        "main.tex:71"
+      ],
+      "operation": "equal",
+      "expected": "gpt-5.4-mini-none"
+    },
+    {
+      "id": "flags.quant_worst_rate",
+      "metric": "flags.quant_worst_rate",
+      "locations": [
+        "main.tex:71"
+      ],
+      "operation": "round",
+      "expected": 11,
+      "digits": 0
+    },
+    {
+      "id": "flags.verbal_max_rate",
+      "metric": "flags.verbal_max_rate",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "less_than",
+      "expected": 1
+    },
+    {
+      "id": "flags.quant.p",
+      "metric": "flags.quant.p",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "flags.verbal.p",
+      "metric": "flags.verbal.p",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "flags.combined.p",
+      "metric": "flags.combined.p",
+      "locations": [
+        "appendix_conversation.tex:31"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "flag_agreement.quant.practice.rho",
+      "metric": "flag_agreement.quant.practice.rho",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.713,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.quant.practice.p_holm_6",
+      "metric": "flag_agreement.quant.practice.p_holm_6",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.035,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.quant.practice.n_models",
+      "metric": "flag_agreement.quant.practice.n_models",
+      "locations": [
+        "appendix_conversation.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "flag_agreement.verbal.practice.rho",
+      "metric": "flag_agreement.verbal.practice.rho",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.315,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.verbal.practice.p_holm_6",
+      "metric": "flag_agreement.verbal.practice.p_holm_6",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.388,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.verbal.practice.n_models",
+      "metric": "flag_agreement.verbal.practice.n_models",
+      "locations": [
+        "appendix_conversation.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "flag_agreement.combined.practice.rho",
+      "metric": "flag_agreement.combined.practice.rho",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.773,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.combined.practice.p_holm_6",
+      "metric": "flag_agreement.combined.practice.p_holm_6",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.033,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.combined.practice.n_models",
+      "metric": "flag_agreement.combined.practice.n_models",
+      "locations": [
+        "appendix_conversation.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 11
+    },
+    {
+      "id": "flag_agreement.quant.accuracy.rho",
+      "metric": "flag_agreement.quant.accuracy.rho",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.895,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.quant.accuracy.p_holm_6",
+      "metric": "flag_agreement.quant.accuracy.p_holm_6",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "less_than",
+      "expected": 0.001
+    },
+    {
+      "id": "flag_agreement.quant.accuracy.n_models",
+      "metric": "flag_agreement.quant.accuracy.n_models",
+      "locations": [
+        "appendix_conversation.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "flag_agreement.verbal.accuracy.rho",
+      "metric": "flag_agreement.verbal.accuracy.rho",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.406,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.verbal.accuracy.p_holm_6",
+      "metric": "flag_agreement.verbal.accuracy.p_holm_6",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.388,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.verbal.accuracy.n_models",
+      "metric": "flag_agreement.verbal.accuracy.n_models",
+      "locations": [
+        "appendix_conversation.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "flag_agreement.combined.accuracy.rho",
+      "metric": "flag_agreement.combined.accuracy.rho",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.782,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.combined.accuracy.p_holm_6",
+      "metric": "flag_agreement.combined.accuracy.p_holm_6",
+      "locations": [
+        "appendix_conversation.tex:43"
+      ],
+      "operation": "round",
+      "expected": 0.033,
+      "digits": 3
+    },
+    {
+      "id": "flag_agreement.combined.accuracy.n_models",
+      "metric": "flag_agreement.combined.accuracy.n_models",
+      "locations": [
+        "appendix_conversation.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 11
+    },
+    {
+      "id": "cost.minimum",
+      "metric": "cost.minimum",
+      "locations": [
+        "main.tex:94",
+        "main.tex:103"
+      ],
+      "operation": "round",
+      "expected": 0.067,
+      "digits": 3
+    },
+    {
+      "id": "cost.maximum",
+      "metric": "cost.maximum",
+      "locations": [
+        "main.tex:94",
+        "main.tex:103"
+      ],
+      "operation": "round",
+      "expected": 21.24,
+      "digits": 2
+    },
+    {
+      "id": "cost.spread_printed_endpoints",
+      "metric": "cost.spread_printed_endpoints",
+      "locations": [
+        "main.tex:103"
+      ],
+      "operation": "round",
+      "expected": 317,
+      "digits": 0,
+      "note": "The prose ratio uses its displayed endpoints21.24 and0.067. The underlying unrounded ratio is checked separately."
+    },
+    {
+      "id": "cost.spread_unrounded",
+      "metric": "cost.spread_unrounded",
+      "locations": [
+        "audit:underlying cost ratio"
+      ],
+      "operation": "close",
+      "expected": 318.4262887971261,
+      "note": "Diagnostic underlying ratio; not the paper's printed-endpoint calculation.",
+      "absolute_tolerance": 1e-09
+    },
+    {
+      "id": "cost.ratio.human_gemma",
+      "metric": "cost.ratio.human_gemma",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 918,
+      "digits": 0
+    },
+    {
+      "id": "cost.ratio.human_flash",
+      "metric": "cost.ratio.human_flash",
+      "locations": [
+        "paper.tex:25",
+        "introduction.tex:17",
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 68,
+      "digits": 0
+    },
+    {
+      "id": "cost.ratio.pro_flash_session",
+      "metric": "cost.ratio.pro_flash_session",
+      "locations": [
+        "main.tex:93"
+      ],
+      "operation": "round",
+      "expected": 20,
+      "digits": 0
+    },
+    {
+      "id": "cost.frontier_maximum",
+      "metric": "cost.frontier_maximum",
+      "locations": [
+        "main.tex:93"
+      ],
+      "operation": "less_than",
+      "expected": 5
+    },
+    {
+      "id": "cost.gemini31_dominates_gpt55pro",
+      "metric": "cost.gemini31_dominates_gpt55pro",
+      "locations": [
+        "main.tex:94"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "cost.combined.gemini-3.5-flash-low.mean_cost_usd",
+      "metric": "cost.combined.gemini-3.5-flash-low.mean_cost_usd",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 1.04,
+      "digits": 2
+    },
+    {
+      "id": "cost.combined.gemini-3.5-flash-low.mean_gain_pp",
+      "metric": "cost.combined.gemini-3.5-flash-low.mean_gain_pp",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 14.65,
+      "digits": 2
+    },
+    {
+      "id": "cost.combined.human.mean_gain_pp",
+      "metric": "cost.combined.human.mean_gain_pp",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 15.61,
+      "digits": 2
+    },
+    {
+      "id": "cost.combined.gemini-3.5-flash-low.cost_per_gain_pp",
+      "metric": "cost.combined.gemini-3.5-flash-low.cost_per_gain_pp",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 0.071,
+      "digits": 3
+    },
+    {
+      "id": "cost.combined.human.cost_per_gain_pp",
+      "metric": "cost.combined.human.cost_per_gain_pp",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 4.81,
+      "digits": 2
+    },
+    {
+      "id": "cost.combined.gemma-4-31b-high.cost_per_gain_pp",
+      "metric": "cost.combined.gemma-4-31b-high.cost_per_gain_pp",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 0.0052,
+      "digits": 4
+    },
+    {
+      "id": "cost.combined.gpt-5.4-mini-none.cost_per_gain_pp",
+      "metric": "cost.combined.gpt-5.4-mini-none.cost_per_gain_pp",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "round",
+      "expected": 0.0242,
+      "digits": 4
+    },
+    {
+      "id": "cost.quant.cheapest_four",
+      "metric": "cost.quant.cheapest_four",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": [
+        "gemma-4-31b-high",
+        "gpt-5.4-mini-none",
+        "kimi-k2.6",
+        "gemini-3.7-flash-medium"
+      ]
+    },
+    {
+      "id": "cost.verbal.cheapest_four",
+      "metric": "cost.verbal.cheapest_four",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": [
+        "gemma-4-31b-high",
+        "gpt-5.4-mini-none",
+        "kimi-k2.6",
+        "gemini-3.7-flash-medium"
+      ]
+    },
+    {
+      "id": "cost.combined.cheapest_four",
+      "metric": "cost.combined.cheapest_four",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": [
+        "gemma-4-31b-high",
+        "gpt-5.4-mini-none",
+        "kimi-k2.6",
+        "gemini-3.7-flash-medium"
+      ]
+    },
+    {
+      "id": "learning.verbal.ai_means_above_human",
+      "metric": "learning.verbal.ai_means_above_human",
+      "locations": [
+        "introduction.tex:14",
+        "appendix_resources.tex:7"
+      ],
+      "operation": "equal",
+      "expected": 0
+    },
+    {
+      "id": "learning.quant.ai_means_above_human",
+      "metric": "learning.quant.ai_means_above_human",
+      "locations": [
+        "introduction.tex:14",
+        "appendix_resources.tex:7"
+      ],
+      "operation": "greater_than",
+      "expected": 1
+    },
+    {
+      "id": "latency.minimum",
+      "metric": "latency.minimum",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "round",
+      "expected": 1.9,
+      "digits": 1
+    },
+    {
+      "id": "latency.maximum",
+      "metric": "latency.maximum",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "round",
+      "expected": 31.0,
+      "digits": 1
+    },
+    {
+      "id": "latency.fastest",
+      "metric": "latency.fastest",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "equal",
+      "expected": "gpt-5.4-mini-none"
+    },
+    {
+      "id": "latency.slowest",
+      "metric": "latency.slowest",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "equal",
+      "expected": "gpt-5.5-pro-med"
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.combined.spearman_rho",
+      "metric": "resources.latency_student_engagement.associations.combined.spearman_rho",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "round",
+      "expected": -0.81,
+      "digits": 2
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.combined.spearman_p_holm_6",
+      "metric": "resources.latency_student_engagement.associations.combined.spearman_p_holm_6",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "round",
+      "expected": 0.0056,
+      "digits": 4
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.quant.spearman_p_holm_6",
+      "metric": "resources.latency_student_engagement.associations.quant.spearman_p_holm_6",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "less_than",
+      "expected": 0.05
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.verbal.spearman_p_holm_6",
+      "metric": "resources.latency_student_engagement.associations.verbal.spearman_p_holm_6",
+      "locations": [
+        "main.tex:99"
+      ],
+      "operation": "less_than",
+      "expected": 0.05
+    },
+    {
+      "id": "individual.passing",
+      "metric": "individual.passing",
+      "locations": [
+        "main.tex:105",
+        "appendix_statistics.tex:41"
+      ],
+      "operation": "equal",
+      "expected": [
+        "gemini-3.1-pro-high",
+        "gemini-3.5-flash-low",
+        "gpt-5.5-pro-med",
+        "opus-4.8-xhigh"
+      ]
+    },
+    {
+      "id": "individual.summary.valid_tests",
+      "metric": "individual.summary.valid_tests",
+      "locations": [
+        "appendix_statistics.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "individual.summary.cheapest_nominal_model_by_cost_per_gain",
+      "metric": "individual.summary.cheapest_nominal_model_by_cost_per_gain",
+      "locations": [
+        "main.tex:105"
+      ],
+      "operation": "equal",
+      "expected": "gemini-3.5-flash-low"
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.p_tost",
+      "metric": "individual.gemini-3.5-flash-low.p_tost",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": 0.045,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.gap_pp",
+      "metric": "individual.gemini-3.5-flash-low.gap_pp",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": -0.961,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.ci90_low",
+      "metric": "individual.gemini-3.5-flash-low.ci90_low",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": -3.995,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.ci90_high",
+      "metric": "individual.gemini-3.5-flash-low.ci90_high",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": 2.073,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.estimated_mean_cost_usd",
+      "metric": "individual.gemini-3.5-flash-low.estimated_mean_cost_usd",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": 1.03674,
+      "digits": 5
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.model_cost_per_gain_pp",
+      "metric": "individual.gemini-3.5-flash-low.model_cost_per_gain_pp",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": 0.07078,
+      "digits": 5
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.human_cost_per_gain_pp",
+      "metric": "individual.gemini-3.5-flash-low.human_cost_per_gain_pp",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": 4.80508,
+      "digits": 5
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.human_to_model_cost_per_gain_ratio",
+      "metric": "individual.gemini-3.5-flash-low.human_to_model_cost_per_gain_ratio",
+      "locations": [
+        "appendix_statistics.tex:42",
+        "appendix_statistics.tex:44"
+      ],
+      "operation": "round",
+      "expected": 67.89,
+      "digits": 2
+    },
+    {
+      "id": "individual.gemini-3.5-flash-low.n_ai",
+      "metric": "individual.gemini-3.5-flash-low.n_ai",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "equal",
+      "expected": 177
+    },
+    {
+      "id": "requests.total",
+      "metric": "requests.total",
+      "locations": [
+        "appendix_resource_methods.tex:2"
+      ],
+      "operation": "equal",
+      "expected": 164237
+    },
+    {
+      "id": "requests.observed",
+      "metric": "requests.observed",
+      "locations": [
+        "appendix_resource_methods.tex:2"
+      ],
+      "operation": "equal",
+      "expected": 158887
+    },
+    {
+      "id": "requests.covered_percent",
+      "metric": "requests.covered_percent",
+      "locations": [
+        "appendix_resource_methods.tex:2"
+      ],
+      "operation": "round",
+      "expected": 96.7,
+      "digits": 1
+    },
+    {
+      "id": "requests.unpriced_percent",
+      "metric": "requests.unpriced_percent",
+      "locations": [
+        "appendix_resource_methods.tex:2"
+      ],
+      "operation": "round",
+      "expected": 3.3,
+      "digits": 1
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.quant.k_ai_arms",
+      "metric": "resources.latency_student_engagement.associations.quant.k_ai_arms",
+      "locations": [
+        "appendix_resource_methods.tex:14"
+      ],
+      "operation": "equal",
+      "expected": 13
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.verbal.k_ai_arms",
+      "metric": "resources.latency_student_engagement.associations.verbal.k_ai_arms",
+      "locations": [
+        "appendix_resource_methods.tex:14"
+      ],
+      "operation": "equal",
+      "expected": 13
+    },
+    {
+      "id": "resources.latency_student_engagement.associations.combined.k_ai_arms",
+      "metric": "resources.latency_student_engagement.associations.combined.k_ai_arms",
+      "locations": [
+        "appendix_resource_methods.tex:14"
+      ],
+      "operation": "equal",
+      "expected": 12
+    },
+    {
+      "id": "engagement.sessions",
+      "metric": "engagement.sessions",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 2135
+    },
+    {
+      "id": "engagement.temporal_sessions",
+      "metric": "engagement.temporal_sessions",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 2133
+    },
+    {
+      "id": "engagement.test_count",
+      "metric": "engagement.test_count",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 276
+    },
+    {
+      "id": "engagement.family_counts.primary_raw",
+      "metric": "engagement.family_counts.primary_raw",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 78
+    },
+    {
+      "id": "engagement.family_counts.secondary_log1p",
+      "metric": "engagement.family_counts.secondary_log1p",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 78
+    },
+    {
+      "id": "engagement.family_counts.secondary_engagement",
+      "metric": "engagement.family_counts.secondary_engagement",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 42
+    },
+    {
+      "id": "engagement.family_counts.temporal_raw",
+      "metric": "engagement.family_counts.temporal_raw",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 78
+    },
+    {
+      "id": "engagement.repeat_sessions",
+      "metric": "engagement.repeat_sessions",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 1985
+    },
+    {
+      "id": "engagement.repeat_selected",
+      "metric": "engagement.repeat_selected",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 7
+    },
+    {
+      "id": "engagement.repeat_signs_preserved",
+      "metric": "engagement.repeat_signs_preserved",
+      "locations": [
+        "appendix_resource_methods.tex:39",
+        "appendix_resource_methods.tex:41",
+        "appendix_resource_methods.tex:43",
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "engagement.quant.latency_engagement.n",
+      "metric": "engagement.quant.latency_engagement.n",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "equal",
+      "expected": 1137
+    },
+    {
+      "id": "engagement.quant.latency_engagement.report_effect",
+      "metric": "engagement.quant.latency_engagement.report_effect",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": -5.19,
+      "digits": 2
+    },
+    {
+      "id": "engagement.quant.latency_engagement.report_ci95",
+      "metric": "engagement.quant.latency_engagement.report_ci95",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": [
+        -7.09,
+        -3.29
+      ],
+      "digits": 2
+    },
+    {
+      "id": "engagement.quant.latency_engagement.p_holm276",
+      "metric": "engagement.quant.latency_engagement.p_holm276",
+      "locations": [
+        "paper.tex:25",
+        "main.tex:118"
+      ],
+      "operation": "less_than",
+      "expected": 0.002
+    },
+    {
+      "id": "engagement.quant.engagement_practice.n",
+      "metric": "engagement.quant.engagement_practice.n",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "equal",
+      "expected": 1137
+    },
+    {
+      "id": "engagement.quant.engagement_practice.report_effect",
+      "metric": "engagement.quant.engagement_practice.report_effect",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": 0.52,
+      "digits": 2
+    },
+    {
+      "id": "engagement.quant.engagement_practice.report_ci95",
+      "metric": "engagement.quant.engagement_practice.report_ci95",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": [
+        0.29,
+        0.75
+      ],
+      "digits": 2
+    },
+    {
+      "id": "engagement.quant.engagement_practice.p_holm276",
+      "metric": "engagement.quant.engagement_practice.p_holm276",
+      "locations": [
+        "paper.tex:25",
+        "main.tex:118"
+      ],
+      "operation": "less_than",
+      "expected": 0.002
+    },
+    {
+      "id": "engagement.quant.practice_gain.n",
+      "metric": "engagement.quant.practice_gain.n",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "equal",
+      "expected": 1137
+    },
+    {
+      "id": "engagement.quant.practice_gain.report_effect",
+      "metric": "engagement.quant.practice_gain.report_effect",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": 5.62,
+      "digits": 2
+    },
+    {
+      "id": "engagement.quant.practice_gain.report_ci95",
+      "metric": "engagement.quant.practice_gain.report_ci95",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": [
+        3.97,
+        7.26
+      ],
+      "digits": 2
+    },
+    {
+      "id": "engagement.quant.practice_gain.p_holm276",
+      "metric": "engagement.quant.practice_gain.p_holm276",
+      "locations": [
+        "paper.tex:25",
+        "main.tex:118"
+      ],
+      "operation": "less_than",
+      "expected": 0.002
+    },
+    {
+      "id": "engagement.verbal.latency_engagement.p_holm276",
+      "metric": "engagement.verbal.latency_engagement.p_holm276",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "greater_than",
+      "expected": 0.05
+    },
+    {
+      "id": "engagement.verbal.engagement_practice.p_holm276",
+      "metric": "engagement.verbal.engagement_practice.p_holm276",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "greater_than",
+      "expected": 0.05
+    },
+    {
+      "id": "engagement.verbal.practice_gain.p_holm276",
+      "metric": "engagement.verbal.practice_gain.p_holm276",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "greater_than",
+      "expected": 0.05
+    },
+    {
+      "id": "engagement.verbal.practice_gain.report_effect",
+      "metric": "engagement.verbal.practice_gain.report_effect",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "round",
+      "expected": 2.27,
+      "digits": 2
+    },
+    {
+      "id": "engagement.verbal.practice_gain.n",
+      "metric": "engagement.verbal.practice_gain.n",
+      "locations": [
+        "main.tex:118"
+      ],
+      "operation": "equal",
+      "expected": 998
+    },
+    {
+      "id": "engagement.temporal.quant_early_engagement_late_practice",
+      "metric": "engagement.temporal.quant_early_engagement_late_practice",
+      "locations": [
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "round",
+      "expected": 0.091,
+      "digits": 3
+    },
+    {
+      "id": "engagement.temporal.verbal_late_practice_gain",
+      "metric": "engagement.temporal.verbal_late_practice_gain",
+      "locations": [
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "round",
+      "expected": 1,
+      "digits": 2
+    },
+    {
+      "id": "repeat.excluded_sessions",
+      "metric": "repeat.excluded_sessions",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": 172
+    },
+    {
+      "id": "repeat.excluded_review_subjects",
+      "metric": "repeat.excluded_review_subjects",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": 26
+    },
+    {
+      "id": "repeat.analyses.exclude_repeat.sessions",
+      "metric": "repeat.analyses.exclude_repeat.sessions",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": 2297
+    },
+    {
+      "id": "repeat.exclude_repeat.ai",
+      "metric": "repeat.exclude_repeat.ai",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": 1989
+    },
+    {
+      "id": "repeat.exclude_repeat.human",
+      "metric": "repeat.exclude_repeat.human",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": 118
+    },
+    {
+      "id": "repeat.exclude_repeat.control",
+      "metric": "repeat.exclude_repeat.control",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": 190
+    },
+    {
+      "id": "repeat.checks.expert_rankings_unchanged.lesson_planning",
+      "metric": "repeat.checks.expert_rankings_unchanged.lesson_planning",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "repeat.checks.expert_rankings_unchanged.practice_problem_design",
+      "metric": "repeat.checks.expert_rankings_unchanged.practice_problem_design",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "repeat.checks.cost_frontier_unchanged",
+      "metric": "repeat.checks.cost_frontier_unchanged",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "repeat.checks.reply_time_frontier_unchanged",
+      "metric": "repeat.checks.reply_time_frontier_unchanged",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "repeat.checks.provider_bands_remain_ordered",
+      "metric": "repeat.checks.provider_bands_remain_ordered",
+      "locations": [
+        "appendix_repeat_participation.tex:2",
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "repeat.exclude_repeat.ai_control",
+      "metric": "repeat.exclude_repeat.ai_control",
+      "locations": [
+        "appendix_repeat_participation.tex:4"
+      ],
+      "operation": "round",
+      "expected": 6.2,
+      "digits": 2
+    },
+    {
+      "id": "repeat.analyses.exclude_repeat.cost.human_to_flash_cost_ratio",
+      "metric": "repeat.analyses.exclude_repeat.cost.human_to_flash_cost_ratio",
+      "locations": [
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "round",
+      "expected": 70,
+      "digits": 0
+    },
+    {
+      "id": "repeat.exclude_repeat.passing",
+      "metric": "repeat.exclude_repeat.passing",
+      "locations": [
+        "appendix_repeat_participation.tex:25"
+      ],
+      "operation": "equal",
+      "expected": [
+        "gemini-3.1-pro-high",
+        "gemini-3.5-flash-low",
+        "gpt-5.5-pro-med"
+      ]
+    },
+    {
+      "id": "separation.models",
+      "metric": "separation.models",
+      "locations": [
+        "appendix_statistics.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 11
+    },
+    {
+      "id": "separation.pairs",
+      "metric": "separation.pairs",
+      "locations": [
+        "appendix_statistics.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 55
+    },
+    {
+      "id": "separation.disjoint_at_least_one",
+      "metric": "separation.disjoint_at_least_one",
+      "locations": [
+        "appendix_statistics.tex:49"
+      ],
+      "operation": "equal",
+      "expected": 53
+    },
+    {
+      "id": "separation.percent",
+      "metric": "separation.percent",
+      "locations": [
+        "appendix_statistics.tex:49"
+      ],
+      "operation": "round",
+      "expected": 96.4,
+      "digits": 1
+    },
+    {
+      "id": "reviewer.planning_combined.original.opus-4.8-off:opus-5-high.p_holm",
+      "metric": "reviewer.planning_combined.original.opus-4.8-off:opus-5-high.p_holm",
+      "locations": [
+        "appendix_materials.tex:44"
+      ],
+      "operation": "less_than",
+      "expected": 0.05
+    },
+    {
+      "id": "reviewer.planning_combined.sensitivity.opus-4.8-off:opus-5-high.p_holm",
+      "metric": "reviewer.planning_combined.sensitivity.opus-4.8-off:opus-5-high.p_holm",
+      "locations": [
+        "appendix_materials.tex:44"
+      ],
+      "operation": "greater_than",
+      "expected": 0.05
+    },
+    {
+      "id": "reviewer.common8_combined.original.opus-4.8-off:opus-5-high.p_holm",
+      "metric": "reviewer.common8_combined.original.opus-4.8-off:opus-5-high.p_holm",
+      "locations": [
+        "appendix_materials.tex:44"
+      ],
+      "operation": "less_than",
+      "expected": 0.05
+    },
+    {
+      "id": "reviewer.common8_combined.sensitivity.opus-4.8-off:opus-5-high.p_holm",
+      "metric": "reviewer.common8_combined.sensitivity.opus-4.8-off:opus-5-high.p_holm",
+      "locations": [
+        "appendix_materials.tex:44"
+      ],
+      "operation": "greater_than",
+      "expected": 0.05
+    },
+    {
+      "id": "reviewer.practice_combined.original.gpt-5.5-high:opus-5-high.p_holm",
+      "metric": "reviewer.practice_combined.original.gpt-5.5-high:opus-5-high.p_holm",
+      "locations": [
+        "appendix_materials.tex:44"
+      ],
+      "operation": "less_than",
+      "expected": 0.05
+    },
+    {
+      "id": "reviewer.practice_combined.sensitivity.gpt-5.5-high:opus-5-high.p_holm",
+      "metric": "reviewer.practice_combined.sensitivity.gpt-5.5-high:opus-5-high.p_holm",
+      "locations": [
+        "appendix_materials.tex:44"
+      ],
+      "operation": "greater_than",
+      "expected": 0.05
+    },
+    {
+      "id": "reviewer.planning_combined.sensitivity.df",
+      "metric": "reviewer.planning_combined.sensitivity.df",
+      "locations": [
+        "appendix_materials.tex:32"
+      ],
+      "operation": "equal",
+      "expected": 50
+    },
+    {
+      "id": "prompts.pilot_sessions",
+      "metric": "prompts.pilot_sessions",
+      "locations": [
+        "appendix_grouped.tex:567"
+      ],
+      "operation": "equal",
+      "expected": 326
+    },
+    {
+      "id": "prompts.pilot.coverage.unique_participant_clusters",
+      "metric": "prompts.pilot.coverage.unique_participant_clusters",
+      "locations": [
+        "appendix_grouped.tex:567"
+      ],
+      "operation": "equal",
+      "expected": 312
+    },
+    {
+      "id": "prompts.pilot.coverage.plan_tutor_identity_mismatches",
+      "metric": "prompts.pilot.coverage.plan_tutor_identity_mismatches",
+      "locations": [
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "equal",
+      "expected": 41
+    },
+    {
+      "id": "prompts.group:pilot:lean/lean.mean_gain_pp",
+      "metric": "prompts.group:pilot:lean/lean.mean_gain_pp",
+      "locations": [
+        "appendix_grouped.tex:569"
+      ],
+      "operation": "round",
+      "expected": 14.27,
+      "digits": 2
+    },
+    {
+      "id": "prompts.group:pilot:max/max.mean_gain_pp",
+      "metric": "prompts.group:pilot:max/max.mean_gain_pp",
+      "locations": [
+        "appendix_grouped.tex:569"
+      ],
+      "operation": "round",
+      "expected": 8.85,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:pilot:cluster.interaction_df",
+      "metric": "prompts.fit:pilot:cluster.interaction_df",
+      "locations": [
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "equal",
+      "expected": 8
+    },
+    {
+      "id": "prompts.fit:pilot:cluster.interaction_chi2",
+      "metric": "prompts.fit:pilot:cluster.interaction_chi2",
+      "locations": [
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "round",
+      "expected": 10.0,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:pilot:cluster.interaction_p",
+      "metric": "prompts.fit:pilot:cluster.interaction_p",
+      "locations": [
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "round",
+      "expected": 0.265,
+      "digits": 3
+    },
+    {
+      "id": "prompts.group:s5:opus-5-high:expanded.mean_gain_pp",
+      "metric": "prompts.group:s5:opus-5-high:expanded.mean_gain_pp",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 18.79,
+      "digits": 2
+    },
+    {
+      "id": "prompts.group:s5:opus-5-high:minimal.mean_gain_pp",
+      "metric": "prompts.group:s5:opus-5-high:minimal.mean_gain_pp",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 15.31,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:opus-5-high.estimate_pp",
+      "metric": "prompts.fit:s5:HC3:contrast:opus-5-high.estimate_pp",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 3.61,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:opus-5-high.ci95_low",
+      "metric": "prompts.fit:s5:HC3:contrast:opus-5-high.ci95_low",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": -1.66,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:opus-5-high.ci95_high",
+      "metric": "prompts.fit:s5:HC3:contrast:opus-5-high.ci95_high",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 8.89,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:opus-5-high.p_holm",
+      "metric": "prompts.fit:s5:HC3:contrast:opus-5-high.p_holm",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 0.359,
+      "digits": 3
+    },
+    {
+      "id": "prompts.group:s5:gemini-3.6-flash-low:expanded.mean_gain_pp",
+      "metric": "prompts.group:s5:gemini-3.6-flash-low:expanded.mean_gain_pp",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 19.22,
+      "digits": 2
+    },
+    {
+      "id": "prompts.group:s5:gemini-3.6-flash-low:minimal.mean_gain_pp",
+      "metric": "prompts.group:s5:gemini-3.6-flash-low:minimal.mean_gain_pp",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 14.65,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.estimate_pp",
+      "metric": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.estimate_pp",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 4.62,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.ci95_low",
+      "metric": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.ci95_low",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": -0.17,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.ci95_high",
+      "metric": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.ci95_high",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 9.42,
+      "digits": 2
+    },
+    {
+      "id": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.p_holm",
+      "metric": "prompts.fit:s5:HC3:contrast:gemini-3.6-flash-low.p_holm",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 0.177,
+      "digits": 3
+    },
+    {
+      "id": "prompts.fit:s5:HC3.interaction_p",
+      "metric": "prompts.fit:s5:HC3.interaction_p",
+      "locations": [
+        "appendix_grouped.tex:573"
+      ],
+      "operation": "round",
+      "expected": 0.781,
+      "digits": 3
+    },
+    {
+      "id": "cost.quant.gemini-3.1-pro-high.on_frontier",
+      "metric": "cost.quant.gemini-3.1-pro-high.on_frontier",
+      "locations": [
+        "appendix_resources.tex:7"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "cost.quant.gemini-3.5-flash-low.on_frontier",
+      "metric": "cost.quant.gemini-3.5-flash-low.on_frontier",
+      "locations": [
+        "appendix_resources.tex:7"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "cost.quant.flash35_cheaper_than36",
+      "metric": "cost.quant.flash35_cheaper_than36",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "cost.quant.opus5_cheaper_than48",
+      "metric": "cost.quant.opus5_cheaper_than48",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "cost.verbal.gemini-3.1-pro-high.on_frontier",
+      "metric": "cost.verbal.gemini-3.1-pro-high.on_frontier",
+      "locations": [
+        "appendix_resources.tex:7"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "cost.verbal.gemini-3.5-flash-low.on_frontier",
+      "metric": "cost.verbal.gemini-3.5-flash-low.on_frontier",
+      "locations": [
+        "appendix_resources.tex:7"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "cost.verbal.flash35_cheaper_than36",
+      "metric": "cost.verbal.flash35_cheaper_than36",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "cost.verbal.opus5_cheaper_than48",
+      "metric": "cost.verbal.opus5_cheaper_than48",
+      "locations": [
+        "appendix_resources.tex:2"
+      ],
+      "operation": "equal",
+      "expected": false
+    },
+    {
+      "id": "engagement.quant.robust_directions_preserved",
+      "metric": "engagement.quant.robust_directions_preserved",
+      "locations": [
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "engagement.combined.robust_directions_preserved",
+      "metric": "engagement.combined.robust_directions_preserved",
+      "locations": [
+        "appendix_resource_methods.tex:49"
+      ],
+      "operation": "equal",
+      "expected": true
+    },
+    {
+      "id": "prompts.pilot.models",
+      "metric": "prompts.pilot.models",
+      "locations": [
+        "appendix_grouped.tex:567",
+        "appendix_grouped.tex:569",
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "equal",
+      "expected": 3
+    },
+    {
+      "id": "prompts.pilot.conditions",
+      "metric": "prompts.pilot.conditions",
+      "locations": [
+        "appendix_grouped.tex:567",
+        "appendix_grouped.tex:569",
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "equal",
+      "expected": 5
+    },
+    {
+      "id": "prompts.pilot.significant_contrasts",
+      "metric": "prompts.pilot.significant_contrasts",
+      "locations": [
+        "appendix_grouped.tex:567",
+        "appendix_grouped.tex:569",
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "equal",
+      "expected": 0
+    },
+    {
+      "id": "prompts.pilot.minimal_gains_higher_each_model",
+      "metric": "prompts.pilot.minimal_gains_higher_each_model",
+      "locations": [
+        "appendix_grouped.tex:567",
+        "appendix_grouped.tex:569",
+        "appendix_grouped.tex:571"
+      ],
+      "operation": "equal",
+      "expected": true
+    }
+  ]
+}

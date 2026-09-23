@@ -1537,14 +1537,11 @@ def individual_model_equivalence(students, cost_table, output_dir):
                 / float(cost.cost_per_gain_pp),
             }
         )
-    for row, adjusted in zip(rows, _holm_adjust([row["p_tost"] for row in rows])):
-        row["holm_p"] = adjusted
-        row["holm_equivalent"] = adjusted < 0.05
     protocol = {
         "record_id": "protocol",
         "record_kind": "protocol",
         "margin_pp": margin,
-        "multiplicity": "Holm correction across all 12 joint TOST p-values",
+        "multiplicity": "Separate exploratory tests without correction across AI tutors",
         "nominal_alpha": 0.05,
         "human_reference_usd": float(combined_costs.loc["human", "mean_cost_usd"]),
     }
@@ -1554,7 +1551,6 @@ def individual_model_equivalence(students, cost_table, output_dir):
         "complete": True,
         "valid_tests": len(rows),
         "nominal_equivalent": sum(r["nominal_equivalent"] for r in rows),
-        "holm_equivalent": sum(r["holm_equivalent"] for r in rows),
         "cheapest_nominal_model_by_cost_per_gain": min(
             (r for r in rows if r["nominal_equivalent"]),
             key=lambda r: r["model_cost_per_gain_pp"],

@@ -241,6 +241,12 @@ def apply(svg_path: Path, profile_path: Path | None = None):
                 break
     if profile["provider_marks"]:
         root.append(provider_marks(profile["provider_marks"]))
+    if svg_path.stem == "figure_01_learning":
+        inset = root.find(
+            ".//" + SVG + "g[@id='adjusted_cluster_aware_human_comparison']"
+        )
+        root.remove(inset)
+        root.append(inset)
     straighten_annotation_leaders(root, identifiers, mappings)
     # White annotation backings and logos are typography, never data marks.
     for box in profile.get("label_backgrounds", []):
@@ -314,7 +320,11 @@ def apply(svg_path: Path, profile_path: Path | None = None):
         with pymupdf.open() as document:
             _, _, width, height = profile["pdf_canvas"]
             page = document.new_page(width=width, height=height)
-            page.show_pdf_page(rendered[0].rect, rendered, 0)
+            page.show_pdf_page(
+                page.rect if profile.get("fit_pdf_canvas") else rendered[0].rect,
+                rendered,
+                0,
+            )
             temporary = svg_path.with_suffix(".styled.tmp.pdf")
             document.save(temporary, garbage=4, deflate=True, no_new_id=True)
     svg_path.write_bytes(raw)
@@ -332,3 +342,328 @@ def apply(svg_path: Path, profile_path: Path | None = None):
         svg_sha256=sha256(svg_path),
         pdf_sha256=sha256(svg_path.with_suffix(".pdf")),
     )
+
+
+def _pdf_font(bold=False):
+    from matplotlib.font_manager import FontProperties, findfont
+
+    return findfont(
+        FontProperties(family="Arial", weight="bold" if bold else "normal"),
+        fallback_to_default=False,
+    )
+
+
+def color(c):
+    return ((c >> 16 & 255) / 255, (c >> 8 & 255) / 255, (c & 255) / 255)
+
+
+def lines(page):
+    return [l for b in page.get_text("dict")["blocks"] for l in b.get("lines", [])]
+
+
+def spans(page):
+    return [s for l in lines(page) for s in l["spans"]]
+
+
+def replace(page, old, new, align="left"):
+    found = [s for s in spans(page) if s["text"] == old]
+    assert found, (old, [s["text"] for s in spans(page)])
+    todo = []
+    for s in found:
+        r = pymupdf.Rect(s["bbox"])
+        font = _pdf_font(True) if "Bold" in s["font"] else _pdf_font(False)
+        name = "replacementBold" if "Bold" in s["font"] else "replacementArial"
+        x, y = s["origin"]
+        fw = pymupdf.Font(fontfile=font).text_length(new, fontsize=s["size"])
+        if align == "right":
+            x = r.x1 - fw
+        elif align == "center":
+            x = (r.x0 + r.x1 - fw) / 2
+        page.add_redact_annot(r, fill=False, cross_out=False)
+        todo.append((s, new, (x, y), font, name))
+    page.apply_redactions(images=0, graphics=0, text=0)
+    for s, t, origin, font, name in todo:
+        page.insert_text(
+            origin,
+            t,
+            fontname=name,
+            fontfile=font,
+            fontsize=s["size"],
+            color=color(s["color"]),
+        )
+    return len(todo)
+
+
+def remove_text(page, terms):
+    count = 0
+    for s in spans(page):
+        if any(t in s["text"] for t in terms):
+            page.add_redact_annot(s["bbox"], fill=False, cross_out=False)
+            count += 1
+    page.apply_redactions(images=0, graphics=0, text=0)
+    return count
+
+
+def primary(doc):
+    p = doc[0]
+    assert ".023" not in p.get_text(), "Unexpected second equivalence p label"
+    replace(p, "Highest observed AI mean per topic", "Highest AI mean per topic")
+    replace(
+        p, "Adjusted AI −human (percentage points)", "AI − human (percentage points)"
+    )
+    replace(p, "90% cluster-aware CI", "90% CI", align="center")
+    return doc, {
+        "edits": [
+            "Remove observed/adjusted/cluster-aware qualifiers from three labels. Existing inset has no .023 p label."
+        ],
+        "retained_data": "All plotted geometry, numeric labels, intervals, and colors unchanged.",
+    }
+
+
+def quartile(doc):
+    # Remove painting operations in the raw-series color in nested PDF forms.
+    from pypdf import PdfReader, PdfWriter
+    from pypdf.generic import ContentStream
+    import io
+
+    reader = PdfReader(io.BytesIO(doc.tobytes()))
+    writer = PdfWriter()
+    writer.clone_document_from_reader(reader)
+    raw = (134 / 255, 147 / 255, 157 / 255)
+    seen = set()
+    removed = 0
+
+    def israw(v):
+        return len(v) == 3 and max(abs(a - b) for a, b in zip(v, raw)) < 2e-5
+
+    def walk(resources):
+        nonlocal removed
+        for ref in resources.get("/XObject", {}).values():
+            ob = ref.get_object()
+            if ref.idnum in seen:
+                continue
+            seen.add(ref.idnum)
+            if ob.get("/Subtype") != "/Form":
+                continue
+            stream = ContentStream(ob, writer)
+            fill = stroke = (0.0,)
+            stack = []
+            changed = False
+            new = []
+            for args, op in stream.operations:
+                if op == b"q":
+                    stack.append((fill, stroke))
+                elif op == b"Q":
+                    fill, stroke = stack.pop()
+                elif op in (b"rg", b"g", b"k"):
+                    fill = tuple(float(v) for v in args)
+                elif op in (b"RG", b"G", b"K"):
+                    stroke = tuple(float(v) for v in args)
+                if (
+                    op in (b"S", b"s")
+                    and israw(stroke)
+                    or op in (b"f", b"F", b"f*")
+                    and israw(fill)
+                    or op in (b"B", b"B*", b"b", b"b*")
+                    and (israw(fill) or israw(stroke))
+                ):
+                    op = b"n"
+                    args = []
+                    removed += 1
+                    changed = True
+                new.append((args, op))
+            if changed:
+                stream.operations = new
+                ob.set_data(stream.get_data())
+            walk(ob.get("/Resources", {}))
+
+    walk(writer.pages[0]["/Resources"])
+    assert (
+        removed == 36
+    ), removed  # 8 data circles, 16 caps, 8 CI segments, plus 4 legend glyphs.
+    buf = io.BytesIO()
+    writer.write(buf)
+    out = pymupdf.open(stream=buf.getvalue(), filetype="pdf")
+    p = out[0]
+    assert remove_text(p, ["Observed", "Baseline-adjusted"]) == 2
+    # Remove only the now-unnecessary blue legend key; retain every data path.
+    # This location contains the legend glyph, not a data interval.
+    p.add_redact_annot(pymupdf.Rect(715, 214, 732, 224), fill=False, cross_out=False)
+    p.apply_redactions(images=0, graphics=1, text=0)
+    return out, {
+        "edits": [
+            "Remove gray raw-Welch series and redundant two-estimator legend. Retain blue ANCOVA-HC3 series."
+        ],
+        "raw_paint_operations_removed": removed,
+        "retained_data": "All blue data coordinates, CIs, axes, scales, colors, and positions unchanged.",
+    }
+
+
+def dialogue(doc):
+    count = 0
+    for old, new in [("Quant: Holm ", "Quant: "), ("Verbal: Holm ", "Verbal: ")]:
+        count += replace(doc[0], old, new, align="right")
+    assert count == 6
+    return doc, {
+        "edits": [
+            "Remove Holm from six p labels; ordinary p notation retains identical numeric values."
+        ],
+        "retained_data": "Every point, curve, band, p value, and annotation endpoint preserved.",
+    }
+
+
+def cost(doc):
+    replace(
+        doc[0],
+        "Highlighted rows: human-equivalent gains",
+        "Passed individual equivalence tests",
+    )
+    return doc, {
+        "edits": ["Legend reads Passed individual equivalence tests."],
+        "retained_data": "All four highlights, colors, bars, values, inset, and table entries unchanged.",
+    }
+
+
+def latency(doc):
+    p = doc[0]
+    found = [
+        l for l in lines(p) if "Pearson r=" in "".join(s["text"] for s in l["spans"])
+    ]
+    assert len(found) == 3, len(found)
+    for l in found:
+        p.add_redact_annot(l["bbox"], fill=False, cross_out=False)
+    p.apply_redactions(images=0, graphics=0, text=0)
+    return doc, {
+        "edits": [
+            "Remove three Pearson annotations; retain existing Spearman rho and p annotations."
+        ],
+        "retained_data": "Spearman values, scatter positions, model labels, and fitted lines unchanged.",
+    }
+
+
+def activity(doc):
+    old = "Combined sections · rows ordered by student-message volume · cells show observed values"
+    replace(doc[0], old, old.replace("observed ", ""))
+    return doc, {
+        "edits": ["Remove observed from cell-value description."],
+        "retained_data": "All heatmap cells, values, ordering, colors, and borders unchanged.",
+    }
+
+
+def domains(doc):
+    replace(doc[0], "Observed learning gain", "Learning gain")
+    return doc, {
+        "edits": ["Remove Observed from learning-gain legend."],
+        "retained_data": "All seven domain plots, numerical values, geometry, colors, ordering, and provider marks unchanged.",
+    }
+
+
+def finish_paper_pdf(svg_path):
+    """Apply the paper's final presentation edits to newly generated vectors."""
+    svg_path = Path(svg_path)
+    operations = {
+        "figure_01_learning": primary,
+        "figure_05_cost_per_gain": cost,
+        "figure_06_engagement_practice": dialogue,
+        "figure_13_domain_learning": domains,
+        "figure_14_starting_proficiency": quartile,
+        "figure_18_reply_time_engagement": latency,
+        "figure_19_tutoring_experience": activity,
+    }
+    operation = operations.get(svg_path.stem)
+    if operation is None:
+        return
+    pdf = svg_path.with_suffix(".pdf")
+    with pymupdf.open(pdf) as document:
+        original_marks = document[0].get_drawings()
+        revised, presentation = operation(document)
+        revised_marks = revised[0].get_drawings()
+        if operation is quartile:
+
+            def retained_blue(marks):
+                blue = (8 / 255, 124 / 255, 167 / 255)
+                legend = pymupdf.Rect(715, 214, 732, 224)
+                return [
+                    {key: value for key, value in mark.items() if key != "seqno"}
+                    for mark in marks
+                    if not legend.contains(mark["rect"])
+                    and any(
+                        color is not None
+                        and len(color) == 3
+                        and max(abs(a - b) for a, b in zip(color, blue)) < 1e-4
+                        for color in (mark["fill"], mark["color"])
+                    )
+                ]
+
+            assert retained_blue(original_marks) == retained_blue(revised_marks)
+            presentation["retained_blue_marks"] = len(retained_blue(revised_marks))
+        else:
+            assert [
+                {key: value for key, value in mark.items() if key != "seqno"}
+                for mark in original_marks
+            ] == [
+                {key: value for key, value in mark.items() if key != "seqno"}
+                for mark in revised_marks
+            ], "Presentation changed plotted geometry"
+        presentation["retained_marks_verified"] = True
+        # Pin only serialization metadata; all marks and labels above were rebuilt.
+        profile_path = ROOT / "figures/styles" / (svg_path.stem + ".json")
+        profile = json.loads(profile_path.read_text()) if profile_path.exists() else {}
+        if profile.get("pdf_document_id"):
+            revised.xref_set_key(-1, "ID", profile["pdf_document_id"])
+        temporary = pdf.with_suffix(".final.tmp.pdf")
+        revised.save(temporary, garbage=4, deflate=True, no_new_id=True)
+        # Match the vector SVG representation delivered with these edited PDFs.
+        svg_path.write_text(revised[0].get_svg_image(text_as_path=False))
+        revised[0].get_pixmap(
+            matrix=pymupdf.Matrix(160 / 72, 160 / 72), alpha=False
+        ).save(pdf.with_suffix(".png"))
+        if revised is not document:
+            revised.close()
+    if svg_path.stem == "figure_05_cost_per_gain":
+        _order_font_dictionary_keys(temporary)
+    if profile.get("pdf_version"):
+        raw = temporary.read_bytes()
+        temporary.write_bytes(b"%PDF-" + profile["pdf_version"].encode() + raw[8:])
+    temporary.replace(pdf)
+    return presentation
+
+
+def _order_font_dictionary_keys(pdf):
+    """Keep the paper's PDF serialization without recompressing font streams."""
+    with pymupdf.open(pdf) as document:
+        streams = []
+        for font in document[0].get_fonts(full=True):
+            if "+" not in font[3]:
+                continue
+            references = [document.xref_get_key(font[0], "ToUnicode")]
+            kind, reference = document.xref_get_key(font[0], "FontDescriptor")
+            if kind == "xref":
+                references.append(
+                    document.xref_get_key(int(reference.split()[0]), "FontFile2")
+                )
+            streams.extend(
+                int(value.split()[0]) for kind, value in references if kind == "xref"
+            )
+    raw = pdf.read_bytes()
+    for xref in streams:
+        pattern = rb"(?m)^" + str(xref).encode() + rb" 0 obj\n<<([^>]+)>>"
+        match = re.search(pattern, raw)
+        if not match:
+            raise ValueError("Missing serialized font dictionary")
+        body = match[1]
+        fields = re.findall(rb"/Filter/FlateDecode|/Length1? [0-9]+", body)
+        if b"".join(fields) != body:
+            raise ValueError("Unexpected font stream dictionary")
+        order = {b"/Filter": 0, b"/Length1": 1, b"/Length": 2}
+        ordered = b"".join(
+            sorted(
+                fields,
+                key=lambda field: order[
+                    field.split(b" ")[0].removesuffix(b"/FlateDecode")
+                ],
+            )
+        )
+        assert len(body) == len(ordered)
+        raw = raw[: match.start(1)] + ordered + raw[match.end(1) :]
+    pdf.write_bytes(raw)

@@ -1,6 +1,7 @@
-"""Table C.4: fixed study protocol definitions, not estimated outcomes."""
+"""Table A.4: fixed study protocol definitions, not estimated outcomes."""
 
-from studentbench.table_output import render, cli
+from tables.output import render
+from studentbench.table_output import cli
 
 ROWS = [
     {
@@ -47,7 +48,7 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_04_prompt_guidance",
         ROWS,
-        "Table C.4. Omitted prompt guidance",
+        "Table A.4. Omitted prompt guidance",
         "Fixed study protocol; these definitions specify the analyses rather than report fitted results.",
     )
 

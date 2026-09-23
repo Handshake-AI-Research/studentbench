@@ -1,7 +1,8 @@
-"""Table C.1: starting scores and assessment-form order."""
+"""Table A.1: starting scores and assessment-form order."""
 
 from pathlib import Path
-from studentbench.table_output import render, cli, SECTIONS, KINDS
+from tables.output import render
+from studentbench.table_output import cli, SECTIONS, KINDS
 from studentbench.data import load_sessions
 
 
@@ -14,7 +15,7 @@ def run(data_dir, analysis_dir, output_dir):
             rows.append(
                 {
                     "Section": SECTIONS[section],
-                    "Condition": KINDS[kind],
+                    "Condition": "Control" if kind == "control" else KINDS[kind],
                     "Sessions": len(group),
                     "Pre-test, mean (SD)": f"{group.pre_pct.mean():.2f} ({group.pre_pct.std(ddof=1):.2f})",
                     "P→Q": int(group.form_order.eq("PQ").sum()),
@@ -25,7 +26,7 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_01_baseline",
         rows,
-        "Table C.1. Baseline scores and form order",
+        "Table A.1. Baseline scores and form order",
         "Calculated from released assessment responses.",
     )
 

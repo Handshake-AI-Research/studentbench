@@ -17,7 +17,7 @@ def run(analysis_dir, output_dir, expected_path=None):
         Path(expected_path)
         if expected_path
         else Path(__file__).resolve().parents[1]
-        / "verification/expected_new_analyses.json"
+        / "verification/robustness_expected.json"
     )
     expected = json.loads(expected_path.read_text())
     files = {
