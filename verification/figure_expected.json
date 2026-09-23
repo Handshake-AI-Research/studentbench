@@ -1,6 +1,6 @@
 {
-  "paper_commit": "8f7cc53f0d6d5ff4e58aa00e968e9daada0ae08d",
-  "paper_pdf_sha256": "697da6a716e68d53b9d74f60c21c90d38bd18fac679cc07dadffe9a06f9268b8",
+  "paper_commit": "47fa6226e981435727d8d19194000c8bd2e516b4",
+  "paper_pdf_sha256": "b3661a625bb27242c01c7a93caf1fffb1c11ff50c378bcec542696c8cc8f046d",
   "purpose": "Aggregate expected values used only for verification after fresh analyses and plotting. Never analysis or plotting inputs.",
   "checks": [
     {
@@ -9658,24 +9658,6 @@
             "mean_gain_pp": 15.60846560846561,
             "n": 140
           }
-        },
-        "combined_tost": {
-          "ai_minus_human_raw_gap_pp": -1.6888423854295755,
-          "equivalence_ci_high_pp": 0.48898894371224433,
-          "equivalence_ci_level": 0.9,
-          "equivalence_ci_low_pp": -3.8666737145713954,
-          "equivalence_margin_pp": 4.085466864465263,
-          "equivalent_at_registered_alpha": true,
-          "margin_fraction_pooled_sd": 0.25,
-          "n_ai": 2139,
-          "n_human": 140,
-          "p_lower": 0.03526349941224874,
-          "p_tost": 0.03526349941224874,
-          "p_upper": 1.0357641150550958e-05,
-          "pooled_gain_sd_pp": 16.341867457861053,
-          "tost_alpha": 0.05,
-          "welch_df": 161.61307550106483,
-          "welch_se": 1.3164377484927554
         }
       },
       "atol": 1e-08,

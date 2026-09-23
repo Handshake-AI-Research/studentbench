@@ -85,7 +85,7 @@ def render(analysis_root, output_dir):
         ax.set_xlabel("Pre-test quartile", fontsize=10)
     cax = fig.add_axes([0.40, 0.115, 0.36, 0.025])
     cb = fig.colorbar(im, cax=cax, orientation="horizontal")
-    cb.set_label("AI − no tutor learning gain (percentage points)", fontsize=10)
+    cb.set_label("AI − control learning gain (percentage points)", fontsize=10)
     fig.text(
         0.205,
         0.94,

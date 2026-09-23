@@ -1,7 +1,8 @@
-"""Table F.2: selected adjusted engagement, correct-practice, and gain associations."""
+"""Table D.2: selected adjusted engagement, correct-practice, and gain associations."""
 
 from pathlib import Path
-from studentbench.table_output import render, cli, read_json, pvalue, SECTIONS
+from tables.output import render
+from studentbench.table_output import cli, read_json, pvalue, SECTIONS
 
 
 def run(data_dir, analysis_dir, output_dir):
@@ -41,8 +42,15 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_12_engagement_practice",
         rows,
-        "Table F.2. Student engagement, correct practice and learning",
+        "Table D.2. Student engagement, correct practice and learning",
         "Normal-reference HC3 intervals; global Holm correction across all 276 tests.",
+        values={
+            "sessions_" + scope: next(
+                r["n"] for r in tests
+                if r["scope"] == scope and r["family"] == "primary_raw"
+            )
+            for scope in ["quant", "verbal", "combined"]
+        },
     )
 
 

@@ -144,3 +144,20 @@ def verify_core(
     }
     write_json(output_dir / "core_verification.json", summary)
     return summary
+
+
+def verify_primary_equivalence(analysis_dir, output_dir):
+    """Check the current paper's full and repeat-excluded CR2 estimates."""
+    expected_path = Path(__file__).resolve().parents[1] / 'verification/primary_equivalence_expected.json'
+    actual_path = Path(analysis_dir) / 'primary_equivalence/results.json'
+    expected = json.loads(expected_path.read_text())
+    actual = json.loads(actual_path.read_text())
+    if actual.get('complete') is not True:
+        raise ValueError('Primary equivalence analysis is incomplete')
+    count = _numeric_compare(actual['models'], expected['models'], 'primary_equivalence', 2e-9, 2e-9)
+    result = dict(complete=True, status='PASS', statistics_checked=count,
+                  paper_commit=expected['paper_commit'],
+                  expectations_sha256=hashlib.sha256(expected_path.read_bytes()).hexdigest(),
+                  input_sha256=hashlib.sha256(actual_path.read_bytes()).hexdigest())
+    write_json(Path(output_dir) / 'primary_equivalence.json', result)
+    return result

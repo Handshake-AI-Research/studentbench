@@ -64,7 +64,7 @@ def render(analysis_root, output_dir):
         )
         ax.set_ylim(3.55, -0.55)
         ax.set_title(f"{chr(65 + i)}  {sec.title()}", loc="left")
-        ax.set_xlabel("AI − no tutor learning gain (percentage points)")
+        ax.set_xlabel("AI − control learning gain (percentage points)")
         axes_base(ax)
         ax.set_xlim(
             min(-5, float(df.ci_low_pp.min()) - 1), float(df.ci_high_pp.max()) + 1

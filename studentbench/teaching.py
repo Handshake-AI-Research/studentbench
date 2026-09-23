@@ -220,14 +220,6 @@ def run(data_dir: Path, output_dir: Path):
             "planning_combined",
             events[events.rubric_question_id.isin(CRITERIA[:4] + [CRITERIA[7]])],
         ),
-        (
-            "practice_strict_q5_q7",
-            events[
-                events.rubric_question_id.isin(
-                    ["practice_alignment", "answer_key_accuracy"]
-                )
-            ],
-        ),
     ]
     fits = {}
     for name, block in jobs:

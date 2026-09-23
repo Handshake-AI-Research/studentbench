@@ -93,7 +93,7 @@ def render(analysis_root, output_dir):
     ax.text(
         0,
         0.67,
-        "AI tutors are ranked within each domain.\nHuman and no-tutor results are references.\nAxes begin 1 point below the smallest mean.",
+        "AI tutors are ranked within each domain.\nHuman and control results are references.\nAxes begin 1 point below the smallest mean.",
         fontsize=10,
         linespacing=1.6,
         transform=ax.transAxes,
@@ -103,7 +103,7 @@ def render(analysis_root, output_dir):
         handles=[
             Patch(
                 color=COLORS[k],
-                label={"human": "Human tutor", "control": "No tutor"}.get(k, k),
+                label={"human": "Human tutor", "control": "Control"}.get(k, k),
             )
             for k in ["OpenAI", "Anthropic", "Google", "Moonshot", "human", "control"]
         ],

@@ -31,7 +31,7 @@ Student interaction counts cover the main learning study. The release also inclu
 
 ## Reproduce the results
 
-The commands below compute the results and save each figure and table separately.
+The commands below compute the results and save each figure and table separately. They reproduce the results in paper revision `47fa622`, including the appendix; they do not compile the paper text.
 
 Use Python 3.12 or newer. The setup commands below are for macOS and Linux. No model API keys are needed.
 
@@ -50,7 +50,7 @@ python reproduce.py --data data --output results --verify
 
 Already downloaded the dataset? Set `--data` to the folder containing `studentbench_overall_parameters.json`.
 
-`--verify` compares your computed results with the reference numbers included in this repository. All inputs come from this repository and the public dataset. If a run is interrupted, rerun the same command to resume.
+`--verify` checks the computed statistics, the numbers and rankings stated in the paper, every table cell and each figure's numerical inputs. It also checks the table LaTeX and fixed illustrations against the paper. Reference results are used only for comparison. All analysis inputs come from this repository and the public dataset. If a run is interrupted, rerun the same command to resume.
 
 ```text
 results/
@@ -66,19 +66,19 @@ Find the code for each figure and table by its number in the paper.
 
 | Main figure | Plotting code | Analysis |
 |---|---|---|
-| 1 · Learning gains | [figure_01_learning.py](figures/figure_01_learning.py) | [learning.py](studentbench/learning.py) |
+| 1 · Learning gains | [figure_01_learning.py](figures/figure_01_learning.py) | [Learning outcomes](studentbench/learning.py), [pooled equivalence](studentbench/primary_equivalence.py) |
 | 2 · Study design | [Static artwork](figures/README.md) | Study protocol |
 | 3 · Teaching evaluations | [figure_03_teaching_evaluations.py](figures/figure_03_teaching_evaluations.py) | [teaching.py](studentbench/teaching.py) |
 | 4 · Resources | [figure_04_resources.py](figures/figure_04_resources.py) | [costs.py](studentbench/costs.py) |
 | 5 · Cost per learning gain | [figure_05_cost_per_gain.py](figures/figure_05_cost_per_gain.py) | [costs.py](studentbench/costs.py) |
 | 6 · Engagement and practice | [figure_06_engagement_practice.py](figures/figure_06_engagement_practice.py) | [engagement.py](studentbench/engagement.py) |
 
-[All 24 figures](figures/README.md) · [All 16 tables](tables/README.md)
+[All 24 figures](figures/README.md) · [All 15 tables](tables/README.md)
 
 Run one analysis, then redraw one figure:
 
 ```bash
-python reproduce.py --data data --output results --only learning
+python reproduce.py --data data --output results --only learning primary_equivalence
 python figures/figure_01_learning.py --analysis-root results/analysis --output results/figures
 ```
 
@@ -92,7 +92,9 @@ Event times use signed elapsed seconds, preserving six decimal places, on one sh
 
 Cost analyses reconstruct session totals from request records, fixed prices and measured cache multipliers in [cost_reconstruction.py](studentbench/cost_reconstruction.py). The saved session summaries are checked against those reconstructions. IRT sensitivity analyses use the released calibrated pretest and posttest scores; the original item calibration is not refitted.
 
-Install Arial to match the paper's figure fonts. Otherwise, plots use an available font. Add `--native-figures` when using modified data or changing the layout.
+The pooled AI–human equivalence analysis uses [aggregate CR2 inputs](assets/analysis/README.md) to account for students and human tutors appearing in both sections without releasing their identity links. Regression estimates and equivalence tests are recomputed from the released inputs.
+
+All 24 figure files and 15 table LaTeX fragments were verified byte for byte against this paper revision. To check figure bytes on your machine, add `--verify-figure-bytes`; this requires Arial and the matching [rendering environment](verification/render_environment.json). Other fonts or rendering libraries can change PDF bytes without changing the results. Add `--native-figures` when using modified data or changing the layout.
 
 ## Citation
 

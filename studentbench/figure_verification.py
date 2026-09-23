@@ -214,3 +214,29 @@ def write_figure_manifest(analysis_root, figure_dir):
         completed.append(row)
     write_json(figure_dir / "manifest.json", {"complete": True, "figures": completed})
     return completed
+
+
+def verify_rendered_figures(figure_dir, output_dir):
+    """Require every generated figure PDF/image to match its manuscript asset."""
+    figure_dir, output_dir = Path(figure_dir), Path(output_dir)
+    manifest_path = REPOSITORY / 'figures/manifest.json'
+    manifest = json.loads(manifest_path.read_text())
+    journal = Journal(output_dir / 'figure_bytes.jsonl')
+    results = []
+    for figure in manifest['figures']:
+        artifact = figure_dir / figure['outputs'][0]
+        actual = _sha256(artifact)
+        expected = figure['asset_sha256']
+        result = dict(figure=figure['paper_number'], file=artifact.name,
+                      expected_sha256=expected, actual_sha256=actual,
+                      passed=actual == expected)
+        journal.save(figure['label'], _sha256(manifest_path) + actual, result)
+        results.append(result)
+    summary = dict(complete=True, passed=all(r['passed'] for r in results),
+                   figures=len(results), byte_identical=sum(r['passed'] for r in results),
+                   paper_commit=manifest['paper_commit'], results=results)
+    write_json(output_dir / 'figure_bytes.json', summary)
+    if not summary['passed']:
+        failed = [r['file'] for r in results if not r['passed']]
+        raise ValueError('Rendered figures differ from the paper: ' + ', '.join(failed))
+    return summary

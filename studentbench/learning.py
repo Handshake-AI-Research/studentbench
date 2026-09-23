@@ -91,29 +91,14 @@ def run(data_dir: Path, output_dir: Path):
     topics = load_topics(data_dir, output_dir, frame)
     shared, coverage = proficiency._coverage(frame)
     primary = statistics._estimate_outcomes(frame.to_dict("records"))
-    write_json(
-        output_dir / "capacity_subset_equivalence.json",
-        capacity_subset_equivalence(frame),
-    )
-    from .data import Dataset
-
-    write_csv(
-        output_dir / "human_ai_equivalence_tost.csv",
-        pd.DataFrame(
-            statistics._equivalence(
-                frame.to_dict("records"), Dataset(data_dir).parameters
-            )
-        ),
-    )
     write_json(output_dir / "primary_results.json", primary)
     for key, value in primary.items():
         if isinstance(value, list):
             write_csv(output_dir / (key + ".csv"), pd.DataFrame(value))
-    _, raw, raw_tests = proficiency._distribution_and_raw(frame, shared)
+    raw = proficiency._raw_outcomes(frame, shared)
     adjusted, adjusted_tests = proficiency._adjusted(frame, shared)
     write_csv(output_dir / "raw_arm_outcomes.csv", raw)
     write_csv(output_dir / "ancova_adjusted_arm_outcomes.csv", adjusted)
-    write_json(output_dir / "raw_tests.json", raw_tests)
     write_json(output_dir / "adjusted_tests.json", adjusted_tests)
 
     categories, domains = [], []
@@ -175,15 +160,6 @@ def run(data_dir: Path, output_dir: Path):
     groups, contrasts = proficiency._proficiency_pooled_ai_control(frame, thresholds)
     write_csv(output_dir / "proficiency_quartile_group_outcomes.csv", groups)
     write_csv(output_dir / "proficiency_quartile_ai_control_contrasts.csv", contrasts)
-    human_contrasts, interactions = proficiency._proficiency_pooled_ai_human(
-        frame, thresholds
-    )
-    write_csv(
-        output_dir / "proficiency_quartile_ai_human_contrasts.csv", human_contrasts
-    )
-    write_json(output_dir / "proficiency_ai_human_interaction_tests.json", interactions)
-    bands = proficiency._arm_pretest_bands(frame, shared, adjusted)
-    write_csv(output_dir / "arm_pretest_band_outcomes.csv", bands)
     cells, global_tests, pairs, effects = (
         proficiency._configuration_topic_proficiency_frontier(topics, thresholds)
     )
@@ -193,23 +169,16 @@ def run(data_dir: Path, output_dir: Path):
     write_json(
         output_dir / "topic_proficiency_configuration_omnibus.json", global_tests
     )
-    variants, irt_arms, irt_pairs, irt_tests = irt.high_baseline_analysis(
+    variants, irt_arms, irt_tests = irt.high_baseline_analysis(
         frame, output_dir / "irt"
     )
     for name, table in [
         ("irt_high_baseline_specification_family", variants),
         ("irt_top_quartile_quant_arm_outcomes", irt_arms),
-        ("irt_top_quartile_quant_pairwise", irt_pairs),
     ]:
         write_csv(output_dir / (name + ".csv"), table)
     write_json(output_dir / "irt_high_baseline_statistics.json", irt_tests)
 
-    tost = statistics._welch_tost(
-        frame.loc[frame.kind == "ai", "gain_pp"].to_numpy(),
-        frame.loc[frame.kind == "human", "gain_pp"].to_numpy(),
-        0.25,
-        0.05,
-    )
     figure = {
         "valid_sessions": len(frame),
         "topic_session_rows": len(topics),
@@ -222,7 +191,6 @@ def run(data_dir: Path, output_dir: Path):
             kind: mean_ci(frame.loc[frame.kind == kind, "gain_pp"])
             for kind in ["ai", "human", "control"]
         },
-        "combined_tost": tost,
         "ai_omnibus_tests": adjusted_tests,
         "model_coverage": coverage,
     }
@@ -237,74 +205,3 @@ def run(data_dir: Path, output_dir: Path):
     }
     write_json(output_dir / "summary.json", summary)
     return summary
-
-
-def capacity_subset_equivalence(frame):
-    """Predeclared five-model sensitivity with two explicit equivalence margins."""
-    membership = [
-        "gpt-5.5-high",
-        "gpt-5.5-pro-med",
-        "opus-4.8-xhigh",
-        "opus-5-high",
-        "gemini-3.1-pro-high",
-    ]
-    human = frame.loc[frame.kind == "human", "gain_pp"].to_numpy(float)
-    ai = frame.loc[frame.kind == "ai", "gain_pp"].to_numpy(float)
-    subset = frame.loc[frame.arm_id.isin(membership), "gain_pp"].to_numpy(float)
-    full_margin = statistics._welch_tost(ai, human, 0.25, 0.05)["equivalence_margin_pp"]
-    subset_fit = statistics._welch_tost(subset, human, 0.25, 0.05)
-    fixed_fit = statistics._welch_tost(
-        subset, human, full_margin / subset_fit["pooled_gain_sd_pp"], 0.05
-    )
-    rows = []
-    for key, fit in [
-        ("subset_quarter_pooled_sd", subset_fit),
-        ("fixed_original_full_pool_margin", fixed_fit),
-    ]:
-        rows.append(
-            {
-                "record_id": key,
-                "n_ai": len(subset),
-                "n_human": len(human),
-                "ai_mean_gain_pp": float(subset.mean()),
-                "human_mean_gain_pp": float(human.mean()),
-                "ai_minus_human_pp": fit["ai_minus_human_raw_gap_pp"],
-                "ci90_pp": [
-                    fit["equivalence_ci_low_pp"],
-                    fit["equivalence_ci_high_pp"],
-                ],
-                "margin_pp": fit["equivalence_margin_pp"],
-                "pooled_sd_pp": fit["pooled_gain_sd_pp"],
-                "se_pp": fit["welch_se"],
-                "welch_df": fit["welch_df"],
-                "p_lower": fit["p_lower"],
-                "p_upper": fit["p_upper"],
-                "p_tost": fit["p_tost"],
-                "nominal_equivalent": fit["equivalent_at_registered_alpha"],
-            }
-        )
-    for row, p in zip(rows, proficiency._holm([r["p_tost"] for r in rows])):
-        row["holm_two_margin_p"] = p
-    groups = {}
-    for scope in ["quant", "verbal", "combined"]:
-        block = frame if scope == "combined" else frame[frame.section == scope]
-        masks = {
-            "capacity_subset": block.arm_id.isin(membership),
-            "excluded_ai": (block.kind == "ai") & ~block.arm_id.isin(membership),
-            "full_ai": block.kind == "ai",
-            "human": block.kind == "human",
-        }
-        groups[scope] = {
-            name: {
-                "n": int(mask.sum()),
-                "mean_gain_pp": float(block.loc[mask, "gain_pp"].mean()),
-                "sd_gain_pp": float(block.loc[mask, "gain_pp"].std(ddof=1)),
-            }
-            for name, mask in masks.items()
-        }
-    return {
-        "complete": True,
-        "membership": membership,
-        "results": rows,
-        "group_summaries": groups,
-    }

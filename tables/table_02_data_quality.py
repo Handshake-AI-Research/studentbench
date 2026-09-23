@@ -1,7 +1,8 @@
-"""Table C.2: primary exclusion counts at the two screening stages."""
+"""Table A.2: primary exclusion counts at the two screening stages."""
 
 from pathlib import Path
-from studentbench.table_output import render, cli
+from tables.output import render
+from studentbench.table_output import cli
 from studentbench import data_quality
 
 
@@ -21,7 +22,7 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_02_data_quality",
         rows,
-        "Table C.2. Data-quality exclusions",
+        "Table A.2. Data-quality exclusions",
         "Counts of the recorded primary reason; these are not overall study attrition rates.",
     )
 

@@ -1,32 +1,30 @@
-"""Table E.1: observed and adjusted Combined learning gains."""
+"""Table C.1: Combined learning gains adjusted for starting score and section."""
 
 from pathlib import Path
 import pandas as pd
-from studentbench.table_output import render, cli, interval
+from tables.output import render
+from studentbench.table_output import cli, interval
 from studentbench.plotting import display_label
 
 
 def run(data_dir, analysis_dir, output_dir):
     root = Path(analysis_dir) / "learning"
-    raw = pd.read_csv(root / "raw_arm_outcomes.csv")
     adjusted = pd.read_csv(root / "ancova_adjusted_arm_outcomes.csv")
-    raw = raw.loc[raw.scope.eq("combined")]
-    adjusted = adjusted.loc[adjusted.scope.eq("combined")].set_index("arm_id")
+    adjusted = adjusted.loc[adjusted.scope.eq("combined")]
     rows = []
     ordered = list(
-        raw.loc[raw.kind.eq("ai")].sort_values("mean_gain_pp", ascending=False).arm_id
+        adjusted.loc[adjusted.kind.eq("ai")]
+        .sort_values("adjusted_marginal_gain_pp", ascending=False).arm_id
     ) + ["human", "control"]
     for arm in ordered:
-        r = raw.loc[raw.arm_id.eq(arm)].iloc[0]
-        a = adjusted.loc[arm]
+        a = adjusted.loc[adjusted.arm_id.eq(arm)].iloc[0]
         rows.append(
             {
-                "Tutor": display_label(arm),
-                "n": int(r["n"]),
-                "Observed gain [95% CI]": interval(
-                    r.mean_gain_pp, r.ci_low_pp, r.ci_high_pp
+                "Condition": {"control": "Control", "human": "Human"}.get(
+                    arm, display_label(arm)
                 ),
-                "Adjusted gain [95% CI]": interval(
+                "n": int(a["n"]),
+                "Learning gain [95% CI]": interval(
                     a.adjusted_marginal_gain_pp, a.ci_low_pp, a.ci_high_pp
                 ),
             }
@@ -35,8 +33,8 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_09_combined_learning",
         rows,
-        "Table E.1. Combined learning gains",
-        "Observed Student-t intervals; adjusted HC3 intervals.",
+        "Table C.1. Combined learning gains",
+        "Quadratic pre-test and section adjustment, with 95% HC3 intervals.",
     )
 
 

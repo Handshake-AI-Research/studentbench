@@ -1,7 +1,8 @@
-"""Table D.2: adjusted tutoring-minus-no-tutor learning contrasts."""
+"""Table B.2: adjusted tutoring-minus-no-tutor learning contrasts."""
 
 from pathlib import Path
-from studentbench.table_output import render, cli, read_json, pvalue, SECTIONS, KINDS
+from tables.output import render
+from studentbench.table_output import cli, read_json, pvalue, SECTIONS, KINDS
 
 
 def run(data_dir, analysis_dir, output_dir):
@@ -21,7 +22,7 @@ def run(data_dir, analysis_dir, output_dir):
             rows.append(
                 {
                     "Section": SECTIONS[scope],
-                    "Contrast": KINDS[kind] + " minus no tutor",
+                    "Contrast": KINDS[kind] + " − control",
                     "Estimate": f"{r['estimate_pp']:.2f}",
                     "95% CI": f"[{r['ci_low_pp']:.2f}, {r['ci_high_pp']:.2f}]",
                     "p": pvalue(
@@ -34,7 +35,7 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_06_adjusted_contrasts",
         rows,
-        "Table D.2. Adjusted learning contrasts",
+        "Table B.2. Adjusted learning contrasts",
         "HC3 intervals after adjustment for pre-test score, its square, and section in Combined.",
     )
 

@@ -9348,7 +9348,7 @@
     },
     {
       "id": "text_253",
-      "text_sha256": "0035e8fdb48f4fe57ed7e571f6317dabe2a9beae35d8cec243e5f4cebc5b3577",
+      "text_sha256": "d29c7496297ffcdb1bb812db0afa44e5a4519079b10df60174768a9182a0ee57",
       "template": {
         "tag": "g",
         "attributes": {
@@ -9373,7 +9373,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 47
+              "characters": 46
             },
             "tail": {
               "whitespace": "\n    "

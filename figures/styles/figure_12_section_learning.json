@@ -1426,7 +1426,7 @@
     },
     {
       "id": "model_label_sections_quant_control",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -1451,7 +1451,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n   "
@@ -1981,7 +1981,7 @@
     },
     {
       "id": "model_label_sections_verbal_control",
-      "text_sha256": "0704dfb73229adc8307e0a41501aa6bf89fe00b5dd20492692c11840a51f0cd3",
+      "text_sha256": "32d7e82082479b8cb546187ff0af11e4915e4d17bc28e02dca7425288b79badd",
       "template": {
         "tag": "g",
         "attributes": {
@@ -2006,7 +2006,7 @@
               "{http://www.w3.org/XML/1998/namespace}space": "preserve"
             },
             "text": {
-              "characters": 8
+              "characters": 7
             },
             "tail": {
               "whitespace": "\n   "

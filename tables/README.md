@@ -1,34 +1,35 @@
 # Tables in the paper
 
-Current paper numbers map to stable script filenames below. Each script writes CSV, Markdown and LaTeX. Four tables contain study definitions; the rest are calculated from the analysis outputs.
+Each script computes one table from the released observations or the analysis outputs. It writes CSV, Markdown, a plain LaTeX table, and a `_paper.tex` fragment with the paper's formatting. Four tables describe the study protocol rather than estimated results.
 
-| Table | Code |
+| Paper table | Code |
 |---|---|
-| Table C.1: starting scores and assessment-form order | [table_01_baseline.py](table_01_baseline.py) |
-| Table C.2: primary exclusion counts at the two screening stages | [table_02_data_quality.py](table_02_data_quality.py) |
-| Table C.3: recorded tutor endpoints and analyzed assignments | [table_03_tutor_configurations.py](table_03_tutor_configurations.py) |
-| Table C.4: prompt guidance and scaffolding | [table_04_prompt_guidance.py](table_04_prompt_guidance.py) |
-| Table D.1: p-value conventions | [table_05_pvalue_conventions.py](table_05_pvalue_conventions.py) |
-| Table D.2: adjusted tutoring-minus-no-tutor learning contrasts | [table_06_adjusted_contrasts.py](table_06_adjusted_contrasts.py) |
-| Table D.3: equivalence with CR2 uncertainty for shared human tutors | [table_07_tutor_dependence.py](table_07_tutor_dependence.py) |
-| Table D.4: equivalence and engagement results after excluding repeat participants | [table_08_repeat_participation.py](table_08_repeat_participation.py) |
-| Table E.1: observed and adjusted Combined learning gains | [table_09_combined_learning.py](table_09_combined_learning.py) |
-| Table E.2: seven domain contrasts against no tutoring | [table_10_domain_contrasts.py](table_10_domain_contrasts.py) |
-| Table F.1: correlations of tutor-level resources with learning gain | [table_11_resource_gain_correlations.py](table_11_resource_gain_correlations.py) |
-| Table F.2: selected adjusted engagement, correct-practice, and gain associations | [table_12_engagement_practice.py](table_12_engagement_practice.py) |
-| Table G.1: lesson-planning and practice-problem rubric criteria | [table_13_rubric_criteria.py](table_13_rubric_criteria.py) |
-| Table G.2: expert rankings with reviewer and pre-test clustering | [table_14_reviewer_dependence.py](table_14_reviewer_dependence.py) |
-| Table H.1: conversation-indicator rules | [table_15_conversation_rules.py](table_15_conversation_rules.py) |
-| Table I.1: all five exploratory prompt-pilot settings | [table_16_prompt_pilot.py](table_16_prompt_pilot.py) |
+| A.1: Starting scores and assessment-form order | [table_01_baseline.py](table_01_baseline.py) |
+| A.2: Data-quality exclusions | [table_02_data_quality.py](table_02_data_quality.py) |
+| A.3: AI tutor endpoints and sample sizes | [table_03_tutor_configurations.py](table_03_tutor_configurations.py) |
+| A.4: Prompt guidance | [table_04_prompt_guidance.py](table_04_prompt_guidance.py) |
+| B.1: Statistical reporting rules | [table_05_pvalue_conventions.py](table_05_pvalue_conventions.py) |
+| B.2: Tutoring gains relative to control | [table_06_adjusted_contrasts.py](table_06_adjusted_contrasts.py) |
+| B.3: Results after excluding repeat participants | [table_08_repeat_participation.py](table_08_repeat_participation.py) |
+| C.1: Combined learning gains by tutor | [table_09_combined_learning.py](table_09_combined_learning.py) |
+| C.2: Domain gains relative to control | [table_10_domain_contrasts.py](table_10_domain_contrasts.py) |
+| D.1: Resources and learning gain across AI tutors | [table_11_resource_gain_correlations.py](table_11_resource_gain_correlations.py) |
+| D.2: Engagement, correct practice and learning | [table_12_engagement_practice.py](table_12_engagement_practice.py) |
+| E.1: Expert rubric criteria | [table_13_rubric_criteria.py](table_13_rubric_criteria.py) |
+| E.2: Expert rankings with repeated-reviewer clustering | [table_14_reviewer_dependence.py](table_14_reviewer_dependence.py) |
+| F.1: Conversation-indicator rules | [table_15_conversation_rules.py](table_15_conversation_rules.py) |
+| G.1: Prompt-pilot settings | [table_16_prompt_pilot.py](table_16_prompt_pilot.py) |
 
-Run the analyses and tables together:
+Run all analyses and tables:
 
 ```bash
 python reproduce.py --data ../data --output results --verify
 ```
 
-Or render a single table from existing analysis outputs:
+Or render one table from existing analysis outputs:
 
 ```bash
 python -m tables.table_09_combined_learning --data ../data --analysis-root results/analysis --output results/tables
 ```
+
+The files in `templates/` preserve the paper's table layout, labels and protocol descriptions. Numeric placeholders receive the newly computed results. Verification checks every table cell and compares each `_paper.tex` fragment byte for byte with the published source. These fragments use the paper's LaTeX preamble and cross-references; they are not standalone documents. Table C.1 uses the four provider logos in `assets/brandmarks/`.

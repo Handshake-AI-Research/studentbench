@@ -1,24 +1,29 @@
-"""Table D.4: equivalence and engagement results after excluding repeat participants."""
+"""Table B.3: equivalence and engagement results after excluding repeat participants."""
 
 from pathlib import Path
-from studentbench.table_output import render, cli, read_json, pvalue, SECTIONS
+from tables.output import render
+from studentbench.table_output import cli, read_json, pvalue, SECTIONS
 
 
 def run(data_dir, analysis_dir, output_dir):
     data = read_json(Path(analysis_dir) / "sensitivity/results.json")
+    equivalence = read_json(Path(analysis_dir) / "primary_equivalence/results.json")[
+        "models"
+    ]
     rows = []
     for scope in ["combined", "quant"]:
-        a, b = (
-            data["equivalence"][scope]["original"],
-            data["equivalence"][scope]["exclude_repeat"],
-        )
+        a = equivalence[f"adjusted_{scope}"]
+        b = equivalence[f"exclude_repeat_adjusted_{scope}"]
+        # The larger margin is the paper's common ±0.25-SD definition.
+        a_test = max(a["margins"], key=lambda test: test["margin_pp"])
+        b_test = max(b["margins"], key=lambda test: test["margin_pp"])
         rows.append(
             {
-                "Result": SECTIONS[scope] + " AI minus human gain",
-                "Original estimate": f"{a['estimate']:.2f}",
-                "Original p": pvalue(a["p"]),
-                "After exclusion estimate": f"{b['estimate']:.2f}",
-                "After exclusion p": pvalue(b["p"]),
+                "Result": SECTIONS[scope] + " AI − human gain",
+                "Original estimate": f"{a['estimate_pp']:.2f}",
+                "Original p": pvalue(a_test["p_tost"]),
+                "After exclusion estimate": f"{b['estimate_pp']:.2f}",
+                "After exclusion p": pvalue(b_test["p_tost"]),
             }
         )
     labels = [
@@ -55,8 +60,8 @@ def run(data_dir, analysis_dir, output_dir):
         output_dir,
         "table_08_repeat_participation",
         rows,
-        "Table D.4. Repeat-participation sensitivity",
-        "Public exclusion membership; equivalence margins fixed to original data; Holm276 recomputed within each cohort.",
+        "Table B.3. Repeat-participation sensitivity",
+        "Pooled CR2 equivalence with fixed original margins; engagement Holm correction recomputed across 276 tests within each cohort.",
     )
 
 

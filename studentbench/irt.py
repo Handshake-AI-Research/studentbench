@@ -8,7 +8,6 @@ from __future__ import annotations
 import math
 import hashlib
 from pathlib import Path
-from itertools import combinations
 from typing import Any
 import numpy as np
 import pandas as pd
@@ -20,7 +19,7 @@ from .journal import Journal
 def high_baseline_analysis(
     frame: pd.DataFrame,
     output_dir: Path,
-) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, dict[str, Any]]:
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, Any]]:
     """Recompute the 72 declared high-baseline sensitivity specifications.
 
     The earlier positive subgroup result used pre-treatment IRT ability to define
@@ -343,43 +342,6 @@ def high_baseline_analysis(
     )
     arm_outcomes["descriptive_rank"] = np.arange(1, len(arm_outcomes) + 1)
 
-    grouped = {
-        arm: chosen.loc[chosen.arm_id == arm, "gain_pp"].to_numpy(float)
-        for arm in sorted(chosen.arm_id.unique())
-    }
-    df_error = int(len(chosen) - len(grouped))
-    mse = (
-        sum(
-            float(np.square(values - values.mean()).sum())
-            for values in grouped.values()
-        )
-        / df_error
-    )
-    pair_rows: list[dict[str, Any]] = []
-    for left, right in combinations(sorted(grouped), 2):
-        key = f"quant:irt_q75:tukey:{left}:{right}"
-        cached = journal.get(key, signature)
-        if cached is not None:
-            pair_rows.append(cached)
-            continue
-        left_values, right_values = grouped[left], grouped[right]
-        estimate = float(left_values.mean() - right_values.mean())
-        se_q = math.sqrt(mse / 2.0 * (1.0 / len(left_values) + 1.0 / len(right_values)))
-        q_value = abs(estimate) / se_q
-        p_value = float(stats.studentized_range.sf(q_value, len(grouped), df_error))
-        row = {
-            "left_arm_id": left,
-            "left_arm_label": MODEL_LABELS[left],
-            "right_arm_id": right,
-            "right_arm_label": MODEL_LABELS[right],
-            "left_minus_right_gain_pp": estimate,
-            "p_tukey_kramer": p_value,
-            "difference_detected_0_05": bool(p_value < 0.05),
-        }
-        journal.save(key, signature, row)
-        pair_rows.append(row)
-    pairwise = pd.DataFrame(pair_rows)
-
     verbal_variant = variant_frame[
         (variant_frame.section == "verbal")
         & (variant_frame.stratifier == "pretest_irt_theta")
@@ -392,152 +354,6 @@ def high_baseline_analysis(
         & np.isclose(variant_frame.upper_tail_quantile, 0.75)
         & (variant_frame.outcome == "gain_pp")
     ].iloc[0]
-
-    def _pairwise_counts(scope: str) -> dict[str, Any]:
-        """All-pairs resolution inside the chosen IRT-Q75 cell."""
-        cell = selected_cells[(scope, "pretest_irt_theta", 0.75, "gain_pp")].copy()
-        arms_here = sorted(cell.arm_id.unique())
-        if scope == "combined":
-            baseline = cell["combined_baseline_z"].to_numpy(float)
-            section_verbal = (cell.section == "verbal").to_numpy(float)
-            names = (
-                ["Intercept"]
-                + [f"arm:{arm}" for arm in arms_here[1:]]
-                + ["section:verbal", "baseline", "baseline_squared"]
-            )
-            matrix = np.column_stack(
-                [
-                    np.ones(len(cell)),
-                    *[(cell.arm_id == arm).to_numpy(float) for arm in arms_here[1:]],
-                    section_verbal,
-                    baseline,
-                    baseline**2,
-                ]
-            )
-        else:
-            baseline = cell.pretest_irt_theta.to_numpy(float)
-            baseline = (baseline - baseline.mean()) / (baseline.std(ddof=0) or 1.0)
-            names = (
-                ["Intercept"]
-                + [f"arm:{arm}" for arm in arms_here[1:]]
-                + ["baseline", "baseline_squared"]
-            )
-            matrix = np.column_stack(
-                [
-                    np.ones(len(cell)),
-                    *[(cell.arm_id == arm).to_numpy(float) for arm in arms_here[1:]],
-                    baseline,
-                    baseline**2,
-                ]
-            )
-        fit = _hc3(matrix, cell.gain_pp.to_numpy(float))
-        contrast_rows: list[np.ndarray] = []
-        for left, right in combinations(arms_here, 2):
-            row = np.zeros(len(names), dtype=float)
-            if left != arms_here[0]:
-                row[names.index(f"arm:{left}")] += 1.0
-            if right != arms_here[0]:
-                row[names.index(f"arm:{right}")] -= 1.0
-            contrast_rows.append(row)
-        raw_p: list[float] = []
-        for contrast_row in contrast_rows:
-            estimate = float(contrast_row @ fit["beta"])
-            variance = float(contrast_row @ fit["covariance"] @ contrast_row)
-            z = estimate / math.sqrt(max(variance, 1e-15))
-            raw_p.append(float(2.0 * stats.norm.sf(abs(z))))
-        adjusted_p = _holm(raw_p)
-        return {
-            "pairs": len(raw_p),
-            "hc3_holm_differences_detected_0_05": int(
-                sum(value < 0.05 for value in adjusted_p)
-            ),
-            "minimum_hc3_holm_p": float(min(adjusted_p)),
-        }
-
-    scope_pairwise = {
-        scope: _pairwise_counts(scope) for scope in ("quant", "verbal", "combined")
-    }
-    scope_pairwise["quant"]["raw_familywise_differences_detected_0_05"] = int(
-        pairwise.difference_detected_0_05.sum()
-    )
-    # The old analysis only saved the two zero counts below. Recompute them:
-    # Verbal mirrors the Quant Tukey-Kramer family. Combined uses an explicit
-    # section-adjusted OLS contrast family with Holm correction. The latter is
-    # an additional direct verification of the reported absence of resolved pairs.
-    for scope in ("verbal", "combined"):
-        cell = selected_cells[(scope, "pretest_irt_theta", 0.75, "gain_pp")]
-        arms = sorted(cell.arm_id.unique())
-        matrix = np.column_stack(
-            [
-                np.ones(len(cell)),
-                *[(cell.arm_id == arm).to_numpy(float) for arm in arms[1:]],
-                *(
-                    [(cell.section == "verbal").to_numpy(float)]
-                    if scope == "combined"
-                    else []
-                ),
-            ]
-        )
-        values = cell.gain_pp.to_numpy(float)
-        beta = np.linalg.lstsq(matrix, values, rcond=None)[0]
-        residual_df = len(cell) - int(np.linalg.matrix_rank(matrix))
-        mse = float(np.square(values - matrix @ beta).sum() / residual_df)
-        covariance = mse * np.linalg.inv(matrix.T @ matrix)
-        raw_pairs = []
-        for left, right in combinations(arms, 2):
-            key = f"{scope}:irt_q75:raw_pair:{left}:{right}"
-            row = journal.get(key, signature)
-            if row is None:
-                vector = np.zeros(matrix.shape[1])
-                if left != arms[0]:
-                    vector[arms.index(left)] += 1
-                if right != arms[0]:
-                    vector[arms.index(right)] -= 1
-                estimate = float(vector @ beta)
-                se = math.sqrt(float(vector @ covariance @ vector))
-                pvalue = (
-                    float(
-                        stats.studentized_range.sf(
-                            abs(estimate) / (se / math.sqrt(2)), len(arms), residual_df
-                        )
-                    )
-                    if scope == "verbal"
-                    else float(2 * stats.t.sf(abs(estimate / se), residual_df))
-                )
-                row = dict(
-                    scope=scope,
-                    left_arm_id=left,
-                    right_arm_id=right,
-                    estimate_pp=estimate,
-                    se=se,
-                    residual_df=residual_df,
-                    p=pvalue,
-                )
-                journal.save(key, signature, row)
-            raw_pairs.append(row)
-        corrected = (
-            [row["p"] for row in raw_pairs]
-            if scope == "verbal"
-            else _holm([row["p"] for row in raw_pairs])
-        )
-        for row, adjusted_p in zip(raw_pairs, corrected):
-            row["p_familywise"] = float(adjusted_p)
-        from .journal import write_csv
-
-        write_csv(
-            Path(output_dir) / (scope + "_raw_pairwise.csv"), pd.DataFrame(raw_pairs)
-        )
-        scope_pairwise[scope].update(
-            raw_familywise_differences_detected_0_05=int(
-                sum(value < 0.05 for value in corrected)
-            ),
-            raw_pairwise_method=(
-                "Tukey-Kramer"
-                if scope == "verbal"
-                else "Additional verification: section-adjusted OLS Student-t contrasts, Holm family"
-            ),
-            minimum_raw_familywise_p=float(min(corrected)),
-        )
 
     scope_audit = []
     for scope, row in (
@@ -561,7 +377,6 @@ def high_baseline_analysis(
                 "hc3_df": int(row["hc3_df"]),
                 "hc3_p_raw": float(row["hc3_p_raw"]),
                 "hc3_p_holm_24": float(row["hc3_p_holm_24"]),
-                "pairwise": scope_pairwise[scope],
                 "separates_after_declared_family": bool(
                     float(row["anova_p_holm_24"]) < 0.05
                     or float(row["hc3_p_holm_24"]) < 0.05
@@ -583,11 +398,6 @@ def high_baseline_analysis(
             "multiplicity": "Holm family-wise correction across all 24 AI-configuration omnibus tests separately within Quant, Verbal, and scale-safe Combined",
             "combined_scale_rule": "upper-tail thresholds resolved separately within instrument; gain is in percentage points; IRT lift is standardized within instrument; all Combined models include a section fixed effect",
         },
-        "pairwise_method": "Tukey-Kramer across all 78 AI-configuration pairs in the chosen Quant subgroup",
-        "pairwise_rows": int(len(pairwise)),
-        "pairwise_differences_detected_0_05": int(
-            pairwise.difference_detected_0_05.sum()
-        ),
         "top_arm_id": str(arm_outcomes.iloc[0].arm_id),
         "bottom_arm_id": str(arm_outcomes.iloc[-1].arm_id),
         "interpretation": (
@@ -596,4 +406,4 @@ def high_baseline_analysis(
             "are null before and after correction. None supports a stable AI-tutor ranking in the final frozen cohort."
         ),
     }
-    return variant_frame, arm_outcomes, pairwise, summary
+    return variant_frame, arm_outcomes, summary
