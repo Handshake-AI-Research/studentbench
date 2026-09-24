@@ -1,10 +1,10 @@
-"""Pooled AI–human equivalence in Figure 1 and the repeat-participation check.
+"""Pooled AI–human equivalence and repeat-participant/tutor-omission checks.
 
 Coefficients and fixed equivalence margins are estimated from released response
 files. Within a section, public tutor aliases identify the dependence clusters.
-For the combined comparison, private participant and tutor links are represented
-by global CR2 moment sums in assets/analysis/pooled_equivalence_cr2.json. No participant
-links or individual-cluster summaries are released. See assets/analysis/README.md.
+For combined comparisons, global CR2 moment inputs encode dependence across
+sections. Anonymous tutor aliases define tutor omissions; no direct identifiers
+or participant-pair lists are included. See assets/analysis/README.md.
 """
 
 from pathlib import Path
@@ -19,12 +19,14 @@ from .journal import Journal, write_json
 
 
 INPUT = Path(__file__).resolve().parents[1] / "assets/analysis/pooled_equivalence_cr2.json"
+OMISSIONS = INPUT.with_name("leave_one_tutor_out_cr2.json")
 
 
 def session_fingerprint(frame):
-    """Bind privacy-preserving moments to the public outcomes and design."""
-    columns = ["student_id", "section", "kind", "pre_pct", "post_pct", "form_order"]
-    records = frame.sort_values("student_id")[columns].to_dict("records")
+    """Bind aggregate moments to the public outcomes and design."""
+    columns = ["student_id", "section", "kind", "arm_id", "human_tutor_id",
+               "pre_pct", "post_pct", "form_order"]
+    records = frame.sort_values("student_id")[columns].fillna({"human_tutor_id": ""}).to_dict("records")
     payload = json.dumps(records, sort_keys=True, separators=(",", ":"), allow_nan=False)
     return hashlib.sha256(payload.encode()).hexdigest()
 
@@ -140,7 +142,7 @@ def run(data_dir, output_dir):
     weights = {section: float((sessions.section == section).mean())
                for section in ["quant", "verbal"]}
     inputs = json.loads(INPUT.read_text())
-    signature = sha256(Path(__file__)) + sha256(INPUT) + session_fingerprint(sessions)
+    signature = sha256(Path(__file__)) + sha256(INPUT) + sha256(OMISSIONS) + session_fingerprint(sessions)
     signature += hashlib.sha256("\n".join(sorted(excluded)).encode()).hexdigest()
     journal = Journal(output_dir / "models.jsonl")
     results = {}
@@ -178,7 +180,32 @@ def run(data_dir, output_dir):
                         stats.t.cdf((result["estimate_pp"] - margin) / result["se_pp"], result["df"]))
                 result["margins"].append(dict(margin_sd=fraction, margin_pp=margin, p_tost=float(p)))
             results[key] = journal.save(key, signature, result)
+    # Anonymous public tutor aliases define the omissions. Global moments retain
+    # dependence from repeated students without releasing their identity pairs.
+    omissions = json.loads(OMISSIONS.read_text())["models"]
+    for key, source in omissions.items():
+        cached = journal.get(key, signature)
+        if cached is not None:
+            results[key] = cached
+            continue
+        aliases = source["omitted_public_tutor_aliases"]
+        frame = sessions[~sessions.human_tutor_id.isin(aliases)]
+        if source["session_fingerprint"] != session_fingerprint(frame):
+            raise ValueError(f"{key}: public observations differ from CR2 moment inputs")
+        x, contrast = design(frame, "combined", weights)
+        value = fit(x, frame.post_pct.to_numpy(float), contrast, source["moments"])
+        value.update(n_ai=int((frame.kind == "ai").sum()),
+                     n_human=int((frame.kind == "human").sum()),
+                     omitted_public_tutor_aliases=aliases)
+        value["margins"] = []
+        for fraction in [.20, .25]:
+            margin = margins["combined"] * fraction / .25
+            p = max(stats.t.sf((value["estimate_pp"] + margin) / value["se_pp"], value["df"]),
+                    stats.t.cdf((value["estimate_pp"] - margin) / value["se_pp"], value["df"]))
+            value["margins"].append(dict(margin_sd=fraction, margin_pp=margin, p_tost=float(p)))
+        results[key] = journal.save(key, signature, value)
     result = dict(complete=True, status="complete", models=results,
-                  section_weights=weights, fixed_margins_pp=margins)
+                  section_weights=weights, fixed_margins_pp=margins,
+                  dependence_coverage=inputs["coverage"])
     write_json(output_dir / "results.json", result)
     return result

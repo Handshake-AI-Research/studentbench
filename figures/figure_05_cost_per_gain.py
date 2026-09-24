@@ -38,10 +38,8 @@ def render(analysis_root, output_dir):
     ]
     tests = [row for row in tests if row.get("record_kind") == "model_result"]
     equivalent_ids = {row["arm_id"] for row in tests if row["nominal_equivalent"]}
-    baseline_id = min(
-        (row for row in tests if row["nominal_equivalent"]),
-        key=lambda row: row["model_cost_per_gain_pp"],
-    )["arm_id"]
+    baseline_id = "gemma-4-31b-high"
+    assert baseline_id in equivalent_ids
     baseline_cost = next(
         row["cost_per_gain_pp"] for row in rows if row["arm_id"] == baseline_id
     )
@@ -86,10 +84,10 @@ def render(analysis_root, output_dir):
     multiplier_column_x = (0.997 - 0.16) / 0.73
     gain_column_x = (1.060 - 0.16) / 0.73
     ax.annotate(
-        "Highlighted rows: human-equivalent gains",
+        "Passed individual equivalence tests",
         (0, 1),
         xycoords="axes fraction",
-        xytext=(0, 5),
+        xytext=(0, 5.10546875),
         textcoords="offset points",
         fontsize=9,
         ha="left",
@@ -375,7 +373,14 @@ def render(analysis_root, output_dir):
             and endpoints[1, 0] >= inset_box.x0
         ), "The inset covers a main estimate or interval"
 
-    save_figure(fig, output_dir, "figure_05_cost_per_gain", pad_inches=0.04)
+    # Reserve the published top margin independently of tight-box font metrics.
+    save_figure(
+        fig,
+        output_dir,
+        "figure_05_cost_per_gain",
+        pad_inches=0.04,
+        extra_canvas=(0, 4.246734375),
+    )
 
 
 if __name__ == "__main__":

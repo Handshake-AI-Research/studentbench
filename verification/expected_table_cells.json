@@ -1,6 +1,6 @@
 {
-  "description": "Complete retained table cells, independently compared with manuscript 47fa622. These are verification targets only; empirical cells are regenerated from released observations and analysis outputs.",
-  "paper_commit": "47fa622",
+  "description": "Complete retained table cells, independently compared with manuscript 53f16080bfd2b2780a4b7d24f99a7063f0600685. These are verification targets only; empirical cells are regenerated from released observations and analysis outputs.",
+  "paper_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
   "tables": {
     "table_01_baseline.csv": [
       [
@@ -284,7 +284,7 @@
       ],
       [
         "Equivalence",
-        "TOST at alpha=.05 with ±0.25-SD bounds; p is the larger of the two one-sided p values. Each AI tutor is tested separately against human tutoring, without correction across tutors; all four passing tutors are highlighted."
+        "TOST at alpha=.05 with ±0.25-SD bounds; p is the larger of the two one-sided p values. Each AI tutor is tested separately against human tutoring, without correction across tutors; all six passing tutors are highlighted."
       ],
       [
         "Differences and associations",

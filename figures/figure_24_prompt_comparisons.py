@@ -1,4 +1,4 @@
-"""Figure I.1. Learning gains with minimal and expanded prompts."""
+"""Figure G.1. Learning gains with minimal and expanded prompts."""
 
 from pathlib import Path
 import sys

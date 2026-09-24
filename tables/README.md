@@ -1,6 +1,6 @@
 # Tables in the paper
 
-Each script computes one table from the released observations or the analysis outputs. It writes CSV, Markdown, a plain LaTeX table, and a `_paper.tex` fragment with the paper's formatting. Four tables describe the study protocol rather than estimated results.
+Each script computes one table from the released observations or the analysis outputs. It writes CSV, Markdown, a plain LaTeX table, and a `_paper.tex` fragment with the paper's formatting. Four tables describe the study protocol; the reporting-rules table also counts the tutors that pass the individual equivalence tests.
 
 | Paper table | Code |
 |---|---|

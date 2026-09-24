@@ -69,6 +69,10 @@ def collect_metrics(analysis_dir, data_dir=None):
             put("pooled." + name + "." + label, margin)
         put("pooled." + name + ".equivalent", row["margins"][1]["p_tost"] < .05)
     put("pooled.section_weights", pooled["section_weights"])
+    put("pooled.dependence_coverage", pooled["dependence_coverage"])
+    omitted = [row for key, row in pooled["models"].items() if key.startswith("leave_one_tutor_out_")]
+    put("pooled.leave_one_tutor_out.fits", len(omitted))
+    put("pooled.leave_one_tutor_out.passing", sum(row["margins"][1]["p_tost"] < .05 for row in omitted))
     put("pooled.fixed_margins", pooled["fixed_margins_pp"])
     put("interaction", read("condition_interaction/summary.json")["adjusted_sensitivity"])
     for row in read("tutor_dependence/results.json")["results"]:
@@ -124,6 +128,10 @@ def collect_metrics(analysis_dir, data_dir=None):
         put("teaching." + name + ".winner", max(value["models"], key=lambda row: row["ability"])["model"])
         put("teaching." + name + ".models", len(value["models"]))
         put("teaching." + name + ".pairs", len(value["pairwise_contrasts"]))
+        pairs = [(left, right) for index, left in enumerate(value["models"])
+                 for right in value["models"][index + 1:]]
+        separated = sum(left["hi"] < right["lo"] or right["hi"] < left["lo"] for left, right in pairs)
+        put("teaching." + name + ".nonoverlapping_interval_fraction", separated / len(pairs))
     flags = table("teaching/flag_rates.csv")
     quant = flags[flags.scope == "quant"].sort_values("flags_per_100_answered", ascending=False)
     put("flags.quant_worst_model", quant.iloc[0].model_preset)
@@ -157,11 +165,8 @@ def collect_metrics(analysis_dir, data_dir=None):
     minimum, maximum = float(ai.mean_cost_usd.min()), float(ai.mean_cost_usd.max())
     put("cost.minimum", minimum)
     put("cost.maximum", maximum)
-    put("cost.spread_unrounded", maximum / minimum)
-    put("cost.spread_printed_endpoints", round(maximum, 2) / round(minimum, 3))
     put("cost.frontier_maximum", float(ai.loc[ai.pareto_frontier, "mean_cost_usd"].max()))
-    for numerator, denominator, name in [("human", "gemini-3.5-flash-low", "human_flash"), ("human", "gemma-4-31b-high", "human_gemma")]:
-        put("cost.ratio." + name, float(combined.loc[numerator, "cost_per_gain_pp"] / combined.loc[denominator, "cost_per_gain_pp"]))
+    put("cost.ratio.human_gemma", float(combined.loc["human", "cost_per_gain_pp"] / combined.loc["gemma-4-31b-high", "cost_per_gain_pp"]))
     put("cost.ratio.pro_flash_session", float(combined.loc["gpt-5.5-pro-med", "mean_cost_usd"] / combined.loc["gemini-3.5-flash-low", "mean_cost_usd"]))
     lat = latency[latency.scope == "combined"].set_index("arm_id")
     put("latency.minimum", float(lat.median_latency_s.min()))

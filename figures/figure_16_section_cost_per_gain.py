@@ -1,4 +1,4 @@
-"""Figure F.1. Inference cost per point of learning gain."""
+"""Figure D.1. Inference cost per point of learning gain."""
 
 from pathlib import Path
 import sys
@@ -46,7 +46,7 @@ def render(analysis_root, output_dir):
         assert len(rows) == 14 and rows[0]["kind"] == "human"
         # Preserve Figure 5's named reference in each section; this does not
         # claim that it establishes equivalence within either section.
-        baseline_id = "gemini-3.5-flash-low"
+        baseline_id = "gemma-4-31b-high"
         baseline_row = next(r for r in rows if r["arm_id"] == baseline_id)
         baseline_cost = baseline_row["cost_per_gain_pp"]
         zoom_rows = [
@@ -331,7 +331,14 @@ def render(analysis_root, output_dir):
                 and endpoints[1, 0] >= inset_box.x0
             ), "The inset covers a main estimate or interval"
 
-    save_figure(fig, output_dir, "figure_16_section_cost_per_gain", pad_inches=0.04)
+    # Reserve the published top margin independently of tight-box font metrics.
+    save_figure(
+        fig,
+        output_dir,
+        "figure_16_section_cost_per_gain",
+        pad_inches=0.04,
+        extra_canvas=(0, 4.246734375),
+    )
 
 
 if __name__ == "__main__":

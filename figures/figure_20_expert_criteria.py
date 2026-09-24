@@ -1,4 +1,4 @@
-"""Figure G.1. Eight expert criteria and three overall rankings."""
+"""Figure E.1. Eight expert criteria and three overall rankings."""
 
 from pathlib import Path
 import sys
