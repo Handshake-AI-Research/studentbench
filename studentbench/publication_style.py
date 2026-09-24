@@ -512,18 +512,6 @@ def dialogue(doc):
     }
 
 
-def cost(doc):
-    replace(
-        doc[0],
-        "Highlighted rows: human-equivalent gains",
-        "Passed individual equivalence tests",
-    )
-    return doc, {
-        "edits": ["Legend reads Passed individual equivalence tests."],
-        "retained_data": "All four highlights, colors, bars, values, inset, and table entries unchanged.",
-    }
-
-
 def latency(doc):
     p = doc[0]
     found = [
@@ -563,7 +551,6 @@ def finish_paper_pdf(svg_path):
     svg_path = Path(svg_path)
     operations = {
         "figure_01_learning": primary,
-        "figure_05_cost_per_gain": cost,
         "figure_06_engagement_practice": dialogue,
         "figure_13_domain_learning": domains,
         "figure_14_starting_proficiency": quartile,
@@ -620,50 +607,8 @@ def finish_paper_pdf(svg_path):
         ).save(pdf.with_suffix(".png"))
         if revised is not document:
             revised.close()
-    if svg_path.stem == "figure_05_cost_per_gain":
-        _order_font_dictionary_keys(temporary)
     if profile.get("pdf_version"):
         raw = temporary.read_bytes()
         temporary.write_bytes(b"%PDF-" + profile["pdf_version"].encode() + raw[8:])
     temporary.replace(pdf)
     return presentation
-
-
-def _order_font_dictionary_keys(pdf):
-    """Keep the paper's PDF serialization without recompressing font streams."""
-    with pymupdf.open(pdf) as document:
-        streams = []
-        for font in document[0].get_fonts(full=True):
-            if "+" not in font[3]:
-                continue
-            references = [document.xref_get_key(font[0], "ToUnicode")]
-            kind, reference = document.xref_get_key(font[0], "FontDescriptor")
-            if kind == "xref":
-                references.append(
-                    document.xref_get_key(int(reference.split()[0]), "FontFile2")
-                )
-            streams.extend(
-                int(value.split()[0]) for kind, value in references if kind == "xref"
-            )
-    raw = pdf.read_bytes()
-    for xref in streams:
-        pattern = rb"(?m)^" + str(xref).encode() + rb" 0 obj\n<<([^>]+)>>"
-        match = re.search(pattern, raw)
-        if not match:
-            raise ValueError("Missing serialized font dictionary")
-        body = match[1]
-        fields = re.findall(rb"/Filter/FlateDecode|/Length1? [0-9]+", body)
-        if b"".join(fields) != body:
-            raise ValueError("Unexpected font stream dictionary")
-        order = {b"/Filter": 0, b"/Length1": 1, b"/Length": 2}
-        ordered = b"".join(
-            sorted(
-                fields,
-                key=lambda field: order[
-                    field.split(b" ")[0].removesuffix(b"/FlateDecode")
-                ],
-            )
-        )
-        assert len(body) == len(ordered)
-        raw = raw[: match.start(1)] + ordered + raw[match.end(1) :]
-    pdf.write_bytes(raw)

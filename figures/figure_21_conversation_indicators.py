@@ -1,4 +1,4 @@
-"""Figure H.1. Combined conversation indicators and uncertainty."""
+"""Figure F.1. Combined conversation indicators and uncertainty."""
 
 from pathlib import Path
 import sys

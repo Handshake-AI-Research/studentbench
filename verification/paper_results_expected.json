@@ -1,5 +1,5 @@
 {
-  "paper_commit": "47fa622",
+  "paper_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
   "purpose": "Comparison targets transcribed from empirical paper prose; never inputs to estimation.",
   "checks": [
     {
@@ -1570,47 +1570,17 @@
       "digits": 2
     },
     {
-      "id": "cost.spread_printed_endpoints",
-      "metric": "cost.spread_printed_endpoints",
-      "locations": [
-        "main.tex:103"
-      ],
-      "operation": "round",
-      "expected": 317,
-      "digits": 0,
-      "note": "The prose ratio uses its displayed endpoints21.24 and0.067. The underlying unrounded ratio is checked separately."
-    },
-    {
-      "id": "cost.spread_unrounded",
-      "metric": "cost.spread_unrounded",
-      "locations": [
-        "audit:underlying cost ratio"
-      ],
-      "operation": "close",
-      "expected": 318.4262887971261,
-      "note": "Diagnostic underlying ratio; not the paper's printed-endpoint calculation.",
-      "absolute_tolerance": 1e-09
-    },
-    {
       "id": "cost.ratio.human_gemma",
       "metric": "cost.ratio.human_gemma",
       "locations": [
-        "main.tex:105"
+        "paper.tex:25",
+        "introduction.tex:17",
+        "main.tex:103",
+        "main.tex:146",
+        "appendix_statistics.tex:44"
       ],
       "operation": "round",
       "expected": 918,
-      "digits": 0
-    },
-    {
-      "id": "cost.ratio.human_flash",
-      "metric": "cost.ratio.human_flash",
-      "locations": [
-        "paper.tex:25",
-        "introduction.tex:17",
-        "main.tex:105"
-      ],
-      "operation": "round",
-      "expected": 68,
       "digits": 0
     },
     {
@@ -1860,8 +1830,10 @@
       "expected": [
         "gemini-3.1-pro-high",
         "gemini-3.5-flash-low",
-        "gpt-5.5-pro-med",
-        "opus-4.8-xhigh"
+        "gemini-3.7-flash-medium",
+        "gemma-4-31b-high",
+        "gpt-5.5-high",
+        "opus-4.8-off"
       ]
     },
     {
@@ -1880,104 +1852,7 @@
         "main.tex:105"
       ],
       "operation": "equal",
-      "expected": "gemini-3.5-flash-low"
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.p_tost",
-      "metric": "individual.gemini-3.5-flash-low.p_tost",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": 0.045,
-      "digits": 3
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.gap_pp",
-      "metric": "individual.gemini-3.5-flash-low.gap_pp",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": -0.961,
-      "digits": 3
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.ci90_low",
-      "metric": "individual.gemini-3.5-flash-low.ci90_low",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": -3.995,
-      "digits": 3
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.ci90_high",
-      "metric": "individual.gemini-3.5-flash-low.ci90_high",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": 2.073,
-      "digits": 3
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.estimated_mean_cost_usd",
-      "metric": "individual.gemini-3.5-flash-low.estimated_mean_cost_usd",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": 1.03674,
-      "digits": 5
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.model_cost_per_gain_pp",
-      "metric": "individual.gemini-3.5-flash-low.model_cost_per_gain_pp",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": 0.07078,
-      "digits": 5
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.human_cost_per_gain_pp",
-      "metric": "individual.gemini-3.5-flash-low.human_cost_per_gain_pp",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": 4.80508,
-      "digits": 5
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.human_to_model_cost_per_gain_ratio",
-      "metric": "individual.gemini-3.5-flash-low.human_to_model_cost_per_gain_ratio",
-      "locations": [
-        "appendix_statistics.tex:42",
-        "appendix_statistics.tex:44"
-      ],
-      "operation": "round",
-      "expected": 67.89,
-      "digits": 2
-    },
-    {
-      "id": "individual.gemini-3.5-flash-low.n_ai",
-      "metric": "individual.gemini-3.5-flash-low.n_ai",
-      "locations": [
-        "appendix_statistics.tex:42"
-      ],
-      "operation": "equal",
-      "expected": 177
+      "expected": "gemma-4-31b-high"
     },
     {
       "id": "requests.total",
@@ -2477,13 +2352,13 @@
       "digits": 2
     },
     {
-      "id": "repeat.analyses.exclude_repeat.cost.human_to_flash_cost_ratio",
-      "metric": "repeat.analyses.exclude_repeat.cost.human_to_flash_cost_ratio",
+      "id": "repeat.analyses.exclude_repeat.cost.human_to_gemma_cost_ratio",
+      "metric": "repeat.analyses.exclude_repeat.cost.human_to_gemma_cost_ratio",
       "locations": [
         "appendix_repeat_participation.tex:25"
       ],
       "operation": "round",
-      "expected": 70,
+      "expected": 932,
       "digits": 0
     },
     {
@@ -2496,7 +2371,11 @@
       "expected": [
         "gemini-3.1-pro-high",
         "gemini-3.5-flash-low",
-        "gpt-5.5-pro-med"
+        "gemini-3.7-flash-medium",
+        "gemma-4-31b-high",
+        "gpt-5.4-mini-none",
+        "gpt-5.5-high",
+        "opus-4.8-off"
       ]
     },
     {
@@ -2938,6 +2817,220 @@
       ],
       "operation": "equal",
       "expected": true
+    },
+    {
+      "id": "individual.gemma-4-31b-high.p_tost",
+      "metric": "individual.gemma-4-31b-high.p_tost",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 0.044,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemma-4-31b-high.gap_pp",
+      "metric": "individual.gemma-4-31b-high.gap_pp",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": -1.09,
+      "digits": 2
+    },
+    {
+      "id": "individual.gemma-4-31b-high.ci90_low",
+      "metric": "individual.gemma-4-31b-high.ci90_low",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": -3.93,
+      "digits": 2
+    },
+    {
+      "id": "individual.gemma-4-31b-high.ci90_high",
+      "metric": "individual.gemma-4-31b-high.ci90_high",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 1.75,
+      "digits": 2
+    },
+    {
+      "id": "individual.gemma-4-31b-high.estimated_mean_cost_usd",
+      "metric": "individual.gemma-4-31b-high.estimated_mean_cost_usd",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 0.06671,
+      "digits": 5
+    },
+    {
+      "id": "individual.gemma-4-31b-high.model_cost_per_gain_pp",
+      "metric": "individual.gemma-4-31b-high.model_cost_per_gain_pp",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 0.00524,
+      "digits": 5
+    },
+    {
+      "id": "individual.gemma-4-31b-high.human_cost_per_gain_pp",
+      "metric": "individual.gemma-4-31b-high.human_cost_per_gain_pp",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 4.80508,
+      "digits": 5
+    },
+    {
+      "id": "individual.gemma-4-31b-high.human_to_model_cost_per_gain_ratio",
+      "metric": "individual.gemma-4-31b-high.human_to_model_cost_per_gain_ratio",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 917.78,
+      "digits": 2
+    },
+    {
+      "id": "individual.gemma-4-31b-high.model_mean_gain_pp",
+      "metric": "individual.gemma-4-31b-high.model_mean_gain_pp",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 12.742,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemma-4-31b-high.human_mean_gain_pp",
+      "metric": "individual.gemma-4-31b-high.human_mean_gain_pp",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "round",
+      "expected": 15.608,
+      "digits": 3
+    },
+    {
+      "id": "individual.gemma-4-31b-high.n_ai",
+      "metric": "individual.gemma-4-31b-high.n_ai",
+      "locations": [
+        "appendix_statistics.tex:42"
+      ],
+      "operation": "equal",
+      "expected": 159
+    },
+    {
+      "id": "individual.summary.nominal_equivalent",
+      "metric": "individual.summary.nominal_equivalent",
+      "locations": [
+        "appendix_statistics.tex:41"
+      ],
+      "operation": "equal",
+      "expected": 6
+    },
+    {
+      "id": "requests.covered_percent_main",
+      "metric": "requests.covered_percent",
+      "locations": [
+        "main.tex:91"
+      ],
+      "operation": "round",
+      "expected": 97,
+      "digits": 0
+    },
+    {
+      "id": "pooled.dependence_coverage.human_containing_clusters",
+      "metric": "pooled.dependence_coverage.human_containing_clusters",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "equal",
+      "expected": 7
+    },
+    {
+      "id": "pooled.dependence_coverage.largest_human_cluster_sessions",
+      "metric": "pooled.dependence_coverage.largest_human_cluster_sessions",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "equal",
+      "expected": 102
+    },
+    {
+      "id": "pooled.dependence_coverage.human_sessions",
+      "metric": "pooled.dependence_coverage.human_sessions",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "equal",
+      "expected": 140
+    },
+    {
+      "id": "pooled.exclude_repeat_adjusted_combined.df",
+      "metric": "pooled.exclude_repeat_adjusted_combined.df",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "round",
+      "expected": 7.44,
+      "digits": 2
+    },
+    {
+      "id": "pooled.exclude_repeat_adjusted_combined.ci90_pp",
+      "metric": "pooled.exclude_repeat_adjusted_combined.ci90_pp",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "round",
+      "expected": [
+        -1.62,
+        1.52
+      ],
+      "digits": 2
+    },
+    {
+      "id": "teaching.planning_combined.nonoverlapping_interval_fraction",
+      "metric": "teaching.planning_combined.nonoverlapping_interval_fraction",
+      "locations": [
+        "main.tex:70"
+      ],
+      "operation": "greater_than",
+      "expected": 0.5
+    },
+    {
+      "id": "teaching.practice_combined.nonoverlapping_interval_fraction",
+      "metric": "teaching.practice_combined.nonoverlapping_interval_fraction",
+      "locations": [
+        "main.tex:70"
+      ],
+      "operation": "greater_than",
+      "expected": 0.5
+    },
+    {
+      "id": "pooled.leave_one_tutor_out.fits",
+      "metric": "pooled.leave_one_tutor_out.fits",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "equal",
+      "expected": 13
+    },
+    {
+      "id": "pooled.leave_one_tutor_out.passing",
+      "metric": "pooled.leave_one_tutor_out.passing",
+      "locations": [
+        "appendix_statistics.tex:27"
+      ],
+      "operation": "equal",
+      "expected": 13
     }
   ]
 }

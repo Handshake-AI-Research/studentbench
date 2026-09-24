@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "studentbench"
 version = "1.0.0"
 description = "Reproduce StudentBench's studies of AI and human tutoring."
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [{name = "StudentBench authors"}]

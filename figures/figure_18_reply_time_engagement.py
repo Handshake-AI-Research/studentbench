@@ -1,4 +1,4 @@
-"""Figure F.3. Student engagement versus AI reply time."""
+"""Figure D.3. Student engagement versus AI reply time."""
 
 from pathlib import Path
 import sys

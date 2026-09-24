@@ -1,4 +1,4 @@
-"""Figure E.2. AI tutor rankings across all seven GRE domains."""
+"""Figure C.2. AI tutor rankings across all seven GRE domains."""
 
 from pathlib import Path
 import sys

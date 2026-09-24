@@ -42,7 +42,8 @@ def test_global_sums_match_direct_cr2_with_unequal_clusters(seed):
 
 def test_response_change_does_not_reuse_the_same_moment_fingerprint():
     frame = pd.DataFrame([dict(student_id="session1", section="quant", kind="ai",
-                               pre_pct=30., post_pct=50., form_order="PQ")])
+                               pre_pct=30., post_pct=50., form_order="PQ",
+                               arm_id="ai1", human_tutor_id="")])
     fingerprint = session_fingerprint(frame)
     frame.loc[0, "post_pct"] = 60.
     assert session_fingerprint(frame) != fingerprint
@@ -52,3 +53,26 @@ def test_rank_deficiency_stops_inference():
     x = np.ones((6, 2))
     with pytest.raises(ValueError, match="full rank"):
         cr2_moments(x, np.arange(6.), np.arange(6), np.array([0., 1.]))
+
+
+def test_tutor_alias_change_invalidates_moment_fingerprint():
+    frame = pd.DataFrame([dict(student_id="session1", section="quant", kind="human",
+                              pre_pct=30., post_pct=50., form_order="PQ",
+                              arm_id="human", human_tutor_id="tutor1")])
+    before = session_fingerprint(frame)
+    frame.loc[0, "human_tutor_id"] = "tutor2"
+    assert session_fingerprint(frame) != before
+
+
+@pytest.mark.parametrize("name", ["balanced_small", "unbalanced_medium", "singletons_present"])
+def test_matches_independent_r_clubsandwich_fixture(name):
+    import json
+    from pathlib import Path
+    case = json.loads(Path(__file__).with_name("clubsandwich_cr2_fixtures.json").read_text())["cases"][name]
+    x = np.column_stack([np.ones(len(case["x"])), case["x"]])
+    covariance = np.asarray(case["vcov_cr2"]).reshape(2, 2)
+    for coefficient in range(2):
+        contrast = np.eye(2)[coefficient]
+        value = fit(x, case["y"], contrast, cr2_moments(x, case["y"], case["cluster"], contrast))
+        np.testing.assert_allclose([value["estimate_pp"], value["se_pp"], value["df"]],
+            [case["coef"][coefficient], np.sqrt(covariance[coefficient, coefficient]), case["dof_bm"][coefficient]], rtol=2e-10, atol=2e-10)

@@ -1,4 +1,4 @@
-"""Figure H.3. Student-disputed practice answers."""
+"""Figure F.3. Student-disputed practice answers."""
 
 from pathlib import Path
 import sys
