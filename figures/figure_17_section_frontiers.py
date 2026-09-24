@@ -1,4 +1,4 @@
-"""Figure F.2. Cost and reply-time learning frontiers by GRE section."""
+"""Figure D.2. Cost and reply time learning frontiers by GRE section."""
 
 from pathlib import Path
 import sys

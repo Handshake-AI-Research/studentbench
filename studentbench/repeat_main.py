@@ -9,10 +9,9 @@ import hashlib
 import pandas as pd
 from scipy import stats
 
-from . import costs, conversation, statistics, teaching
+from . import costs, conversation, statistics, teaching, individual_equivalence
 from .data import Dataset, load_sessions
 from .journal import Journal, write_json, write_csv
-from .sensitivity import welch_tost
 
 
 def conversation_summary(frame):
@@ -137,11 +136,8 @@ def run(data_dir, output_dir, resource_dir=None, conversation_dir=None):
             value = journal.save(key, signature, function())
         return value
 
-    full_ai = sessions.loc[sessions.kind == "ai", "gain_pp"].to_numpy(float)
-    full_human = sessions.loc[sessions.kind == "human", "gain_pp"].to_numpy(float)
-    margin = statistics._welch_tost(full_ai, full_human, 0.25, 0.05)[
-        "equivalence_margin_pp"
-    ]
+    individual_models = individual_equivalence.run(
+        data_dir, output_dir / "individual_cr2", sessions=sessions)["models"]
     analyses = {}
     for label in ["original", "exclude_repeat"]:
         restricted = label == "exclude_repeat"
@@ -182,26 +178,21 @@ def run(data_dir, output_dir, resource_dir=None, conversation_dir=None):
         human_cost = next(
             r["cost_per_gain_pp"] for r in combined if r["arm_id"] == "human"
         )
-        flash_cost = next(
+        gemma_cost = next(
             r["cost_per_gain_pp"]
             for r in combined
-            if r["arm_id"] == "gemini-3.5-flash-low"
+            if r["arm_id"] == "gemma-4-31b-high"
         )
-        human = frame.loc[frame.kind == "human", "gain_pp"].to_numpy(float)
         individual = []
         for row in combined:
             arm = row["arm_id"]
             if arm == "human":
                 continue
-            fit = task(
-                label + ":individual:" + arm,
-                lambda arm=arm: welch_tost(
-                    frame.loc[frame.arm_id == arm, "gain_pp"].to_numpy(float),
-                    human,
-                    margin,
-                ),
-            )
-            individual.append(dict(arm_id=arm, **fit))
+            fit = individual_models[label + ":" + arm]
+            individual.append(dict(arm_id=arm, estimate=fit["estimate_pp"],
+                                   p=fit["p_tost"], margin=fit["margin_pp"],
+                                   ci90=fit["ci90_pp"], n_ai=fit["n_ai"],
+                                   n_human=fit["n_human"], df=fit["df"]))
         latency = task(
             label + ":latency",
             lambda: costs._build_latency_rows(resource)[0].to_dict("records"),
@@ -228,8 +219,8 @@ def run(data_dir, output_dir, resource_dir=None, conversation_dir=None):
             individual_combined_equivalence=individual,
             cost=dict(
                 human_per_pp=human_cost,
-                gemini35flash_per_pp=flash_cost,
-                human_to_flash_cost_ratio=human_cost / flash_cost,
+                gemma_per_pp=gemma_cost,
+                human_to_gemma_cost_ratio=human_cost / gemma_cost,
                 combined_frontier_models=sorted(
                     r["arm_id"] for r in combined if r["pareto_frontier"]
                 ),

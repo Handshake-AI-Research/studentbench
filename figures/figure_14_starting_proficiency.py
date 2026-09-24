@@ -1,4 +1,4 @@
-"""Figure E.3. AI minus no-tutor gains by starting proficiency."""
+"""Figure C.3. AI minus no-tutor gains by starting proficiency."""
 
 from pathlib import Path
 import sys

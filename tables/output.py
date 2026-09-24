@@ -34,7 +34,8 @@ def render(output_dir, name, rows, title, source, *, values=None):
         placeholder = f"@@R{binding['row']}C{binding['column']}N{binding['number']}@@"
         text = text.replace(placeholder, formatted)
     for key, value in (values or {}).items():
-        text = text.replace("@@" + key + "@@", f"{int(value):,}")
+        formatted = value if isinstance(value, str) else f"{int(value):,}"
+        text = text.replace("@@" + key + "@@", formatted)
     if "@@" in text:
         raise ValueError(f"Unresolved table placeholder: {name}")
     target = Path(output_dir) / (name + "_paper.tex")

@@ -1,4 +1,4 @@
-"""Figure E.1. Observed and adjusted gains by GRE section."""
+"""Figure C.1. Observed and adjusted gains by GRE section."""
 
 from pathlib import Path
 import sys

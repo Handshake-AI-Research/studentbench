@@ -18,8 +18,9 @@
   "file_count": 35498,
   "sha256": "2456f73f72fc75050ddb52e095af2ea949cfc1e2c3b074878b74964ea060aeb3",
   "method": "SHA256 of sorted relative_path TAB file_sha256 NEWLINE records",
-  "paper_source_commit": "a4b7cb621b5105a8b92a2530220410c0b9128d32",
-  "scientific_reference_commit": "8f7cc53f0d6d5ff4e58aa00e968e9daada0ae08d",
+  "paper_source_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
+  "scientific_reference_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
   "release_status": "published",
-  "huggingface_revision": "341c294efec6c28d33243f300cd1d7f51dfda36d"
+  "huggingface_revision": "efc476fb3b50010769b55905fff90aee93b8e125",
+  "paper": "https://arxiv.org/abs/2609.28470v1"
 }

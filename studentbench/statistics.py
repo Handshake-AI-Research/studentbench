@@ -1,4 +1,4 @@
-"""Primary learning estimators: HC3 ANCOVA, Welch contrasts and TOST."""
+"""Learning-gain estimates and contrasts from HC3 ANCOVA."""
 
 from __future__ import annotations
 import math
@@ -205,42 +205,4 @@ def _estimate_outcomes(records: list[dict[str, Any]]) -> dict[str, Any]:
         "adjusted_groups": adjusted_groups,
         "adjusted_contrasts": adjusted_contrasts,
         "models": models,
-    }
-
-
-def _welch_tost(
-    ai: np.ndarray, human: np.ndarray, fraction: float, alpha: float
-) -> dict[str, Any]:
-    n_ai, n_human = len(ai), len(human)
-    sd_ai, sd_human = ai.std(ddof=1), human.std(ddof=1)
-    pooled_sd = math.sqrt(
-        ((n_ai - 1) * sd_ai**2 + (n_human - 1) * sd_human**2) / (n_ai + n_human - 2)
-    )
-    gap = float(ai.mean() - human.mean())
-    se = math.sqrt(sd_ai**2 / n_ai + sd_human**2 / n_human)
-    dof = se**4 / (
-        (sd_ai**2 / n_ai) ** 2 / (n_ai - 1)
-        + (sd_human**2 / n_human) ** 2 / (n_human - 1)
-    )
-    margin = fraction * pooled_sd
-    p_lower = float(stats.t.sf((gap + margin) / se, dof))
-    p_upper = float(stats.t.cdf((gap - margin) / se, dof))
-    critical = float(stats.t.ppf(1.0 - alpha, dof))
-    return {
-        "n_ai": n_ai,
-        "n_human": n_human,
-        "ai_minus_human_raw_gap_pp": gap,
-        "pooled_gain_sd_pp": pooled_sd,
-        "margin_fraction_pooled_sd": fraction,
-        "equivalence_margin_pp": margin,
-        "welch_se": se,
-        "welch_df": float(dof),
-        "tost_alpha": alpha,
-        "p_lower": p_lower,
-        "p_upper": p_upper,
-        "p_tost": max(p_lower, p_upper),
-        "equivalence_ci_level": 1.0 - 2.0 * alpha,
-        "equivalence_ci_low_pp": gap - critical * se,
-        "equivalence_ci_high_pp": gap + critical * se,
-        "equivalent_at_registered_alpha": max(p_lower, p_upper) < alpha,
     }

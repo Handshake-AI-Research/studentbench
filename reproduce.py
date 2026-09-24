@@ -166,7 +166,9 @@ def main():
             elif stage == "verify":
                 from studentbench.snapshot import verify_data
                 from studentbench.verification import verify_prompts_and_subgroups
-                from studentbench.core_verification import verify_core, verify_primary_equivalence
+                from studentbench.core_verification import (
+                    verify_core, verify_primary_equivalence, verify_individual_equivalence,
+                )
                 from studentbench.verify_robustness import run as verify_robustness
                 from studentbench.verify_tables import run as verify_tables
                 from studentbench.condition_interaction import (
@@ -185,6 +187,7 @@ def main():
                 verify_prompts_and_subgroups(analysis, output / "verification")
                 verify_core(analysis, output / "verification")
                 verify_primary_equivalence(analysis, output / "verification")
+                verify_individual_equivalence(analysis, output / "verification")
                 verify_robustness(analysis, output / "verification/robustness")
                 verify_tables(output / "tables", output / "verification/tables")
                 verify_interaction(analysis, output / "verification")

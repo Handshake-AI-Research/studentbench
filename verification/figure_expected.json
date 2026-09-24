@@ -1,6 +1,6 @@
 {
-  "paper_commit": "47fa6226e981435727d8d19194000c8bd2e516b4",
-  "paper_pdf_sha256": "b3661a625bb27242c01c7a93caf1fffb1c11ff50c378bcec542696c8cc8f046d",
+  "paper_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
+  "paper_pdf_sha256": "c6123f58e50cdcc5b30c75ed3e567dc169d404a3b5e97a059877801bc36bde53",
   "purpose": "Aggregate expected values used only for verification after fresh analyses and plotting. Never analysis or plotting inputs.",
   "checks": [
     {
@@ -10273,11 +10273,11 @@
         },
         {
           "record_id": "gemini-3.7-flash-medium",
-          "nominal_equivalent": false
+          "nominal_equivalent": true
         },
         {
           "record_id": "gemma-4-31b-high",
-          "nominal_equivalent": false
+          "nominal_equivalent": true
         },
         {
           "record_id": "gpt-5.4-mini-none",
@@ -10285,11 +10285,11 @@
         },
         {
           "record_id": "gpt-5.5-high",
-          "nominal_equivalent": false
+          "nominal_equivalent": true
         },
         {
           "record_id": "gpt-5.5-pro-med",
-          "nominal_equivalent": true
+          "nominal_equivalent": false
         },
         {
           "record_id": "kimi-k2.6",
@@ -10297,11 +10297,11 @@
         },
         {
           "record_id": "opus-4.8-off",
-          "nominal_equivalent": false
+          "nominal_equivalent": true
         },
         {
           "record_id": "opus-4.8-xhigh",
-          "nominal_equivalent": true
+          "nominal_equivalent": false
         },
         {
           "record_id": "opus-5-high",
@@ -10310,7 +10310,7 @@
       ],
       "atol": 1e-08,
       "rtol": 2e-07,
-      "source_sha256": "608910fd247f17761056f339ccf53247292ed87ecd9198df8e5fe765e8f9e278"
+      "source_sha256": "b2007ed4f42c711fd6e209e081b76cb6ce4d952410835373f0df2d9b3db3ee37"
     },
     {
       "input": "teaching/fit_planning_combined.json",
@@ -19332,5 +19332,6 @@
       "rtol": 2e-07,
       "source_sha256": "f1d3510dac37f5b40ddd4167db6ae938899a804e212a144cf2360082228bc2ce"
     }
-  ]
+  ],
+  "paper_url": "https://arxiv.org/abs/2609.28470v1"
 }

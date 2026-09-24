@@ -1,5 +1,5 @@
 {
-  "paper_commit": "47fa6226e981435727d8d19194000c8bd2e516b4",
+  "paper_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
   "figures": [
     {
       "number": 1,
@@ -26,12 +26,12 @@
       "label": "fig:placeholder",
       "title": "Study design",
       "asset": "figures/exp-design.pdf",
-      "asset_sha256": "43cf209478f9dab79b539d6254b878545468e65b49e4c94f13bfe98ee0554ef9",
+      "asset_sha256": "7f6fc91961c695f8a30e64f4ea0433fa3b6b7e94a9c6f5ba9dffb390d6b1d3bd",
       "analysis_inputs": [],
       "kind": "fixed_artwork",
       "script": null,
       "static_asset": "assets/static/figure_02_study_design.pdf",
-      "static_sha256": "43cf209478f9dab79b539d6254b878545468e65b49e4c94f13bfe98ee0554ef9",
+      "static_sha256": "7f6fc91961c695f8a30e64f4ea0433fa3b6b7e94a9c6f5ba9dffb390d6b1d3bd",
       "outputs": [
         "figure_02_study_design.pdf"
       ],
@@ -82,7 +82,7 @@
       "label": "fig:cost",
       "title": "Cost per learning gain",
       "asset": "figures/revised_efficiency/main_cost_per_gain.pdf",
-      "asset_sha256": "b71597de9aaaae380e3a3888f9c190789a6b43fdc978dde5f93780ad1eb67275",
+      "asset_sha256": "e08a155617f73785fab5056c4b16cbd0d97452c21a9e62bcb3d9b9bcc8ff1355",
       "analysis_inputs": [
         "costs/cost_efficiency_by_arm_scope.csv",
         "costs/individual_model_equivalence.jsonl"
@@ -273,7 +273,7 @@
       "label": "fig:cost_per_gain_sections",
       "title": "Section cost per gain",
       "asset": "figures/revised_efficiency/cost_per_gain_sections.pdf",
-      "asset_sha256": "59e6bb269fc9febf724f88ca733324a1826d4a426eee944f6db1b137ff795171",
+      "asset_sha256": "73bb546c1759397f799930e58c0a41b6089d05fedf5f4eaa588fa000498d211e",
       "analysis_inputs": [
         "costs/cost_efficiency_by_arm_scope.csv"
       ],
@@ -443,5 +443,5 @@
       "paper_number": "G.1"
     }
   ],
-  "scientific_reference_commit": "47fa6226e981435727d8d19194000c8bd2e516b4"
+  "scientific_reference_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685"
 }

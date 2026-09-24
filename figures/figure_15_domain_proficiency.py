@@ -1,4 +1,4 @@
-"""Figure E.4. Quantitative AI tutor, domain and starting-proficiency differences."""
+"""Figure C.4. Quantitative AI tutor, domain and starting-proficiency differences."""
 
 from pathlib import Path
 import sys

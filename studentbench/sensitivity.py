@@ -5,34 +5,7 @@ mapping or cross-section identity pairs are needed or reconstructed.
 """
 
 from pathlib import Path
-import numpy as np
-from scipy import stats
 from .engagement import csv_rows, extract, fit_tests, write_json
-
-
-def welch_tost(ai, human, margin):
-    ai, human = np.asarray(ai, float), np.asarray(human, float)
-    variance_ai, variance_human = (
-        ai.var(ddof=1) / len(ai),
-        human.var(ddof=1) / len(human),
-    )
-    se = np.sqrt(variance_ai + variance_human)
-    df = (variance_ai + variance_human) ** 2 / (
-        variance_ai**2 / (len(ai) - 1) + variance_human**2 / (len(human) - 1)
-    )
-    estimate = ai.mean() - human.mean()
-    p = max(
-        stats.t.sf((estimate + margin) / se, df),
-        stats.t.cdf((estimate - margin) / se, df),
-    )
-    return dict(
-        estimate=float(estimate),
-        p=float(p),
-        margin=float(margin),
-        ci90=(estimate + np.array([-1, 1]) * stats.t.ppf(0.95, df) * se).tolist(),
-        n_ai=len(ai),
-        n_human=len(human),
-    )
 
 
 def run(data_dir, output_dir, engagement_dir=None):

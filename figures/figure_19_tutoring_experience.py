@@ -1,4 +1,4 @@
-"""Figure F.4. The tutoring experience across AI tutors."""
+"""Figure D.4. The tutoring experience across AI tutors."""
 
 from pathlib import Path
 import sys

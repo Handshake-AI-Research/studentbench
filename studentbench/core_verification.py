@@ -154,10 +154,38 @@ def verify_primary_equivalence(analysis_dir, output_dir):
     actual = json.loads(actual_path.read_text())
     if actual.get('complete') is not True:
         raise ValueError('Primary equivalence analysis is incomplete')
+    if set(actual['models']) != set(expected['models']):
+        raise ValueError('Primary equivalence model coverage differs')
     count = _numeric_compare(actual['models'], expected['models'], 'primary_equivalence', 2e-9, 2e-9)
     result = dict(complete=True, status='PASS', statistics_checked=count,
                   paper_commit=expected['paper_commit'],
                   expectations_sha256=hashlib.sha256(expected_path.read_bytes()).hexdigest(),
                   input_sha256=hashlib.sha256(actual_path.read_bytes()).hexdigest())
     write_json(Path(output_dir) / 'primary_equivalence.json', result)
+    return result
+
+
+def verify_individual_equivalence(analysis_dir, output_dir):
+    """Check every individual CR2 fit, including the repeat-excluded cohort."""
+    expected_path = (Path(__file__).resolve().parents[1]
+                     / "verification/individual_equivalence_expected.json")
+    expected = json.loads(expected_path.read_text())
+    paths = [Path(analysis_dir) / stage / "individual_cr2/results.json"
+             for stage in ("costs", "repeat_main")]
+    count = 0
+    hashes = {}
+    for path in paths:
+        actual = json.loads(path.read_text())
+        if actual.get("complete") is not True:
+            raise ValueError(f"Individual equivalence analysis is incomplete: {path}")
+        if set(actual["models"]) != set(expected["models"]):
+            raise ValueError(f"Individual equivalence model coverage differs: {path}")
+        count += _numeric_compare(actual["models"], expected["models"],
+                                  "individual_equivalence", 2e-9, 2e-9)
+        hashes[str(path.relative_to(analysis_dir))] = hashlib.sha256(path.read_bytes()).hexdigest()
+    result = dict(complete=True, status="PASS", models_checked=len(expected["models"]),
+                  statistics_checked=count, paper_commit=expected["paper_commit"],
+                  expectations_sha256=hashlib.sha256(expected_path.read_bytes()).hexdigest(),
+                  output_sha256=hashes)
+    write_json(Path(output_dir) / "individual_equivalence.json", result)
     return result

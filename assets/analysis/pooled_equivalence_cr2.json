@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "paper_commit": "47fa622",
+  "paper_commit": "53f16080bfd2b2780a4b7d24f99a7063f0600685",
   "models": {
     "adjusted_combined": {
-      "session_fingerprint": "e53d55402e7f6f7bae95951a64cf48cf2c9b8e22d4bd07cf47983b1446110cd2",
+      "session_fingerprint": "855d857e7a0c4568740e0600a19559666c952f8ff2633181ed4e27875d19c0db",
       "human_tutors": 13,
       "moments": {
         "design_outer_sum": [
@@ -269,7 +269,7 @@
       }
     },
     "exclude_repeat_adjusted_combined": {
-      "session_fingerprint": "41d990e4e827b2f02122156b91c4cba6f2c6e6ad278930b033ca37b4ce510a85",
+      "session_fingerprint": "84ff7b7cb3d38ed4d34d2dd74d386d2b9bbe294f2f4546501ba93ed1bd2539c6",
       "human_tutors": 13,
       "moments": {
         "design_outer_sum": [
@@ -534,5 +534,10 @@
         "clusters": 2002
       }
     }
+  },
+  "coverage": {
+    "human_containing_clusters": 7,
+    "largest_human_cluster_sessions": 102,
+    "human_sessions": 140
   }
 }

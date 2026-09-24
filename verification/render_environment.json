@@ -1,5 +1,5 @@
 {
-  "purpose": "Environment used to verify all 24 figure assets byte for byte against paper 47fa622. Other environments can reproduce the analyses while rendering different PDF bytes.",
+  "purpose": "Environment used to verify all 24 figure assets byte for byte against paper 53f1608. Other environments can reproduce the analyses while rendering different PDF bytes.",
   "python": "3.14.4",
   "platform": {
     "system": "Darwin",

@@ -1,4 +1,4 @@
-"""Figure H.2. Conversation indicators by GRE section."""
+"""Figure F.2. Conversation indicators by GRE section."""
 
 from pathlib import Path
 import sys

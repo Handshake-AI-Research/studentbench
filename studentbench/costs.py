@@ -1470,7 +1470,7 @@ def run(data_dir: Path, output_dir: Path):
         output_dir / "pareto_figure_data.json",
         {"status": "complete", "rows": points.to_dict("records")},
     )
-    individual_model_equivalence(students, cost_table, output_dir)
+    individual_model_equivalence(data_dir, students, cost_table, output_dir)
     summary = {
         "complete": True,
         "sessions": len(students),
@@ -1484,50 +1484,40 @@ def run(data_dir: Path, output_dir: Path):
     return summary
 
 
-def individual_model_equivalence(students, cost_table, output_dir):
-    """Twelve exploratory TOST tests with the original pooled margin held fixed."""
-    from .statistics import _welch_tost
+def individual_model_equivalence(data_dir, students, cost_table, output_dir):
+    """Individual CR2 equivalence with the primary model and fixed pooled margin."""
+    from . import individual_equivalence
 
-    ai = students.loc[students.kind == "ai", "gain_pp"].to_numpy(float)
+    models = individual_equivalence.run(data_dir, output_dir / "individual_cr2")
     human = students.loc[students.kind == "human", "gain_pp"].to_numpy(float)
-    margin = _welch_tost(ai, human, 0.25, 0.05)["equivalence_margin_pp"]
+    margin = models["fixed_margin_pp"]
     combined_costs = cost_table[cost_table.scope == "combined"].set_index("arm_id")
     human_cost_per_gain = float(combined_costs.loc["human", "cost_per_gain_pp"])
     rows = []
     for arm in sorted(combined_costs.index.difference(["human"])):
         block = students[students.arm_id == arm]
         values = block.gain_pp.to_numpy(float)
-        n_ai, n_human = len(values), len(human)
-        var_ai, var_human = values.var(ddof=1), human.var(ddof=1)
-        se = math.sqrt(var_ai / n_ai + var_human / n_human)
-        df = se**4 / (
-            (var_ai / n_ai) ** 2 / (n_ai - 1)
-            + (var_human / n_human) ** 2 / (n_human - 1)
-        )
-        gap = float(values.mean() - human.mean())
-        p_lower = float(stats.t.sf((gap + margin) / se, df))
-        p_upper = float(stats.t.cdf((gap - margin) / se, df))
-        critical = float(stats.t.ppf(0.95, df))
+        fit = models["models"]["original:" + arm]
         cost = combined_costs.loc[arm]
         rows.append(
             {
                 "record_id": arm,
                 "record_kind": "model_result",
                 "arm_id": arm,
-                "n_ai": n_ai,
-                "n_human": n_human,
+                "n_ai": fit["n_ai"],
+                "n_human": fit["n_human"],
                 "n_quant": int((block.instrument == "quant").sum()),
                 "n_verbal": int((block.instrument == "verbal").sum()),
                 "margin_pp": margin,
-                "gap_pp": gap,
-                "se": se,
-                "df": df,
-                "ci90_low": gap - critical * se,
-                "ci90_high": gap + critical * se,
-                "p_lower": p_lower,
-                "p_upper": p_upper,
-                "p_tost": max(p_lower, p_upper),
-                "nominal_equivalent": max(p_lower, p_upper) < 0.05,
+                "gap_pp": fit["estimate_pp"],
+                "se": fit["se_pp"],
+                "df": fit["df"],
+                "ci90_low": fit["ci90_pp"][0],
+                "ci90_high": fit["ci90_pp"][1],
+                "p_lower": fit["p_lower"],
+                "p_upper": fit["p_upper"],
+                "p_tost": fit["p_tost"],
+                "nominal_equivalent": fit["equivalent_at_05"],
                 "estimated_mean_cost_usd": float(cost.mean_cost_usd),
                 "model_mean_gain_pp": float(values.mean()),
                 "human_mean_gain_pp": float(human.mean()),
@@ -1542,6 +1532,7 @@ def individual_model_equivalence(students, cost_table, output_dir):
         "record_kind": "protocol",
         "margin_pp": margin,
         "multiplicity": "Separate exploratory tests without correction across AI tutors",
+        "model": "Primary section-specific quadratic-pretest ANCOVA with connected-cluster CR2 uncertainty",
         "nominal_alpha": 0.05,
         "human_reference_usd": float(combined_costs.loc["human", "mean_cost_usd"]),
     }
