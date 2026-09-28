@@ -52,6 +52,8 @@ python reproduce.py --data data --output results --verify
 
 Already downloaded the dataset? Set `--data` to the folder containing `studentbench_overall_parameters.json`.
 
+If your data were downloaded before September 28, 2026, update this repository and rerun `python download_data.py --output data` to obtain the privacy-redacted snapshot. These text-only redactions leave the reproduced results and paper figures unchanged.
+
 `--verify` checks the computed statistics, the numbers and rankings stated in the paper, every table cell and each figure's numerical inputs. It also checks the table LaTeX and fixed illustrations against the paper. Reference results are used only for comparison. All analysis inputs come from this repository and the public dataset. If a run is interrupted, rerun the same command to resume.
 
 ```text
